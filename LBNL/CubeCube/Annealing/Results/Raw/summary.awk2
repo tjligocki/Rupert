@@ -1,0 +1,63 @@
+BEGIN {
+  max1 = 0;
+  max2 = 0;
+}
+NF == 5 {
+  if ($1 > max1) {
+    max1 = $1;
+  }
+  if ($2 > max2) {
+    max2 = $2;
+  }
+  num[$1,$2] =  0;
+  best[$1,$2] = 0.0;
+}
+NF == 4 {
+  if ($3 >= best[$1,$2]) {
+    num[$1,$2] = $4;
+    best[$1,$2] = $3;
+  }
+}
+END {
+  printf("\\begin{tabular}{c|");
+  for (i = 1; i <= max1; i++) {
+    printf("c|");
+  }
+  printf("}\n");
+
+  printf("\\cline{2-%d}\n",max1+1);
+
+  printf("  ");
+  for (i = 1; i <= max1; i++) {
+    if (i < 10) {
+      printf("& {\\it ~%d} ",i);
+    } else {
+      printf("& {\\it %d} ",i);
+    }
+  }
+  printf("\\\\\ ");
+  printf("\\hhline{-|");
+  for (i = 1; i <= max1; i++) {
+    printf("=|",i);
+  }
+  printf("}\n");
+
+  for (j = 2; j <= max2; j++) {
+    printf("\\multicolumn{1}{|r||}{\\it %d} ",j);
+    for (i = 1; i <= max1; i++) {
+      if (i >= j) {
+        printf("& - ");
+      } else {
+        if (best[i,j] > 1) {
+          printf("& {\\bf %d} ",num[i,j]);
+        } else {
+          printf("& %d ",num[i,j]);
+        }
+      }
+    }
+    printf("\\\\\ ");
+    printf("\\hline\n");
+  }
+
+  printf("\\end{tabular}\n");
+}

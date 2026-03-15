@@ -1,0 +1,33 @@
+#!/bin/tcsh -f
+if (! -e best.vertices.raw) then
+  mkdir best.vertices.raw
+endif
+set count=0
+while (1)
+  set j=($<)
+  if ($#j <= 1) then
+    if ($count > 0) then
+      break
+    else
+      @ count++
+    endif
+  else
+    set m=$j[1]
+    set n=$j[2]
+    set value=$j[3]
+    set file=$j[4]
+    set proof=$j[5]
+    if ("$proof" != "none") then
+      set runname=`basename $proof`
+      if (-e best.vertices.raw/$runname) then
+        diff -q $proof best.vertices.raw
+        if ("$status" != 0) then
+          /bin/cp -f $proof best.vertices.raw
+        endif
+      else
+        /bin/cp -f $proof best.vertices.raw
+      endif
+    endif
+    set count=0
+  endif
+end

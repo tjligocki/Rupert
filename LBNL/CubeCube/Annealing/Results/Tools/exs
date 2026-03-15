@@ -1,0 +1,4 @@
+#!/bin/csh -f
+set dir=$HOME/ANAG/TJLigocki/Research/Rupert/CubeCube/Annealing/Results/Tools
+
+awk -f ${dir}/exs.awk column1=$1 column2=$2 $argv[3-]

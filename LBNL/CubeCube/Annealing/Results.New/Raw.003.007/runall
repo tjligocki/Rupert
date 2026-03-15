@@ -1,0 +1,10 @@
+#!/bin/csh -f
+foreach i (00000010 00000100 00001000 00010000 00100000 01000000 10000000)
+  /bin/rm -rf runsome.line runsome.vertices runsome.results
+  /bin/cp runsome.$i.param runsome.param
+  mkdir runsome.vertices
+  nice +16 runsome.$i >&! runsome.out
+  mv runsome.out runsome.$i.out
+  mv runsome.vertices runsome.$i.vertices
+  mv runsome.results runsome.$i.results
+end

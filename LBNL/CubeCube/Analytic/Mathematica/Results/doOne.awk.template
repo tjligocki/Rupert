@@ -1,0 +1,16 @@
+BEGIN {
+  on = 0;
+}
+/{{TN0[^0-9]/ {
+  print $0;
+  on = 1;
+  next;
+}
+/{{TN1[^0-9]/ {
+  on = 0;
+  exit;
+}
+on == 1 {
+  print $0;
+  next;
+}

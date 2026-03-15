@@ -1,0 +1,3 @@
+#!/bin/csh -f
+check1.csh best.vertices.gradientRelax.300.save > check1.gradientRelax.300.save.out
+check2.csh best.vertices.gradientRelax.300.save > check2.gradientRelax.300.save.out

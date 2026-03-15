@@ -1,0 +1,475 @@
+\documentclass[12pt,titlepage]{article}
+
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{indentfirst}
+\usepackage{hhline}
+
+\allowdisplaybreaks[1]
+\numberwithin{equation}{section}
+
+\title{\bf Largest $m$-cube in an $n$-cube: \\
+       Examples of Solving Specific Cases
+      }
+
+\author{Greg Huber \\
+        Terry J. Ligocki
+       }
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Here are examples of solving for the largest m-cube that can be fit in an
+n-cube but using empirical data and the problem constraints to produce
+algegraic equations that have a root that is the solution to the given
+problem.  The examples are for (m,n) equal to (1,2), (2,3), (3,4), and
+(4,5).
+\end{abstract}
+
+\section{Introduction}
+
+We will be using two different matrix representations of the m-cube.  One
+version, V, will have the vertices of the m-cube in n-dimensional space as
+rows of the matrix.  Thus, this matrix will be $2^m$ x $n$.
+
+The other matrix, E, will contain the edge vectors of the m-cube as rows.
+These can be computed from all pairs of adjacent vertices but many of these
+vectors will be identical since there are many parallel edges.  Thus, this
+matrix will be $m$ x $n$.
+
+The form of the vertex matrix will be estimated from empirical results.
+Specifically, the best empirical result will be used to determine which
+coordinates are probably $\pm 1/2$ and which coordinates are equal to other
+coordinates.
+
+\section{(1,2) Case}
+
+Here the vertex matrix is:
+\begin{equation*}
+V =
+\begin{bmatrix*}[r]
+v_0 \\
+v_1
+\end{bmatrix*}
+=
+\begin{bmatrix*}[r]
+-1/2 & -1/2  \\
+ 1/2 &  1/2 
+\end{bmatrix*}
+\end{equation*}
+And the edge matrix is:
+\begin{equation*}
+E =
+\begin{bmatrix*}[r]
+e_0
+\end{bmatrix*}
+=
+\begin{bmatrix*}[r]
+v_1 - v_0
+\end{bmatrix*}
+=
+\begin{bmatrix*}[r]
+ 1 & 1
+\end{bmatrix*}
+\end{equation*}
+Since there is only one edge there are no constraints beyond this and we know
+that f(1,2) = $|e_0|$ = $\sqrt{2}$.
+
+\section{(2,3) Case}
+
+Here the vertex matrix is:
+\begin{equation*}
+V =
+\begin{bmatrix*}[r]
+v_{0,0} \\
+v_{1,0} \\
+v_{0,1} \\
+v_{1,1}
+\end{bmatrix*}
+=
+\begin{bmatrix*}[r]
+-1/2 & -1/2 &   -x \\
+ 1/2 &   -x & -1/2 \\
+-1/2 &    x &  1/2 \\
+ 1/2 &  1/2 &    x \\
+\end{bmatrix*}
+\end{equation*}
+And the edge matrix is:
+\begin{align*}
+E &=
+\begin{bmatrix*}[r]
+e_{1,0} \\
+e_{0,1}
+\end{bmatrix*}
+=
+\begin{bmatrix*}[r]
+v_{1,0} - v_{0,0} \\
+v_{0,1} - v_{0,0}
+\end{bmatrix*}
+=
+\begin{bmatrix*}[r]
+v_{1,1} - v_{0,1} \\
+v_{1,1} - v_{1,0}
+\end{bmatrix*}
+=
+\begin{bmatrix*}[r]
+1 & -x + 1/2 & x - 1/2 \\
+0 &  x + 1/2 & x + 1/2
+\end{bmatrix*}
+\\
+&=
+\begin{bmatrix*}[r]
+1 & -a   & a   \\
+0 &  a+1 & a+1 \\
+\end{bmatrix*}
+\end{align*}
+The constraints are:
+\begin{align*}
+e_{1,0} \cdot e_{1,0} &= |e_{1,0}|^2 = f(2,3)^2 \\
+e_{1,0} \cdot e_{0,1} &= 0                      \\
+e_{0,1} \cdot e_{0,1} &= |e_{0,1}|^2 = f(2,3)^2
+\end{align*}
+Substituting for $e_{1,0}$ and $e_{0,1}$ and letting $m = f(2,3)$:
+\begin{align}
+2a^2 + 1 &= m^2 \label{con23:1} \\
+       0 &= 0   \nonumber       \\
+2(a+1)^2 &= m^2 \label{con23:2}
+\end{align}
+This gives us 2 equations (\ref{con23:1} - \ref{con23:2}) in 2 unknowns
+($a$, $m$).  These can be reduced to a single polynomial in $m$:
+\begin{equation*}
+8 m^2 = 9
+\end{equation*}
+So:
+\begin{equation*}
+f(2,3) = m = \sqrt{9/8}
+\end{equation*}
+
+\section{(3,4) Case}
+
+Here the vertex matrix is:
+\begin{equation*}
+V =
+\begin{bmatrix*}[r]
+v_{0,0,0} \\
+v_{1,0,0} \\
+v_{0,1,0} \\
+v_{1,1,0} \\
+v_{0,0,1} \\
+v_{1,0,1} \\
+v_{0,1,1} \\
+v_{1,1,1}
+\end{bmatrix*}
+=
+\begin{bmatrix*}[r]
+   x &  1/2 &    y &  1/2 \\
+ 1/2 &  1/2 &    z &   -w \\
+   z & -1/2 &  1/2 &    w \\
+   y & -1/2 &    x & -1/2 \\
+  -y &  1/2 &   -x &  1/2 \\
+  -z &  1/2 & -1/2 &   -w \\
+-1/2 & -1/2 &   -z &    w \\
+  -x & -1/2 &   -y & -1/2
+\end{bmatrix*}
+\end{equation*}
+And the edge matrix is:
+\begin{align*}
+E =
+\begin{bmatrix*}[r]
+e_{1,0,0} \\
+e_{0,1,0} \\
+e_{0,0,1}
+\end{bmatrix*}
+&=
+\begin{bmatrix*}[r]
+v_{1,0,0} - v_{0,0,0} \\
+v_{0,1,0} - v_{0,0,0} \\
+v_{0,0,1} - v_{0,0,0}
+\end{bmatrix*}
+= 
+\begin{bmatrix*}[r]
+v_{1,1,1} - v_{0,1,1} \\
+v_{1,1,1} - v_{1,0,1} \\
+v_{1,1,1} - v_{1,1,0}
+\end{bmatrix*}
+\\
+&=  
+\begin{bmatrix*}[r]
+-x + 1/2 &  0 & -y +   z & -w - 1/2 \\
+-x +   z & -1 & -y + 1/2 &  w - 1/2 \\
+-x -   y &  0 & -x -   y &        0
+\end{bmatrix*}
+\\
+&= 
+\begin{bmatrix*}[r]
+v_{1,1,0} - v_{0,1,0} \\
+v_{0,1,1} - v_{0,0,1} \\
+v_{1,0,1} - v_{1,0,0}
+\end{bmatrix*}
+= 
+\begin{bmatrix*}[r]
+v_{1,0,1} - v_{0,0,1} \\
+v_{1,1,0} - v_{1,0,0} \\
+v_{0,1,1} - v_{0,1,0}
+\end{bmatrix*}
+\\
+&=  
+\begin{bmatrix*}[r]
+ y - z   &  0 &  x - 1/2 & -w - 1/2 \\
+ y - 1/2 & -1 &  x - z   &  w - 1/2 \\
+-z - 1/2 &  0 & -z - 1/2 &        0
+\end{bmatrix*}
+\\
+&=  
+\begin{bmatrix*}[r]
+a     &  0 & -a     &    b \\
+c     & -1 & -c     & -1-b \\
+a-c-1 &  0 &  a-c-1 &    0 \\
+\end{bmatrix*}
+\end{align*}
+where:
+\begin{align*}
+a &= -x+1/2 = y-z \\
+b &= -w-1/2       \\
+c &= y-1/2 = -x+z
+\end{align*}
+The constraints are:
+\begin{align*}
+e_{1,0,0} \cdot e_{1,0,0} &= |e_{1,0,0}|^2 = f(3,4)^2 \\
+e_{1,0,0} \cdot e_{0,1,0} &= 0                        \\
+e_{1,0,0} \cdot e_{0,0,1} &= 0                        \\
+e_{0,1,0} \cdot e_{0,1,0} &= |e_{0,1,0}|^2 = f(3,4)^2 \\
+e_{0,1,0} \cdot e_{0,0,1} &= 0                        \\
+e_{0,0,1} \cdot e_{0,0,1} &= |e_{0,0,1}|^2 = f(3,4)^2
+\end{align*}
+Substituting for $e_{1,0,0}$, $e_{0,1,0}$, and $e_{0,0,1}$: and
+letting $m = f(3,4)$:
+\begin{align}
+2a^2 + b^2         &= m^2 \label{con34:1} \\
+2ac - b(b+1)       &= 0   \label{con34:2} \\
+0                  &= 0   \nonumber       \\
+2c^2 + (b+1)^2 + 1 &= m^2 \label{con34:3} \\
+0                  &= 0   \nonumber       \\
+2(a-c-1)^2         &= m^2 \label{con34:4}
+\end{align}
+This gives us 4 equations (\ref{con34:1} - \ref{con34:4}) in 4 unknowns
+($a$, $b$, $c$, $m$).
+These can be reduced to a single polynomial in $m$:
+\begin{equation*}
+4 m^8 - 28 m^6 - 7 m^4 + 16 m^2 + 16 = 0
+\end{equation*}
+and we are interested in the smallest, positive, real root.  This is:
+\begin{align*}
+m &=
+\frac{1}{2}
+  \sqrt{7+
+    \sqrt{\frac{c}{3}}-\sqrt{161-\frac{c}{3}+720\sqrt{\frac{3}{c}}}
+  }
+   = 1.0074347568...
+\\
+c &= 161 + (184841 - 4320\sqrt{1290})^{1/3}
+         + (184841 + 4320\sqrt{1290})^{1/3}
+\end{align*}
+
+\section{(4,5) Case}
+
+Here the vertex matrix is:
+\begin{equation*}
+V =
+\begin{bmatrix*}[r]
+v_{0,0,0,0} \\
+v_{1,0,0,0} \\
+v_{0,1,0,0} \\
+v_{1,1,0,0} \\
+v_{0,0,1,0} \\
+v_{1,0,1,0} \\
+v_{0,1,1,0} \\
+v_{1,1,1,0} \\
+v_{0,0,0,1} \\
+v_{1,0,0,1} \\
+v_{0,1,0,1} \\
+v_{1,1,0,1} \\
+v_{0,0,1,1} \\
+v_{1,0,1,1} \\
+v_{0,1,1,1} \\
+v_{1,1,1,1}
+\end{bmatrix*}
+=
+\begin{bmatrix*}[r]
+  -x &  1/2 & -1/2 &    y &   -z \\
+  -w &  1/2 &   -v &    u &  1/2 \\
+  -t &  1/2 &   -s & -1/2 &   -z \\
+  -r &  1/2 &   -q &   -r &  1/2 \\
+  -q & -1/2 &   -r &    r & -1/2 \\
+  -s & -1/2 &   -t &  1/2 &    z \\
+  -v & -1/2 &   -w &   -u & -1/2 \\
+-1/2 & -1/2 &   -x &   -y &    z \\
+ 1/2 &  1/2 &    x &    y &   -z \\
+   v &  1/2 &    w &    u &  1/2 \\
+   s &  1/2 &    t & -1/2 &   -z \\
+   q &  1/2 &    r &   -r &  1/2 \\
+   r & -1/2 &    q &    r & -1/2 \\
+   t & -1/2 &    s &  1/2 &    z \\
+   w & -1/2 &    v &   -u & -1/2 \\
+   x & -1/2 &  1/2 &   -y &    z 
+\end{bmatrix*}
+\end{equation*}
+And the edge matrix is:
+\begin{align*}
+E =
+\begin{bmatrix*}[r]
+e_{1,0,0,0} \\
+e_{0,1,0,0} \\
+e_{0,0,1,0} \\
+e_{0,0,0,1}
+\end{bmatrix*}
+&=
+\begin{bmatrix*}[r]
+v_{1,0,0,0} - v_{0,0,0,0} \\
+v_{0,1,0,0} - v_{0,0,0,0} \\
+v_{0,0,1,0} - v_{0,0,0,0} \\
+v_{0,0,0,1} - v_{0,0,0,0}
+\end{bmatrix*}
+= 
+\begin{bmatrix*}[r]
+v_{1,1,1,1} - v_{0,1,1,1} \\
+v_{1,1,1,1} - v_{1,0,1,1} \\
+v_{1,1,1,1} - v_{1,1,0,1} \\
+v_{1,1,1,1} - v_{1,1,1,0}
+\end{bmatrix*}
+\\
+&=
+\begin{bmatrix*}[r]
+-w + x   &  0 & -v + 1/2 &  u - y   & z + 1/2 \\
+-t + x   &  0 & -s + 1/2 & -y - 1/2 &       0 \\
+-q + x   & -1 & -r + 1/2 &  r - y   & z - 1/2 \\
+ x + 1/2 &  0 &  x + 1/2 &        0 &       0
+\end{bmatrix*}
+\\
+&= 
+\begin{bmatrix*}[r]
+v_{1,1,0,0} - v_{0,1,0,0} \\
+v_{0,1,1,0} - v_{0,0,1,0} \\
+v_{0,0,1,1} - v_{0,0,0,1} \\
+v_{1,0,0,1} - v_{1,0,0,0}
+\end{bmatrix*}
+= 
+\begin{bmatrix*}[r]
+v_{1,0,1,1} - v_{0,0,1,1} \\
+v_{1,1,0,1} - v_{1,0,0,1} \\
+v_{1,1,1,0} - v_{1,1,0,0} \\
+v_{0,1,1,1} - v_{0,1,1,0}
+\end{bmatrix*}
+\\
+&=
+\begin{bmatrix*}[r]
+-r + t   &  0 & -q + s & -r + 1/2 & z + 1/2 \\
+ q - v   &  0 &  r - w & -r - u   &       0 \\
+ r - 1/2 & -1 &  q - x &  r - y   & z - 1/2 \\
+ v + w   &  0 &  v + w &      0   &       0
+\end{bmatrix*}
+\\
+&= 
+\begin{bmatrix*}[r]
+v_{1,0,1,0} - v_{0,0,1,0} \\
+v_{0,1,0,1} - v_{0,0,0,1} \\
+v_{1,0,1,0} - v_{1,0,0,0} \\
+v_{0,1,0,1} - v_{0,1,0,0}
+\end{bmatrix*}
+= 
+\begin{bmatrix*}[r]
+v_{1,1,0,1} - v_{0,1,0,1} \\
+v_{1,1,1,0} - v_{1,0,1,0} \\
+v_{0,1,1,1} - v_{0,1,0,1} \\
+v_{1,0,1,1} - v_{1,0,1,0}
+\end{bmatrix*}
+\\
+&=
+\begin{bmatrix*}[r]
+ q - s   &  0 &  r - t & -r + 1/2 & z + 1/2 \\
+ s - 1/2 &  0 &  t - x & -y - 1/2 &       0 \\
+-s + w   & -1 & -t + v & -u + 1/2 & z - 1/2 \\
+ s + t   &  0 &  s + t &        0 &       0
+\end{bmatrix*}
+\\
+&= 
+\begin{bmatrix*}[r]
+v_{1,0,0,1} - v_{0,0,0,1} \\
+v_{1,1,0,0} - v_{1,0,0,0} \\
+v_{0,1,1,0} - v_{0,1,0,0} \\
+v_{0,0,1,1} - v_{0,0,1,0}
+\end{bmatrix*}
+= 
+\begin{bmatrix*}[r]
+v_{1,1,1,0} - v_{0,1,1,0} \\
+v_{0,1,1,1} - v_{0,0,1,1} \\
+v_{1,0,1,1} - v_{1,0,0,1} \\
+v_{1,1,0,1} - v_{1,1,0,0}
+\end{bmatrix*}
+\\
+&=
+\begin{bmatrix*}[r]
+ v - 1/2 &  0 &  w - x &  u - y   & z + 1/2 \\
+-r + w   &  0 & -q + v & -r - u   &       0 \\
+ t - v   & -1 &  s - w & -u + 1/2 & z - 1/2 \\
+ q + r   &  0 &  q + r &        0 &       0
+\end{bmatrix*}
+\\
+&=
+\begin{bmatrix*}[r]
+  a         &  0 & -a         & d - e + 1 & b     \\
+  c         &  0 & -c         & d         &     0 \\
+ -d + e - 1 & -1 &  d - e + 1 & e         & b - 1 \\ 
+  f         &  0 &  f         &         0 &     0
+\end{bmatrix*}
+\end{align*}
+where:
+\begin{align*}
+a &= -w+x   = -r+t   = q-s   =  v-1/2 \\
+b &=  z+1/2                           \\
+c &= -t+x   =  q-v   = s-1/2 = -r+w   \\
+d &= -y-1/2 = -r-u                    \\
+e &=  r-y   = -u+1/2                  \\
+f &=  x+1/2 =  v+w   = s+t   =  q+r
+\end{align*}
+The constraints are:
+\begin{align*}
+e_{1,0,0,0} \cdot e_{1,0,0,0} &= |e_{1,0,0,0}|^2 = f(3,4)^2 \\
+e_{1,0,0,0} \cdot e_{0,1,0,0} &= 0                          \\
+e_{1,0,0,0} \cdot e_{0,0,1,0} &= 0                          \\
+e_{1,0,0,0} \cdot e_{0,0,0,1} &= 0                          \\
+e_{0,1,0,0} \cdot e_{0,1,0,0} &= |e_{0,1,0,0}|^2 = f(3,4)^2 \\
+e_{0,1,0,0} \cdot e_{0,0,1,0} &= 0                          \\
+e_{0,1,0,0} \cdot e_{0,0,0,1} &= 0                          \\
+e_{0,0,1,0} \cdot e_{0,0,1,0} &= |e_{0,0,1,0}|^2 = f(3,4)^2 \\
+e_{0,0,1,0} \cdot e_{0,0,0,1} &= 0                          \\
+e_{0,0,0,1} \cdot e_{0,0,0,1} &= |e_{0,0,0,1}|^2 = f(3,4)^2
+\end{align*}
+Substituting for $e_{1,0,0,0}$, $e_{0,1,0,0}$, $e_{0,0,1,0}$ and
+$e_{0,0,0,1}$ and letting $m = f(3,4)$:
+\begin{align}
+2a^2 + b^2 + (d-e+1)^2         &= m^2 \label{con45:1} \\
+2ac + d(d-e+1)                 &= 0   \label{con45:2} \\
+(-2a+e)(d-e+1) + b(b-1)        &= 0   \label{con45:3} \\
+0                              &= 0   \nonumber       \\
+2c^2 + d^2                     &= m^2 \label{con45:4} \\
+-2c(d-e+1) + de                &= 0   \label{con45:5} \\
+0                              &= 0   \nonumber       \\
+2(d-e+1)^2 + e^2 + (b-1)^2 + 1 &= m^2 \label{con45:6} \\
+0                              &= 0   \nonumber       \\
+2f^2                           &= m^2 \label{con45:7}
+\end{align}
+This gives us 7 equations (\ref{con45:1} - \ref{con45:7}) in 7 unknowns
+($a$, $b$, $c$, $d$, $e$, $f$, $m$).
+These can be reduced to a single polynomial in $m$:
+\begin{align*}
+16384 m^{28} &-  311296 m^{26} + 1953792 m^{24} - 5911552 m^{22} + 9990656 m^{20} \\
+             &- 9787648 m^{18} + 5277456 m^{16} - 1401760 m^{14} +  560248 m^{12} \\
+             &-  705736 m^{10} +  375249 m^{8}  -   50488 m^{6}  +    6296 m^{4}  \\
+             &-   21600 m^{2}  +   10000 = 0
+\end{align*}
+
+\end{document}

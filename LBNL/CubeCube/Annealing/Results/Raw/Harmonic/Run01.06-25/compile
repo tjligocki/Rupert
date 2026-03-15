@@ -1,0 +1,4 @@
+#!/bin/csh -f
+cat job.*.results    > runsome.results
+cat job.*.stats      > runsome.out
+mv job.*.vertices/run* ../runsome.vertices

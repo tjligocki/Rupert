@@ -1,0 +1,2 @@
+#!/bin/csh -f
+awk -v c1=$1 -v c2=$2 -f sc.awk $argv[3-]

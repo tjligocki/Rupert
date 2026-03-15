@@ -1,0 +1,111 @@
+PSLQM1 Test Program
+No. trials =   1   n =  15   kq = 1
+kr = 5   ks = 6   rb =  1.0000D+02
+Full precision level ndp =   200 digits
+Full precision epsilon level nep =   -180
+
+Start trial  1
+ +++       100001  +++
+PSLQM1 integer relation detection: n =   15
+Iteration      0   MP initialization
+Iteration      0   Start MP iterations
+Iteration     25
+Iteration     50
+Iteration     75
+Iteration    100
+Iteration    100   Min, max of y =   5.455584e   -42   2.758046e   -41
+Iteration    100   Norm bound =   2.649308e    2    Max. bound =   2.649308e    2
+Iteration    125
+Iteration    150
+Iteration    175
+Iteration    200
+Iteration    200   Min, max of y =   1.219486e   -69   1.450363e   -67
+Iteration    200   Norm bound =   1.050068e    4    Max. bound =   1.050068e    4
+Iteration    225
+Iteration    250
+Iteration    275
+Iteration    300
+Iteration    300   Min, max of y =   1.966045e   -90   5.616585e   -88
+Iteration    300   Norm bound =   6.455347e    5    Max. bound =   6.455347e    5
+Iteration    325
+Iteration    350
+Iteration    364   itermp: Small value in y =   1.100323e -225
+Iteration    364   Relation detected
+Min, max of y =   1.100323e -225   5.171334e -104
+Max. bound =   7.778349e    6
+Index of relation =   1   Norm =   1.628633e    7   Residual =   1.100323e -225
+CPU times:
+        0.00        0.32
+
+Recovered relation: 0 =
+ ===           57           1  ===
+ ===           57           2  ===
+ ===           57           3  ===
+ ===           57           4  ===
+ ===           57           5  ===
+ ===           57           6  ===
+                                                         -10000. * 1
+                                                         +21600. * al^  1
+ ===           58           1  ===
+ ===           58           2  ===
+ ===           58           3  ===
+ ===           58           4  ===
+ ===           58           5  ===
+                                                          -6296. * al^  2
+                                                         +50488. * al^  3
+ ===           56           1  ===
+ ===           56           2  ===
+ ===           56           3  ===
+ ===           56           4  ===
+ ===           56           5  ===
+ ===           56           6  ===
+ ===           56           7  ===
+                                                        -375249. * al^  4
+                                                        +705736. * al^  5
+ ===           56           1  ===
+ ===           56           2  ===
+ ===           56           3  ===
+ ===           56           4  ===
+ ===           56           5  ===
+ ===           56           6  ===
+ ===           56           7  ===
+                                                        -560248. * al^  6
+                                                       +1401760. * al^  7
+ ===           55           1  ===
+ ===           55           2  ===
+ ===           55           3  ===
+ ===           55           4  ===
+ ===           55           5  ===
+ ===           55           6  ===
+ ===           55           7  ===
+ ===           55           8  ===
+                                                       -5277456. * al^  8
+                                                       +9787648. * al^  9
+ ===           55           1  ===
+ ===           55           2  ===
+ ===           55           3  ===
+ ===           55           4  ===
+ ===           55           5  ===
+ ===           55           6  ===
+ ===           55           7  ===
+ ===           55           8  ===
+                                                       -9990656. * al^ 10
+                                                       +5911552. * al^ 11
+ ===           55           1  ===
+ ===           55           2  ===
+ ===           55           3  ===
+ ===           55           4  ===
+ ===           55           5  ===
+ ===           55           6  ===
+ ===           55           7  ===
+ ===           55           8  ===
+                                                       -1953792. * al^ 12
+                                                        +311296. * al^ 13
+ ===           57           1  ===
+ ===           57           2  ===
+ ===           57           3  ===
+ ===           57           4  ===
+ ===           57           5  ===
+ ===           57           6  ===
+                                                         -16384. * al^ 14
+CPU Time =      0.3228

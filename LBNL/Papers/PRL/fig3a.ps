@@ -1,0 +1,3546 @@
+%!PS-Adobe-2.0
+%%Title: fig3a.ps
+%%Creator: gnuplot 4.6 patchlevel 6
+%%CreationDate: Fri Mar 20 17:22:30 2015
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid true def
+/Dashlength 1 def
+/Landscape true def
+/Level1 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 554 50 lineto 554 770 lineto 50 770 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 4.6 (September 2012)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Default Line colors
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default Line Types
+/LTw {PL [] 1 setgray} def
+/LTb {BL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
+/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
+/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
+/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
+/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+ 2 lt
+	{/InterpretLevel1 true def}
+	{/InterpretLevel1 Level1 def}
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (fig3a.ps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.6 patchlevel 6)
+  /Author (ligocki)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Fri Mar 20 17:22:30 2015)
+  /DOCINFO pdfmark
+end
+} ifelse
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+1605 448 M
+4423 0 V
+stroke
+LTb
+LCb setrgbcolor
+1605 448 M
+63 0 V
+4360 0 R
+-63 0 V
+-4444 0 R
+( 0) Rshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+1605 1333 M
+4423 0 V
+stroke
+LTb
+LCb setrgbcolor
+1605 1333 M
+63 0 V
+4360 0 R
+-63 0 V
+-4444 0 R
+( 0.2) Rshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+1605 2217 M
+4423 0 V
+stroke
+LTb
+LCb setrgbcolor
+1605 2217 M
+63 0 V
+4360 0 R
+-63 0 V
+-4444 0 R
+( 0.4) Rshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+1605 3102 M
+4423 0 V
+stroke
+LTb
+LCb setrgbcolor
+1605 3102 M
+63 0 V
+4360 0 R
+-63 0 V
+-4444 0 R
+( 0.6) Rshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+1605 3986 M
+4423 0 V
+stroke
+LTb
+LCb setrgbcolor
+1605 3986 M
+63 0 V
+4360 0 R
+-63 0 V
+-4444 0 R
+( 0.8) Rshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+1605 4871 M
+4423 0 V
+stroke
+LTb
+LCb setrgbcolor
+1605 4871 M
+63 0 V
+4360 0 R
+-63 0 V
+-4444 0 R
+( 1) Rshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+1605 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+1605 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 0) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+2047 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+2047 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 0.1) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+2490 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+2490 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 0.2) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+2932 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+2932 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 0.3) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+3374 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+3374 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 0.4) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+3817 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+3817 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 0.5) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+4259 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+4259 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 0.6) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+4701 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+4701 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 0.7) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+5143 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+5143 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 0.8) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+5586 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+5586 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 0.9) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+6028 448 M
+0 4423 V
+stroke
+LTb
+LCb setrgbcolor
+6028 448 M
+0 63 V
+0 4360 R
+0 -63 V
+0 -4500 R
+( 1) Cshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTb
+LCb setrgbcolor
+1605 4871 N
+0 -4423 V
+4423 0 V
+0 4423 V
+-4423 0 V
+Z stroke
+LCb setrgbcolor
+1031 2659 M
+currentpoint gsave translate -270 rotate 0 0 M
+(\(1/f\)^2) Cshow
+grestore
+LTb
+LCb setrgbcolor
+3816 98 M
+(m/n) Cshow
+LTb
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+% Begin plot #1
+2.000 UL
+LT0
+0.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
+1649 890 M
+1 3 V
+0 2 V
+1 2 V
+0 2 V
+1 3 V
+0 2 V
+1 3 V
+0 2 V
+1 3 V
+0 2 V
+1 3 V
+0 2 V
+1 3 V
+0 3 V
+1 3 V
+1 3 V
+0 2 V
+1 3 V
+1 3 V
+0 4 V
+1 3 V
+1 3 V
+0 3 V
+1 3 V
+1 4 V
+1 3 V
+1 4 V
+0 3 V
+1 4 V
+1 4 V
+1 3 V
+1 4 V
+1 4 V
+1 4 V
+1 5 V
+1 4 V
+1 4 V
+1 5 V
+2 4 V
+1 5 V
+1 5 V
+1 5 V
+2 5 V
+1 5 V
+1 5 V
+2 6 V
+1 6 V
+2 5 V
+2 6 V
+1 7 V
+1 5 V
+1 1 V
+1 6 V
+1 0 V
+1 6 V
+1 1 V
+1 6 V
+1 1 V
+1 6 V
+1 1 V
+1 7 V
+2 1 V
+1 7 V
+1 1 V
+1 6 V
+1 1 V
+2 8 V
+1 1 V
+1 7 V
+2 1 V
+1 8 V
+1 1 V
+2 8 V
+1 2 V
+2 8 V
+2 1 V
+1 9 V
+2 1 V
+2 9 V
+1 2 V
+2 9 V
+2 2 V
+2 9 V
+2 2 V
+2 10 V
+2 2 V
+2 11 V
+3 1 V
+2 12 V
+2 2 V
+3 12 V
+3 1 V
+2 13 V
+3 2 V
+3 13 V
+3 2 V
+3 14 V
+3 2 V
+3 15 V
+4 3 V
+4 15 V
+3 3 V
+4 17 V
+4 2 V
+stroke 1797 1370 M
+5 18 V
+4 3 V
+5 19 V
+5 3 V
+5 21 V
+5 3 V
+6 22 V
+6 4 V
+6 24 V
+7 4 V
+7 26 V
+7 4 V
+8 28 V
+3 4 V
+5 1 V
+6 28 V
+3 3 V
+3 4 V
+7 1 V
+7 32 V
+3 3 V
+4 4 V
+7 1 V
+8 35 V
+4 4 V
+4 4 V
+8 2 V
+9 39 V
+5 4 V
+5 5 V
+2 1 V
+8 1 V
+7 41 V
+3 4 V
+6 4 V
+5 6 V
+3 1 V
+9 1 V
+9 47 V
+4 4 V
+6 5 V
+7 6 V
+4 2 V
+10 1 V
+9 51 V
+3 4 V
+4 4 V
+3 5 V
+5 1 V
+5 7 V
+3 1 V
+4 1 V
+3 1 V
+10 0 V
+12 61 V
+2 4 V
+5 5 V
+4 6 V
+6 2 V
+7 7 V
+4 2 V
+5 1 V
+3 1 V
+3 0 V
+11 1 V
+12 69 V
+2 4 V
+4 5 V
+6 6 V
+5 7 V
+8 2 V
+8 9 V
+5 2 V
+7 2 V
+4 1 V
+3 0 V
+15 1 V
+13 81 V
+2 4 V
+3 5 V
+5 6 V
+4 6 V
+4 2 V
+7 8 V
+3 2 V
+7 1 V
+8 11 V
+3 1 V
+7 2 V
+6 2 V
+4 0 V
+5 2 V
+4 0 V
+3 0 V
+2 1 V
+15 0 V
+16 99 V
+2 5 V
+3 5 V
+5 6 V
+6 8 V
+5 8 V
+7 2 V
+5 10 V
+stroke 2391 2397 M
+4 1 V
+4 2 V
+10 2 V
+8 13 V
+3 1 V
+4 1 V
+4 2 V
+6 1 V
+0 -1 V
+8 4 V
+5 0 V
+5 1 V
+4 1 V
+5 0 V
+4 1 V
+3 0 V
+2 0 V
+20 0 V
+18 123 V
+2 5 V
+2 5 V
+4 6 V
+4 7 V
+6 9 V
+5 8 V
+5 3 V
+7 11 V
+3 1 V
+7 2 V
+8 13 V
+6 2 V
+6 3 V
+3 1 V
+12 1 V
+12 18 V
+4 1 V
+6 3 V
+0 -1 V
+6 3 V
+3 0 V
+7 1 V
+0 -1 V
+8 4 V
+3 1 V
+3 1 V
+6 0 V
+7 1 V
+5 1 V
+5 1 V
+4 0 V
+6 0 V
+4 0 V
+4 0 V
+3 0 V
+2 0 V
+25 1 V
+25 170 V
+3 6 V
+3 7 V
+4 8 V
+6 9 V
+7 10 V
+4 10 V
+6 3 V
+7 12 V
+8 4 V
+8 14 V
+4 2 V
+4 4 V
+11 1 V
+10 18 V
+4 2 V
+9 3 V
+0 -1 V
+5 5 V
+4 0 V
+6 3 V
+4 0 V
+16 0 V
+16 27 V
+4 1 V
+6 2 V
+5 3 V
+6 0 V
+6 3 V
+4 0 V
+4 2 V
+12 1 V
+0 -1 V
+13 6 V
+6 1 V
+5 1 V
+10 1 V
+0 -1 V
+8 3 V
+4 0 V
+9 1 V
+8 1 V
+7 1 V
+0 -1 V
+5 1 V
+5 -1 V
+8 1 V
+7 0 V
+stroke 3027 3002 M
+5 0 V
+4 0 V
+3 0 V
+3 0 V
+3 0 V
+34 0 V
+36 250 V
+3 7 V
+3 8 V
+4 9 V
+5 10 V
+6 11 V
+7 13 V
+10 15 V
+6 15 V
+7 3 V
+8 18 V
+11 3 V
+8 20 V
+4 2 V
+5 4 V
+11 2 V
+10 23 V
+4 2 V
+8 3 V
+8 6 V
+5 3 V
+16 0 V
+15 31 V
+4 2 V
+7 3 V
+6 4 V
+10 5 V
+0 -4 V
+11 8 V
+8 1 V
+11 2 V
+7 1 V
+4 0 V
+4 0 V
+23 0 V
+24 44 V
+4 2 V
+5 3 V
+7 3 V
+6 4 V
+6 0 V
+9 5 V
+13 0 V
+12 7 V
+7 1 V
+9 1 V
+5 0 V
+20 0 V
+17 12 V
+4 1 V
+6 1 V
+5 1 V
+7 0 V
+11 2 V
+5 1 V
+15 0 V
+13 4 V
+4 -2 V
+7 1 V
+7 0 V
+13 3 V
+0 -3 V
+12 2 V
+5 0 V
+5 1 V
+9 0 V
+0 -1 V
+13 1 V
+10 0 V
+9 0 V
+8 0 V
+8 0 V
+6 0 V
+11 0 V
+9 0 V
+8 0 V
+7 0 V
+5 0 V
+5 0 V
+4 0 V
+4 0 V
+4 0 V
+60 0 V
+22 284 V
+0 2 V
+1 3 V
+0 3 V
+1 3 V
+0 3 V
+1 3 V
+1 3 V
+0 3 V
+1 4 V
+0 3 V
+1 4 V
+1 3 V
+1 4 V
+1 4 V
+stroke 3848 3905 M
+1 4 V
+1 5 V
+1 4 V
+1 5 V
+1 5 V
+1 5 V
+1 6 V
+2 5 V
+1 6 V
+2 6 V
+2 7 V
+2 7 V
+2 7 V
+2 8 V
+2 9 V
+3 9 V
+3 9 V
+4 10 V
+4 11 V
+4 12 V
+5 13 V
+5 15 V
+7 15 V
+8 18 V
+9 19 V
+11 22 V
+6 22 V
+8 3 V
+8 25 V
+9 4 V
+10 30 V
+13 4 V
+14 36 V
+5 5 V
+12 0 V
+13 40 V
+7 4 V
+7 7 V
+17 0 V
+15 47 V
+5 4 V
+11 5 V
+12 7 V
+6 2 V
+21 0 V
+20 60 V
+5 4 V
+9 5 V
+7 7 V
+12 1 V
+13 9 V
+9 4 V
+0 -3 V
+12 3 V
+7 0 V
+5 0 V
+28 0 V
+27 79 V
+4 4 V
+7 5 V
+11 6 V
+8 8 V
+11 1 V
+10 9 V
+6 1 V
+7 2 V
+19 0 V
+21 15 V
+8 1 V
+8 2 V
+14 3 V
+0 -1 V
+0 -2 V
+16 3 V
+12 0 V
+11 0 V
+8 0 V
+13 0 V
+10 0 V
+7 0 V
+6 0 V
+5 0 V
+46 0 V
+14 90 V
+1 1 V
+0 1 V
+1 1 V
+0 1 V
+1 2 V
+1 1 V
+0 1 V
+1 2 V
+1 1 V
+1 2 V
+1 1 V
+1 2 V
+1 2 V
+1 2 V
+1 2 V
+2 2 V
+2 3 V
+2 2 V
+2 3 V
+3 3 V
+stroke 4591 4743 M
+3 4 V
+3 3 V
+4 4 V
+5 5 V
+7 5 V
+8 5 V
+10 7 V
+15 7 V
+9 8 V
+12 1 V
+15 10 V
+19 2 V
+16 11 V
+10 1 V
+11 2 V
+6 0 V
+20 0 V
+26 14 V
+9 2 V
+9 1 V
+14 0 V
+15 3 V
+12 0 V
+15 0 V
+10 0 V
+7 0 V
+41 0 V
+12 15 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 1 V
+1 0 V
+2 0 V
+1 1 V
+2 0 V
+2 1 V
+2 0 V
+3 1 V
+4 0 V
+4 1 V
+6 1 V
+9 1 V
+12 1 V
+20 1 V
+16 2 V
+22 0 V
+21 6 V
+14 -4 V
+17 4 V
+10 0 V
+36 -4 V
+10 2 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+2 1 V
+2 0 V
+3 0 V
+4 0 V
+5 0 V
+9 0 V
+13 0 V
+25 0 V
+23 1 V
+12 0 V
+32 0 V
+7 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+2 0 V
+3 0 V
+4 0 V
+5 0 V
+10 0 V
+18 0 V
+17 0 V
+31 0 V
+7 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+2 0 V
+3 0 V
+4 0 V
+7 0 V
+13 0 V
+13 0 V
+24 0 V
+6 0 V
+1 0 V
+1 0 V
+stroke 5483 4871 M
+1 0 V
+1 0 V
+1 0 V
+3 0 V
+3 0 V
+5 0 V
+11 0 V
+29 0 V
+4 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+3 0 V
+4 0 V
+8 0 V
+24 0 V
+5 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+4 0 V
+7 0 V
+19 0 V
+4 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+3 0 V
+5 0 V
+16 0 V
+4 0 V
+1 0 V
+1 0 V
+2 0 V
+2 0 V
+5 0 V
+14 0 V
+3 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+4 0 V
+12 0 V
+3 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+4 0 V
+10 0 V
+3 0 V
+1 0 V
+1 0 V
+2 0 V
+3 0 V
+9 0 V
+2 0 V
+1 0 V
+1 0 V
+1 0 V
+3 0 V
+8 0 V
+3 0 V
+1 0 V
+1 0 V
+2 0 V
+7 0 V
+3 0 V
+1 0 V
+1 0 V
+2 0 V
+6 0 V
+3 0 V
+1 0 V
+2 0 V
+6 0 V
+3 0 V
+2 0 V
+5 0 V
+3 0 V
+1 0 V
+1 0 V
+5 0 V
+2 0 V
+1 0 V
+1 0 V
+5 0 V
+2 0 V
+2 0 V
+4 0 V
+2 0 V
+1 0 V
+4 0 V
+2 0 V
+2 0 V
+3 0 V
+2 0 V
+1 0 V
+3 0 V
+stroke 5864 4871 M
+2 0 V
+1 0 V
+3 0 V
+2 0 V
+1 0 V
+2 0 V
+2 0 V
+1 0 V
+3 0 V
+1 0 V
+1 0 V
+2 0 V
+2 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+2 0 V
+2 0 V
+2 0 V
+1 0 V
+2 0 V
+2 0 V
+1 0 V
+2 0 V
+2 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+2 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+44 0 V
+% End plot #1
+% Begin plot #2
+0.200 UP
+stroke
+1.000 UL
+LT1
+0.00 1.00 0.00 C /Helvetica findfont 140 scalefont setfont
+1649 890 TriD
+1650 893 TriD
+1650 895 TriD
+1651 897 TriD
+1651 899 TriD
+1652 902 TriD
+1652 904 TriD
+1653 907 TriD
+1653 909 TriD
+1654 912 TriD
+1654 914 TriD
+1655 917 TriD
+1655 919 TriD
+1656 922 TriD
+1656 925 TriD
+1657 928 TriD
+1658 931 TriD
+1658 933 TriD
+1659 936 TriD
+1660 939 TriD
+1660 943 TriD
+1661 946 TriD
+1662 949 TriD
+1662 952 TriD
+1663 955 TriD
+1664 959 TriD
+1665 962 TriD
+1666 966 TriD
+1666 969 TriD
+1667 973 TriD
+1668 977 TriD
+1669 980 TriD
+1670 984 TriD
+1671 988 TriD
+1672 992 TriD
+1673 997 TriD
+1674 1001 TriD
+1675 1005 TriD
+1676 1010 TriD
+1678 1014 TriD
+1679 1019 TriD
+1680 1024 TriD
+1681 1029 TriD
+1683 1034 TriD
+1684 1039 TriD
+1685 1044 TriD
+1687 1050 TriD
+1688 1056 TriD
+1690 1061 TriD
+1692 1067 TriD
+1693 1074 TriD
+1693 1074 TriD
+1694 1079 TriD
+1695 1080 TriD
+1695 1080 TriD
+1696 1086 TriD
+1697 1086 TriD
+1697 1086 TriD
+1698 1092 TriD
+1699 1093 TriD
+1699 1093 TriD
+1700 1099 TriD
+1701 1100 TriD
+1701 1100 TriD
+1702 1106 TriD
+1703 1107 TriD
+1703 1107 TriD
+1704 1114 TriD
+1706 1115 TriD
+1706 1115 TriD
+1707 1122 TriD
+1708 1123 TriD
+1708 1123 TriD
+1709 1129 TriD
+1710 1130 TriD
+1710 1130 TriD
+1712 1138 TriD
+1713 1139 TriD
+1713 1139 TriD
+1714 1146 TriD
+1716 1147 TriD
+1716 1147 TriD
+1717 1155 TriD
+1718 1156 TriD
+1718 1156 TriD
+1720 1164 TriD
+1721 1166 TriD
+1721 1166 TriD
+1723 1174 TriD
+1725 1175 TriD
+1725 1175 TriD
+1726 1184 TriD
+1728 1185 TriD
+1728 1185 TriD
+1730 1194 TriD
+1731 1196 TriD
+1731 1196 TriD
+1733 1205 TriD
+1735 1207 TriD
+1735 1207 TriD
+1737 1216 TriD
+1739 1218 TriD
+1739 1218 TriD
+1739 1218 TriD
+1741 1228 TriD
+1743 1230 TriD
+1743 1230 TriD
+1743 1230 TriD
+1745 1241 TriD
+1748 1242 TriD
+1748 1242 TriD
+1748 1242 TriD
+1750 1254 TriD
+1752 1256 TriD
+1752 1256 TriD
+1752 1256 TriD
+1755 1268 TriD
+1758 1269 TriD
+1758 1269 TriD
+1758 1269 TriD
+1760 1282 TriD
+1763 1284 TriD
+1763 1284 TriD
+1763 1284 TriD
+1766 1297 TriD
+1769 1299 TriD
+1769 1299 TriD
+1769 1299 TriD
+1772 1313 TriD
+1775 1315 TriD
+1775 1315 TriD
+1775 1315 TriD
+1778 1330 TriD
+1782 1333 TriD
+1782 1333 TriD
+1782 1333 TriD
+1782 1333 TriD
+1786 1348 TriD
+1786 1348 TriD
+1789 1351 TriD
+1789 1351 TriD
+1789 1351 TriD
+1789 1351 TriD
+1793 1368 TriD
+1793 1368 TriD
+1797 1370 TriD
+1797 1370 TriD
+1797 1370 TriD
+1797 1370 TriD
+1802 1388 TriD
+1802 1388 TriD
+1806 1391 TriD
+1806 1391 TriD
+1806 1391 TriD
+1806 1391 TriD
+1811 1410 TriD
+1811 1410 TriD
+1816 1413 TriD
+1816 1413 TriD
+1816 1413 TriD
+1816 1413 TriD
+1821 1434 TriD
+1821 1434 TriD
+1826 1437 TriD
+1826 1437 TriD
+1826 1437 TriD
+1826 1437 TriD
+1826 1437 TriD
+1832 1459 TriD
+1832 1459 TriD
+1838 1463 TriD
+1838 1463 TriD
+1838 1463 TriD
+1838 1463 TriD
+1838 1463 TriD
+1844 1487 TriD
+1844 1487 TriD
+1851 1491 TriD
+1851 1491 TriD
+1851 1491 TriD
+1851 1491 TriD
+1851 1491 TriD
+1858 1517 TriD
+1858 1517 TriD
+1865 1521 TriD
+1865 1521 TriD
+1865 1521 TriD
+1865 1521 TriD
+1865 1521 TriD
+1873 1549 TriD
+1873 1549 TriD
+1873 1549 TriD
+1876 1553 TriD
+1881 1554 TriD
+1881 1554 TriD
+1881 1554 TriD
+1881 1554 TriD
+1881 1554 TriD
+1881 1554 TriD
+1887 1582 TriD
+1890 1585 TriD
+1890 1585 TriD
+1890 1585 TriD
+1893 1589 TriD
+1900 1590 TriD
+1900 1590 TriD
+1900 1590 TriD
+1900 1590 TriD
+1900 1590 TriD
+1900 1590 TriD
+1907 1622 TriD
+1910 1625 TriD
+1910 1625 TriD
+1910 1625 TriD
+1914 1629 TriD
+1921 1630 TriD
+1921 1630 TriD
+1921 1630 TriD
+1921 1630 TriD
+1921 1630 TriD
+1921 1630 TriD
+1921 1630 TriD
+1929 1665 TriD
+1933 1669 TriD
+1933 1669 TriD
+1933 1669 TriD
+1937 1673 TriD
+1945 1675 TriD
+1945 1675 TriD
+1945 1675 TriD
+1945 1675 TriD
+1945 1675 TriD
+1945 1675 TriD
+1945 1675 TriD
+1954 1714 TriD
+1959 1718 TriD
+1959 1718 TriD
+1959 1718 TriD
+1959 1718 TriD
+1964 1723 TriD
+1966 1724 TriD
+1974 1725 TriD
+1974 1725 TriD
+1974 1725 TriD
+1974 1725 TriD
+1974 1725 TriD
+1974 1725 TriD
+1974 1725 TriD
+1974 1725 TriD
+1981 1766 TriD
+1984 1770 TriD
+1990 1774 TriD
+1990 1774 TriD
+1990 1774 TriD
+1990 1774 TriD
+1995 1780 TriD
+1998 1781 TriD
+2007 1782 TriD
+2007 1782 TriD
+2007 1782 TriD
+2007 1782 TriD
+2007 1782 TriD
+2007 1782 TriD
+2007 1782 TriD
+2007 1782 TriD
+2007 1782 TriD
+2016 1829 TriD
+2020 1833 TriD
+2026 1838 TriD
+2026 1838 TriD
+2026 1838 TriD
+2026 1838 TriD
+2033 1844 TriD
+2037 1846 TriD
+2047 1847 TriD
+2047 1847 TriD
+2047 1847 TriD
+2047 1847 TriD
+2047 1847 TriD
+2047 1847 TriD
+2047 1847 TriD
+2047 1847 TriD
+2047 1847 TriD
+2047 1847 TriD
+2056 1898 TriD
+2059 1902 TriD
+2063 1906 TriD
+2066 1911 TriD
+2071 1912 TriD
+2071 1912 TriD
+2071 1912 TriD
+2071 1912 TriD
+2071 1912 TriD
+2076 1919 TriD
+2079 1920 TriD
+2083 1921 TriD
+2086 1922 TriD
+2096 1922 TriD
+2096 1922 TriD
+2096 1922 TriD
+2096 1922 TriD
+2096 1922 TriD
+2096 1922 TriD
+2096 1922 TriD
+2096 1922 TriD
+2096 1922 TriD
+2096 1922 TriD
+2096 1922 TriD
+2108 1983 TriD
+2110 1987 TriD
+2115 1992 TriD
+2119 1998 TriD
+2125 2000 TriD
+2125 2000 TriD
+2125 2000 TriD
+2125 2000 TriD
+2125 2000 TriD
+2132 2007 TriD
+2136 2009 TriD
+2141 2010 TriD
+2144 2011 TriD
+2147 2011 TriD
+2158 2012 TriD
+2158 2012 TriD
+2158 2012 TriD
+2158 2012 TriD
+2158 2012 TriD
+2158 2012 TriD
+2158 2012 TriD
+2158 2012 TriD
+2158 2012 TriD
+2158 2012 TriD
+2158 2012 TriD
+2158 2012 TriD
+2170 2081 TriD
+2172 2085 TriD
+2176 2090 TriD
+2182 2096 TriD
+2182 2096 TriD
+2187 2103 TriD
+2195 2105 TriD
+2195 2105 TriD
+2195 2105 TriD
+2195 2105 TriD
+2195 2105 TriD
+2195 2105 TriD
+2203 2114 TriD
+2208 2116 TriD
+2208 2116 TriD
+2215 2118 TriD
+2219 2119 TriD
+2222 2119 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2237 2120 TriD
+2250 2201 TriD
+2252 2205 TriD
+2255 2210 TriD
+2260 2216 TriD
+2264 2222 TriD
+2268 2224 TriD
+2268 2224 TriD
+2275 2232 TriD
+2278 2234 TriD
+2285 2235 TriD
+2285 2235 TriD
+2285 2235 TriD
+2285 2235 TriD
+2285 2235 TriD
+2285 2235 TriD
+2285 2235 TriD
+2293 2246 TriD
+2296 2247 TriD
+2303 2249 TriD
+2303 2249 TriD
+2309 2251 TriD
+2313 2251 TriD
+2318 2253 TriD
+2322 2253 TriD
+2325 2253 TriD
+2327 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2342 2254 TriD
+2358 2353 TriD
+2360 2358 TriD
+2363 2363 TriD
+2368 2369 TriD
+2374 2377 TriD
+2374 2377 TriD
+2379 2385 TriD
+2386 2387 TriD
+2386 2387 TriD
+2391 2397 TriD
+2395 2398 TriD
+2399 2400 TriD
+2409 2402 TriD
+2409 2402 TriD
+2409 2402 TriD
+2409 2402 TriD
+2409 2402 TriD
+2409 2402 TriD
+2409 2402 TriD
+2409 2402 TriD
+2409 2402 TriD
+2417 2415 TriD
+2420 2416 TriD
+2424 2417 TriD
+2428 2419 TriD
+2434 2420 TriD
+2434 2419 TriD
+2434 2419 TriD
+2442 2423 TriD
+2447 2423 TriD
+2447 2423 TriD
+2452 2424 TriD
+2456 2425 TriD
+2461 2425 TriD
+2465 2426 TriD
+2468 2426 TriD
+2470 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2490 2426 TriD
+2508 2549 TriD
+2510 2554 TriD
+2512 2559 TriD
+2516 2565 TriD
+2520 2572 TriD
+2526 2581 TriD
+2526 2581 TriD
+2531 2589 TriD
+2536 2592 TriD
+2536 2592 TriD
+2543 2603 TriD
+2546 2604 TriD
+2553 2606 TriD
+2553 2606 TriD
+2553 2606 TriD
+2561 2619 TriD
+2567 2621 TriD
+2567 2621 TriD
+2573 2624 TriD
+2576 2625 TriD
+2588 2626 TriD
+2588 2626 TriD
+2588 2626 TriD
+2588 2626 TriD
+2588 2626 TriD
+2588 2626 TriD
+2588 2626 TriD
+2588 2626 TriD
+2588 2626 TriD
+2588 2626 TriD
+2588 2626 TriD
+2600 2644 TriD
+2604 2645 TriD
+2610 2648 TriD
+2610 2647 TriD
+2616 2650 TriD
+2619 2650 TriD
+2626 2651 TriD
+2626 2650 TriD
+2626 2650 TriD
+2634 2654 TriD
+2637 2655 TriD
+2640 2656 TriD
+2646 2656 TriD
+2646 2656 TriD
+2653 2657 TriD
+2658 2658 TriD
+2658 2658 TriD
+2663 2659 TriD
+2667 2659 TriD
+2673 2659 TriD
+2677 2659 TriD
+2681 2659 TriD
+2684 2659 TriD
+2686 2659 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2711 2660 TriD
+2736 2830 TriD
+2739 2836 TriD
+2742 2843 TriD
+2746 2851 TriD
+2752 2860 TriD
+2759 2870 TriD
+2759 2870 TriD
+2763 2880 TriD
+2769 2883 TriD
+2769 2883 TriD
+2776 2895 TriD
+2784 2899 TriD
+2784 2899 TriD
+2784 2899 TriD
+2792 2913 TriD
+2796 2915 TriD
+2800 2919 TriD
+2811 2920 TriD
+2811 2920 TriD
+2811 2920 TriD
+2811 2920 TriD
+2821 2938 TriD
+2825 2940 TriD
+2834 2943 TriD
+2834 2942 TriD
+2839 2947 TriD
+2843 2947 TriD
+2849 2950 TriD
+2853 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2869 2950 TriD
+2885 2977 TriD
+2889 2978 TriD
+2895 2980 TriD
+2900 2983 TriD
+2906 2983 TriD
+2906 2983 TriD
+2912 2986 TriD
+2916 2986 TriD
+2920 2988 TriD
+2932 2989 TriD
+2932 2988 TriD
+2932 2988 TriD
+2932 2988 TriD
+2945 2994 TriD
+2951 2995 TriD
+2956 2996 TriD
+2966 2997 TriD
+2966 2996 TriD
+2966 2996 TriD
+2974 2999 TriD
+2978 2999 TriD
+2987 3000 TriD
+2987 3000 TriD
+2995 3001 TriD
+3002 3002 TriD
+3002 3001 TriD
+3007 3002 TriD
+3012 3001 TriD
+3020 3002 TriD
+3027 3002 TriD
+3032 3002 TriD
+3036 3002 TriD
+3039 3002 TriD
+3042 3002 TriD
+3045 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3079 3002 TriD
+3115 3252 TriD
+3118 3259 TriD
+3121 3267 TriD
+3125 3276 TriD
+3130 3286 TriD
+3136 3297 TriD
+3143 3310 TriD
+3153 3325 TriD
+3153 3325 TriD
+3159 3340 TriD
+3166 3343 TriD
+3166 3343 TriD
+3174 3361 TriD
+3185 3364 TriD
+3185 3364 TriD
+3193 3384 TriD
+3197 3386 TriD
+3202 3390 TriD
+3213 3392 TriD
+3213 3392 TriD
+3213 3392 TriD
+3223 3415 TriD
+3227 3417 TriD
+3235 3420 TriD
+3235 3420 TriD
+3243 3426 TriD
+3248 3429 TriD
+3264 3429 TriD
+3264 3429 TriD
+3264 3429 TriD
+3264 3429 TriD
+3264 3429 TriD
+3279 3460 TriD
+3283 3462 TriD
+3290 3465 TriD
+3296 3469 TriD
+3306 3474 TriD
+3306 3470 TriD
+3306 3470 TriD
+3317 3478 TriD
+3325 3479 TriD
+3325 3479 TriD
+3336 3481 TriD
+3343 3482 TriD
+3347 3482 TriD
+3351 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3374 3482 TriD
+3398 3526 TriD
+3402 3528 TriD
+3407 3531 TriD
+3414 3534 TriD
+3420 3538 TriD
+3426 3538 TriD
+3426 3538 TriD
+3435 3543 TriD
+3448 3543 TriD
+3448 3543 TriD
+3448 3543 TriD
+3460 3550 TriD
+3467 3551 TriD
+3467 3551 TriD
+3476 3552 TriD
+3481 3552 TriD
+3501 3552 TriD
+3501 3552 TriD
+3501 3552 TriD
+3501 3552 TriD
+3501 3552 TriD
+3518 3564 TriD
+3522 3565 TriD
+3528 3566 TriD
+3533 3567 TriD
+3540 3567 TriD
+3540 3567 TriD
+3551 3569 TriD
+3556 3570 TriD
+3571 3570 TriD
+3571 3570 TriD
+3571 3570 TriD
+3571 3570 TriD
+3584 3574 TriD
+3588 3572 TriD
+3595 3573 TriD
+3602 3573 TriD
+3615 3576 TriD
+3615 3573 TriD
+3615 3573 TriD
+3627 3575 TriD
+3632 3575 TriD
+3637 3576 TriD
+3646 3576 TriD
+3646 3575 TriD
+3659 3576 TriD
+3669 3576 TriD
+3669 3576 TriD
+3678 3576 TriD
+3686 3576 TriD
+3686 3576 TriD
+3694 3576 TriD
+3700 3576 TriD
+3700 3576 TriD
+3711 3576 TriD
+3720 3576 TriD
+3728 3576 TriD
+3735 3576 TriD
+3740 3576 TriD
+3745 3576 TriD
+3749 3576 TriD
+3753 3576 TriD
+3757 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3817 3576 TriD
+3839 3860 TriD
+3839 3862 TriD
+3840 3865 TriD
+3840 3868 TriD
+3841 3871 TriD
+3841 3874 TriD
+3842 3877 TriD
+3843 3880 TriD
+3843 3883 TriD
+3844 3887 TriD
+3844 3890 TriD
+3845 3894 TriD
+3846 3897 TriD
+3847 3901 TriD
+3848 3905 TriD
+3849 3909 TriD
+3850 3914 TriD
+3851 3918 TriD
+3852 3923 TriD
+3853 3928 TriD
+3854 3933 TriD
+3855 3939 TriD
+3857 3944 TriD
+3858 3950 TriD
+3860 3956 TriD
+3862 3963 TriD
+3862 3963 TriD
+3864 3970 TriD
+3864 3970 TriD
+3866 3977 TriD
+3866 3977 TriD
+3868 3985 TriD
+3868 3985 TriD
+3870 3994 TriD
+3870 3994 TriD
+3873 4003 TriD
+3873 4003 TriD
+3876 4012 TriD
+3876 4012 TriD
+3880 4022 TriD
+3880 4022 TriD
+3884 4033 TriD
+3884 4033 TriD
+3884 4033 TriD
+3888 4045 TriD
+3888 4045 TriD
+3888 4045 TriD
+3893 4058 TriD
+3893 4058 TriD
+3893 4058 TriD
+3898 4073 TriD
+3898 4073 TriD
+3898 4073 TriD
+3905 4088 TriD
+3905 4088 TriD
+3905 4088 TriD
+3905 4088 TriD
+3913 4106 TriD
+3913 4106 TriD
+3913 4106 TriD
+3913 4106 TriD
+3922 4125 TriD
+3922 4125 TriD
+3922 4125 TriD
+3922 4125 TriD
+3933 4147 TriD
+3933 4147 TriD
+3933 4147 TriD
+3933 4147 TriD
+3933 4147 TriD
+3939 4169 TriD
+3947 4172 TriD
+3947 4172 TriD
+3947 4172 TriD
+3947 4172 TriD
+3947 4172 TriD
+3955 4197 TriD
+3964 4201 TriD
+3964 4201 TriD
+3964 4201 TriD
+3964 4201 TriD
+3964 4201 TriD
+3964 4201 TriD
+3974 4231 TriD
+3987 4235 TriD
+3987 4235 TriD
+3987 4235 TriD
+3987 4235 TriD
+3987 4235 TriD
+3987 4235 TriD
+3987 4235 TriD
+4001 4271 TriD
+4006 4276 TriD
+4018 4276 TriD
+4018 4276 TriD
+4018 4276 TriD
+4018 4276 TriD
+4018 4276 TriD
+4018 4276 TriD
+4018 4276 TriD
+4018 4276 TriD
+4018 4276 TriD
+4031 4316 TriD
+4038 4320 TriD
+4045 4327 TriD
+4062 4327 TriD
+4062 4327 TriD
+4062 4327 TriD
+4062 4327 TriD
+4062 4327 TriD
+4062 4327 TriD
+4062 4327 TriD
+4062 4327 TriD
+4062 4327 TriD
+4062 4327 TriD
+4062 4327 TriD
+4077 4374 TriD
+4082 4378 TriD
+4093 4383 TriD
+4093 4383 TriD
+4105 4390 TriD
+4111 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4132 4392 TriD
+4152 4452 TriD
+4157 4456 TriD
+4166 4461 TriD
+4173 4468 TriD
+4185 4469 TriD
+4185 4469 TriD
+4198 4478 TriD
+4207 4482 TriD
+4207 4479 TriD
+4219 4482 TriD
+4226 4482 TriD
+4231 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4259 4482 TriD
+4286 4561 TriD
+4290 4565 TriD
+4297 4570 TriD
+4308 4576 TriD
+4316 4584 TriD
+4327 4585 TriD
+4327 4585 TriD
+4337 4594 TriD
+4343 4595 TriD
+4350 4597 TriD
+4369 4597 TriD
+4369 4597 TriD
+4369 4597 TriD
+4369 4597 TriD
+4390 4612 TriD
+4398 4613 TriD
+4406 4615 TriD
+4420 4618 TriD
+4420 4617 TriD
+4420 4615 TriD
+4436 4618 TriD
+4448 4618 TriD
+4448 4618 TriD
+4459 4618 TriD
+4467 4618 TriD
+4480 4618 TriD
+4490 4618 TriD
+4497 4618 TriD
+4503 4618 TriD
+4508 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4554 4618 TriD
+4568 4708 TriD
+4569 4709 TriD
+4569 4710 TriD
+4570 4711 TriD
+4570 4712 TriD
+4571 4714 TriD
+4572 4715 TriD
+4572 4716 TriD
+4573 4718 TriD
+4574 4719 TriD
+4575 4721 TriD
+4576 4722 TriD
+4577 4724 TriD
+4578 4726 TriD
+4579 4728 TriD
+4580 4730 TriD
+4582 4732 TriD
+4584 4735 TriD
+4584 4735 TriD
+4586 4737 TriD
+4586 4737 TriD
+4588 4740 TriD
+4588 4740 TriD
+4591 4743 TriD
+4591 4743 TriD
+4594 4747 TriD
+4594 4747 TriD
+4597 4750 TriD
+4597 4750 TriD
+4601 4754 TriD
+4601 4754 TriD
+4601 4754 TriD
+4606 4759 TriD
+4606 4759 TriD
+4606 4759 TriD
+4613 4764 TriD
+4613 4764 TriD
+4613 4764 TriD
+4613 4764 TriD
+4621 4769 TriD
+4621 4769 TriD
+4621 4769 TriD
+4621 4769 TriD
+4631 4776 TriD
+4631 4776 TriD
+4631 4776 TriD
+4631 4776 TriD
+4631 4776 TriD
+4646 4783 TriD
+4646 4783 TriD
+4646 4783 TriD
+4646 4783 TriD
+4646 4783 TriD
+4646 4783 TriD
+4655 4791 TriD
+4667 4792 TriD
+4667 4792 TriD
+4667 4792 TriD
+4667 4792 TriD
+4667 4792 TriD
+4667 4792 TriD
+4667 4792 TriD
+4682 4802 TriD
+4701 4804 TriD
+4701 4804 TriD
+4701 4804 TriD
+4701 4804 TriD
+4701 4804 TriD
+4701 4804 TriD
+4701 4804 TriD
+4701 4804 TriD
+4701 4804 TriD
+4701 4804 TriD
+4717 4815 TriD
+4727 4816 TriD
+4738 4818 TriD
+4744 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4764 4818 TriD
+4790 4832 TriD
+4799 4834 TriD
+4808 4835 TriD
+4822 4835 TriD
+4822 4835 TriD
+4837 4838 TriD
+4849 4838 TriD
+4849 4838 TriD
+4864 4838 TriD
+4874 4838 TriD
+4881 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4922 4838 TriD
+4934 4853 TriD
+4934 4853 TriD
+4935 4853 TriD
+4935 4853 TriD
+4936 4853 TriD
+4937 4854 TriD
+4937 4854 TriD
+4938 4854 TriD
+4939 4855 TriD
+4940 4855 TriD
+4942 4855 TriD
+4943 4856 TriD
+4945 4856 TriD
+4945 4856 TriD
+4947 4857 TriD
+4947 4857 TriD
+4949 4857 TriD
+4949 4857 TriD
+4952 4858 TriD
+4952 4858 TriD
+4956 4858 TriD
+4956 4858 TriD
+4956 4858 TriD
+4960 4859 TriD
+4960 4859 TriD
+4960 4859 TriD
+4966 4860 TriD
+4966 4860 TriD
+4966 4860 TriD
+4966 4860 TriD
+4975 4861 TriD
+4975 4861 TriD
+4975 4861 TriD
+4975 4861 TriD
+4987 4862 TriD
+4987 4862 TriD
+4987 4862 TriD
+4987 4862 TriD
+4987 4862 TriD
+5007 4863 TriD
+5007 4863 TriD
+5007 4863 TriD
+5007 4863 TriD
+5007 4863 TriD
+5007 4863 TriD
+5007 4863 TriD
+5023 4865 TriD
+5045 4865 TriD
+5045 4865 TriD
+5045 4865 TriD
+5045 4865 TriD
+5045 4865 TriD
+5045 4865 TriD
+5045 4865 TriD
+5045 4865 TriD
+5045 4865 TriD
+5045 4865 TriD
+5045 4865 TriD
+5066 4871 TriD
+5080 4867 TriD
+5097 4871 TriD
+5107 4871 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5143 4867 TriD
+5153 4869 TriD
+5153 4869 TriD
+5154 4869 TriD
+5154 4869 TriD
+5155 4869 TriD
+5156 4869 TriD
+5157 4869 TriD
+5158 4869 TriD
+5159 4869 TriD
+5161 4869 TriD
+5163 4870 TriD
+5163 4870 TriD
+5165 4870 TriD
+5165 4870 TriD
+5168 4870 TriD
+5168 4870 TriD
+5172 4870 TriD
+5172 4870 TriD
+5172 4870 TriD
+5177 4870 TriD
+5177 4870 TriD
+5177 4870 TriD
+5186 4870 TriD
+5186 4870 TriD
+5186 4870 TriD
+5186 4870 TriD
+5199 4870 TriD
+5199 4870 TriD
+5199 4870 TriD
+5199 4870 TriD
+5199 4870 TriD
+5199 4870 TriD
+5224 4870 TriD
+5224 4870 TriD
+5224 4870 TriD
+5224 4870 TriD
+5224 4870 TriD
+5224 4870 TriD
+5224 4870 TriD
+5224 4870 TriD
+5224 4870 TriD
+5247 4871 TriD
+5259 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5291 4871 TriD
+5298 4871 TriD
+5299 4871 TriD
+5300 4871 TriD
+5300 4871 TriD
+5301 4871 TriD
+5302 4871 TriD
+5303 4871 TriD
+5304 4871 TriD
+5306 4871 TriD
+5306 4871 TriD
+5308 4871 TriD
+5308 4871 TriD
+5311 4871 TriD
+5311 4871 TriD
+5315 4871 TriD
+5315 4871 TriD
+5315 4871 TriD
+5320 4871 TriD
+5320 4871 TriD
+5320 4871 TriD
+5320 4871 TriD
+5330 4871 TriD
+5330 4871 TriD
+5330 4871 TriD
+5330 4871 TriD
+5330 4871 TriD
+5348 4871 TriD
+5348 4871 TriD
+5348 4871 TriD
+5348 4871 TriD
+5348 4871 TriD
+5348 4871 TriD
+5348 4871 TriD
+5365 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5396 4871 TriD
+5403 4871 TriD
+5403 4871 TriD
+5404 4871 TriD
+5404 4871 TriD
+5405 4871 TriD
+5406 4871 TriD
+5407 4871 TriD
+5409 4871 TriD
+5409 4871 TriD
+5411 4871 TriD
+5411 4871 TriD
+5414 4871 TriD
+5414 4871 TriD
+5418 4871 TriD
+5418 4871 TriD
+5418 4871 TriD
+5425 4871 TriD
+5425 4871 TriD
+5425 4871 TriD
+5425 4871 TriD
+5438 4871 TriD
+5438 4871 TriD
+5438 4871 TriD
+5438 4871 TriD
+5438 4871 TriD
+5438 4871 TriD
+5451 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5475 4871 TriD
+5481 4871 TriD
+5481 4871 TriD
+5482 4871 TriD
+5483 4871 TriD
+5484 4871 TriD
+5485 4871 TriD
+5486 4871 TriD
+5486 4871 TriD
+5489 4871 TriD
+5489 4871 TriD
+5492 4871 TriD
+5492 4871 TriD
+5492 4871 TriD
+5497 4871 TriD
+5497 4871 TriD
+5497 4871 TriD
+5497 4871 TriD
+5508 4871 TriD
+5508 4871 TriD
+5508 4871 TriD
+5508 4871 TriD
+5508 4871 TriD
+5537 4871 TriD
+5537 4871 TriD
+5537 4871 TriD
+5537 4871 TriD
+5537 4871 TriD
+5537 4871 TriD
+5537 4871 TriD
+5537 4871 TriD
+5537 4871 TriD
+5537 4871 TriD
+5537 4871 TriD
+5541 4871 TriD
+5542 4871 TriD
+5543 4871 TriD
+5543 4871 TriD
+5544 4871 TriD
+5545 4871 TriD
+5547 4871 TriD
+5547 4871 TriD
+5550 4871 TriD
+5550 4871 TriD
+5554 4871 TriD
+5554 4871 TriD
+5554 4871 TriD
+5562 4871 TriD
+5562 4871 TriD
+5562 4871 TriD
+5562 4871 TriD
+5562 4871 TriD
+5586 4871 TriD
+5586 4871 TriD
+5586 4871 TriD
+5586 4871 TriD
+5586 4871 TriD
+5586 4871 TriD
+5586 4871 TriD
+5586 4871 TriD
+5586 4871 TriD
+5586 4871 TriD
+5591 4871 TriD
+5591 4871 TriD
+5592 4871 TriD
+5593 4871 TriD
+5594 4871 TriD
+5596 4871 TriD
+5596 4871 TriD
+5600 4871 TriD
+5600 4871 TriD
+5600 4871 TriD
+5607 4871 TriD
+5607 4871 TriD
+5607 4871 TriD
+5607 4871 TriD
+5626 4871 TriD
+5626 4871 TriD
+5626 4871 TriD
+5626 4871 TriD
+5626 4871 TriD
+5626 4871 TriD
+5626 4871 TriD
+5626 4871 TriD
+5626 4871 TriD
+5630 4871 TriD
+5630 4871 TriD
+5631 4871 TriD
+5632 4871 TriD
+5633 4871 TriD
+5635 4871 TriD
+5635 4871 TriD
+5638 4871 TriD
+5638 4871 TriD
+5643 4871 TriD
+5643 4871 TriD
+5643 4871 TriD
+5643 4871 TriD
+5659 4871 TriD
+5659 4871 TriD
+5659 4871 TriD
+5659 4871 TriD
+5659 4871 TriD
+5659 4871 TriD
+5659 4871 TriD
+5659 4871 TriD
+5663 4871 TriD
+5664 4871 TriD
+5664 4871 TriD
+5665 4871 TriD
+5667 4871 TriD
+5667 4871 TriD
+5669 4871 TriD
+5669 4871 TriD
+5674 4871 TriD
+5674 4871 TriD
+5674 4871 TriD
+5674 4871 TriD
+5688 4871 TriD
+5688 4871 TriD
+5688 4871 TriD
+5688 4871 TriD
+5688 4871 TriD
+5688 4871 TriD
+5688 4871 TriD
+5691 4871 TriD
+5692 4871 TriD
+5693 4871 TriD
+5694 4871 TriD
+5696 4871 TriD
+5696 4871 TriD
+5700 4871 TriD
+5700 4871 TriD
+5700 4871 TriD
+5712 4871 TriD
+5712 4871 TriD
+5712 4871 TriD
+5712 4871 TriD
+5712 4871 TriD
+5712 4871 TriD
+5712 4871 TriD
+5715 4871 TriD
+5716 4871 TriD
+5717 4871 TriD
+5718 4871 TriD
+5719 4871 TriD
+5719 4871 TriD
+5723 4871 TriD
+5723 4871 TriD
+5723 4871 TriD
+5733 4871 TriD
+5733 4871 TriD
+5733 4871 TriD
+5733 4871 TriD
+5733 4871 TriD
+5733 4871 TriD
+5736 4871 TriD
+5737 4871 TriD
+5738 4871 TriD
+5740 4871 TriD
+5740 4871 TriD
+5743 4871 TriD
+5743 4871 TriD
+5743 4871 TriD
+5752 4871 TriD
+5752 4871 TriD
+5752 4871 TriD
+5752 4871 TriD
+5752 4871 TriD
+5752 4871 TriD
+5754 4871 TriD
+5755 4871 TriD
+5756 4871 TriD
+5757 4871 TriD
+5757 4871 TriD
+5760 4871 TriD
+5760 4871 TriD
+5760 4871 TriD
+5768 4871 TriD
+5768 4871 TriD
+5768 4871 TriD
+5768 4871 TriD
+5768 4871 TriD
+5771 4871 TriD
+5772 4871 TriD
+5773 4871 TriD
+5775 4871 TriD
+5775 4871 TriD
+5782 4871 TriD
+5782 4871 TriD
+5782 4871 TriD
+5782 4871 TriD
+5782 4871 TriD
+5785 4871 TriD
+5786 4871 TriD
+5787 4871 TriD
+5789 4871 TriD
+5789 4871 TriD
+5795 4871 TriD
+5795 4871 TriD
+5795 4871 TriD
+5795 4871 TriD
+5795 4871 TriD
+5798 4871 TriD
+5798 4871 TriD
+5799 4871 TriD
+5801 4871 TriD
+5801 4871 TriD
+5807 4871 TriD
+5807 4871 TriD
+5807 4871 TriD
+5807 4871 TriD
+5807 4871 TriD
+5810 4871 TriD
+5810 4871 TriD
+5812 4871 TriD
+5812 4871 TriD
+5817 4871 TriD
+5817 4871 TriD
+5817 4871 TriD
+5817 4871 TriD
+5820 4871 TriD
+5821 4871 TriD
+5822 4871 TriD
+5822 4871 TriD
+5827 4871 TriD
+5827 4871 TriD
+5827 4871 TriD
+5827 4871 TriD
+5829 4871 TriD
+5830 4871 TriD
+5831 4871 TriD
+5831 4871 TriD
+5836 4871 TriD
+5836 4871 TriD
+5836 4871 TriD
+5836 4871 TriD
+5838 4871 TriD
+5838 4871 TriD
+5840 4871 TriD
+5840 4871 TriD
+5844 4871 TriD
+5844 4871 TriD
+5844 4871 TriD
+5844 4871 TriD
+5846 4871 TriD
+5846 4871 TriD
+5847 4871 TriD
+5847 4871 TriD
+5851 4871 TriD
+5851 4871 TriD
+5851 4871 TriD
+5851 4871 TriD
+5853 4871 TriD
+5855 4871 TriD
+5858 4871 TriD
+5858 4871 TriD
+5858 4871 TriD
+5860 4871 TriD
+5861 4871 TriD
+5864 4871 TriD
+5864 4871 TriD
+5864 4871 TriD
+5866 4871 TriD
+5867 4871 TriD
+5870 4871 TriD
+5870 4871 TriD
+5870 4871 TriD
+5872 4871 TriD
+5873 4871 TriD
+5875 4871 TriD
+5875 4871 TriD
+5875 4871 TriD
+5877 4871 TriD
+5878 4871 TriD
+5881 4871 TriD
+5881 4871 TriD
+5881 4871 TriD
+5882 4871 TriD
+5883 4871 TriD
+5885 4871 TriD
+5885 4871 TriD
+5885 4871 TriD
+5887 4871 TriD
+5888 4871 TriD
+5890 4871 TriD
+5890 4871 TriD
+5890 4871 TriD
+5891 4871 TriD
+5892 4871 TriD
+5894 4871 TriD
+5894 4871 TriD
+5894 4871 TriD
+5895 4871 TriD
+5896 4871 TriD
+5898 4871 TriD
+5898 4871 TriD
+5900 4871 TriD
+5902 4871 TriD
+5902 4871 TriD
+5903 4871 TriD
+5905 4871 TriD
+5905 4871 TriD
+5907 4871 TriD
+5908 4871 TriD
+5908 4871 TriD
+5910 4871 TriD
+5912 4871 TriD
+5912 4871 TriD
+5913 4871 TriD
+5915 4871 TriD
+5915 4871 TriD
+5916 4871 TriD
+5917 4871 TriD
+5917 4871 TriD
+5919 4871 TriD
+5920 4871 TriD
+5920 4871 TriD
+5921 4871 TriD
+5923 4871 TriD
+5923 4871 TriD
+5924 4871 TriD
+5925 4871 TriD
+5925 4871 TriD
+5926 4871 TriD
+5927 4871 TriD
+5927 4871 TriD
+5929 4871 TriD
+5930 4871 TriD
+5930 4871 TriD
+5931 4871 TriD
+5932 4871 TriD
+5932 4871 TriD
+5933 4871 TriD
+5934 4871 TriD
+5934 4871 TriD
+5935 4871 TriD
+5936 4871 TriD
+5936 4871 TriD
+5937 4871 TriD
+5938 4871 TriD
+5938 4871 TriD
+5939 4871 TriD
+5940 4871 TriD
+5940 4871 TriD
+5941 4871 TriD
+5943 4871 TriD
+5945 4871 TriD
+5946 4871 TriD
+5948 4871 TriD
+5949 4871 TriD
+5950 4871 TriD
+5952 4871 TriD
+5953 4871 TriD
+5954 4871 TriD
+5955 4871 TriD
+5957 4871 TriD
+5958 4871 TriD
+5959 4871 TriD
+5960 4871 TriD
+5961 4871 TriD
+5962 4871 TriD
+5963 4871 TriD
+5964 4871 TriD
+5965 4871 TriD
+5966 4871 TriD
+5967 4871 TriD
+5967 4871 TriD
+5968 4871 TriD
+5969 4871 TriD
+5970 4871 TriD
+5971 4871 TriD
+5971 4871 TriD
+5972 4871 TriD
+5973 4871 TriD
+5973 4871 TriD
+5974 4871 TriD
+5975 4871 TriD
+5975 4871 TriD
+5976 4871 TriD
+5977 4871 TriD
+5977 4871 TriD
+5978 4871 TriD
+5978 4871 TriD
+5979 4871 TriD
+5979 4871 TriD
+5980 4871 TriD
+5980 4871 TriD
+5981 4871 TriD
+5981 4871 TriD
+5982 4871 TriD
+5982 4871 TriD
+5983 4871 TriD
+5983 4871 TriD
+5984 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+6028 4871 TriD
+% End plot #2
+1.000 UL
+LTb
+LCb setrgbcolor
+1605 4871 N
+0 -4423 V
+4423 0 V
+0 4423 V
+-4423 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica
+%%Pages: 1

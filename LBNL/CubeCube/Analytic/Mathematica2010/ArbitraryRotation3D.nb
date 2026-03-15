@@ -1,0 +1,269 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      7804,        259]
+NotebookOptionsPosition[      6811,        224]
+NotebookOutlinePosition[      7338,        244]
+CellTagsIndexPosition[      7295,        241]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"m11", ":=", 
+  RowBox[{
+   RowBox[{"v1", "^", "2"}], "+", 
+   RowBox[{"Cos", "[", "t", "]"}], "-", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], 
+    RowBox[{"v1", "^", "2"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.539641996664845*^9, 3.539642019811927*^9}}],
+
+Cell[BoxData[
+ RowBox[{"m12", ":=", 
+  RowBox[{
+   RowBox[{"v1", " ", "v2"}], "-", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], "v1", " ", "v2"}], "+", 
+   RowBox[{
+    RowBox[{"Sin", "[", "t", "]"}], "v3"}]}]}]], "Input",
+ CellChangeTimes->{{3.539642023945702*^9, 3.539642043125646*^9}, 
+   3.539642081008308*^9}],
+
+Cell[BoxData[
+ RowBox[{"m13", ":=", 
+  RowBox[{
+   RowBox[{"v1", " ", "v3"}], "-", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], "v1", " ", "v3"}], "-", 
+   RowBox[{
+    RowBox[{"Sin", "[", "t", "]"}], "v2"}]}]}]], "Input",
+ CellChangeTimes->{{3.539642045978243*^9, 3.539642076623291*^9}}],
+
+Cell[BoxData[
+ RowBox[{"m21", ":=", 
+  RowBox[{
+   RowBox[{"v1", " ", "v2"}], "-", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], "v1", " ", "v2"}], "-", 
+   RowBox[{
+    RowBox[{"Sin", "[", "t", "]"}], "v3"}]}]}]], "Input",
+ CellChangeTimes->{{3.5396420888495617`*^9, 3.539642110563483*^9}}],
+
+Cell[BoxData[
+ RowBox[{"m22", ":=", 
+  RowBox[{
+   RowBox[{"v2", "^", "2"}], "+", 
+   RowBox[{"Cos", "[", "t", "]"}], "-", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], 
+    RowBox[{"v2", "^", "2"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.5396421135256987`*^9, 3.539642129286173*^9}, {
+  3.5396422308862123`*^9, 3.53964223206481*^9}}],
+
+Cell[BoxData[
+ RowBox[{"m23", ":=", 
+  RowBox[{
+   RowBox[{"v2", " ", "v3"}], "-", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], "v2", " ", "v3"}], "+", 
+   RowBox[{
+    RowBox[{"Sin", "[", "t", "]"}], "v1"}]}]}]], "Input",
+ CellChangeTimes->{{3.539642133026429*^9, 3.539642157100358*^9}}],
+
+Cell[BoxData[
+ RowBox[{"m31", ":=", 
+  RowBox[{
+   RowBox[{"v1", " ", "v3"}], "-", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], "v1", " ", "v3"}], "+", 
+   RowBox[{
+    RowBox[{"Sin", "[", "t", "]"}], "v2"}]}]}]], "Input",
+ CellChangeTimes->{{3.5396421680265503`*^9, 3.539642184997661*^9}}],
+
+Cell[BoxData[
+ RowBox[{"m32", ":=", 
+  RowBox[{
+   RowBox[{"v2", " ", "v3"}], "-", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], "v2", " ", "v3"}], "-", 
+   RowBox[{
+    RowBox[{"Sin", "[", "t", "]"}], "v1"}]}]}]], "Input",
+ CellChangeTimes->{{3.539642188830797*^9, 3.5396422064931793`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"m33", ":=", 
+  RowBox[{
+   RowBox[{"v3", "^", "2"}], "+", 
+   RowBox[{"Cos", "[", "t", "]"}], "-", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], 
+    RowBox[{"v3", "^", "2"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.539642216636302*^9, 3.53964224385991*^9}}],
+
+Cell[BoxData[
+ RowBox[{"mt", ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"m11", ",", "m12", ",", "m13"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"m21", ",", "m22", ",", "m23"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"m31", ",", "m32", ",", "m33"}], "}"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.53964224606491*^9, 3.539642278644024*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"mt", "//", "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.5396422818081903`*^9, 3.539642286269178*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{
+       SuperscriptBox["v1", "2"], "+", 
+       RowBox[{"Cos", "[", "t", "]"}], "-", 
+       RowBox[{
+        SuperscriptBox["v1", "2"], " ", 
+        RowBox[{"Cos", "[", "t", "]"}]}]}], 
+      RowBox[{
+       RowBox[{"v1", " ", "v2"}], "-", 
+       RowBox[{"v1", " ", "v2", " ", 
+        RowBox[{"Cos", "[", "t", "]"}]}], "+", 
+       RowBox[{"v3", " ", 
+        RowBox[{"Sin", "[", "t", "]"}]}]}], 
+      RowBox[{
+       RowBox[{"v1", " ", "v3"}], "-", 
+       RowBox[{"v1", " ", "v3", " ", 
+        RowBox[{"Cos", "[", "t", "]"}]}], "-", 
+       RowBox[{"v2", " ", 
+        RowBox[{"Sin", "[", "t", "]"}]}]}]},
+     {
+      RowBox[{
+       RowBox[{"v1", " ", "v2"}], "-", 
+       RowBox[{"v1", " ", "v2", " ", 
+        RowBox[{"Cos", "[", "t", "]"}]}], "-", 
+       RowBox[{"v3", " ", 
+        RowBox[{"Sin", "[", "t", "]"}]}]}], 
+      RowBox[{
+       SuperscriptBox["v2", "2"], "+", 
+       RowBox[{"Cos", "[", "t", "]"}], "-", 
+       RowBox[{
+        SuperscriptBox["v2", "2"], " ", 
+        RowBox[{"Cos", "[", "t", "]"}]}]}], 
+      RowBox[{
+       RowBox[{"v2", " ", "v3"}], "-", 
+       RowBox[{"v2", " ", "v3", " ", 
+        RowBox[{"Cos", "[", "t", "]"}]}], "+", 
+       RowBox[{"v1", " ", 
+        RowBox[{"Sin", "[", "t", "]"}]}]}]},
+     {
+      RowBox[{
+       RowBox[{"v1", " ", "v3"}], "-", 
+       RowBox[{"v1", " ", "v3", " ", 
+        RowBox[{"Cos", "[", "t", "]"}]}], "+", 
+       RowBox[{"v2", " ", 
+        RowBox[{"Sin", "[", "t", "]"}]}]}], 
+      RowBox[{
+       RowBox[{"v2", " ", "v3"}], "-", 
+       RowBox[{"v2", " ", "v3", " ", 
+        RowBox[{"Cos", "[", "t", "]"}]}], "-", 
+       RowBox[{"v1", " ", 
+        RowBox[{"Sin", "[", "t", "]"}]}]}], 
+      RowBox[{
+       SuperscriptBox["v3", "2"], "+", 
+       RowBox[{"Cos", "[", "t", "]"}], "-", 
+       RowBox[{
+        SuperscriptBox["v3", "2"], " ", 
+        RowBox[{"Cos", "[", "t", "]"}]}]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.539642287350024*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   RowBox[{"Det", "[", "mt", "]"}], ",", 
+   RowBox[{"Assumptions", "\[Rule]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"v1", "^", "2"}], "+", 
+      RowBox[{"v2", "^", "2"}], "+", 
+      RowBox[{"v3", "^", "2"}]}], "\[Equal]", "1"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.539642300279258*^9, 3.539642336355486*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{{3.539642302780034*^9, 3.539642337392743*^9}}]
+}, Open  ]]
+},
+WindowSize->{1220, 1040},
+WindowMargins->{{143, Automatic}, {Automatic, 30}},
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{611.28, 789.57},
+"PostScriptOutputFile"->"Untitled-1.ps"},
+FrontEndVersion->"7.0 for Linux x86 (64-bit) (February 25, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 284, 8, 38, "Input"],
+Cell[832, 30, 318, 9, 38, "Input"],
+Cell[1153, 41, 292, 8, 38, "Input"],
+Cell[1448, 51, 294, 8, 38, "Input"],
+Cell[1745, 61, 336, 9, 38, "Input"],
+Cell[2084, 72, 292, 8, 38, "Input"],
+Cell[2379, 82, 294, 8, 38, "Input"],
+Cell[2676, 92, 294, 8, 38, "Input"],
+Cell[2973, 102, 283, 8, 38, "Input"],
+Cell[3259, 112, 374, 10, 38, "Input"],
+Cell[CellGroupData[{
+Cell[3658, 126, 128, 2, 38, "Input"],
+Cell[3789, 130, 2498, 73, 100, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6324, 208, 374, 10, 38, "Input"],
+Cell[6701, 220, 94, 1, 38, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

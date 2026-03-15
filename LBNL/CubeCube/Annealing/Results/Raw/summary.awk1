@@ -1,0 +1,5 @@
+{
+  if (NF >= 3) {
+    print $0,count
+  }
+}

@@ -1,0 +1,13 @@
+best.vertices.improve01.300/run.%: best.vertices.raw/run.%
+	@n=`echo $@ | sed -e 's/^.*\.//g'`;             \
+	 m=`echo $@ | sed -e 's/^.*\.\(.*\)\..*/\1/g'`; \
+	 echo $$m $$n;                                  \
+	 echo --- improve1 ---;                         \
+	 improve1 $$m $$n < $? > $@
+
+best.vertices.gradientRelax.300/run.%: best.vertices.improve01.300/run.%
+	@n=`echo $@ | sed -e 's/^.*\.//g'`;             \
+	 m=`echo $@ | sed -e 's/^.*\.\(.*\)\..*/\1/g'`; \
+	 t=`expr $$n + 4`;                              \
+	 echo $$m $$n;                                  \
+	 gradientRelax $$m $$n < $? | tail -$$t > $@

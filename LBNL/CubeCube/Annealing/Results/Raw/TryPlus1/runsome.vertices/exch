@@ -1,0 +1,2 @@
+#!/bin/csh -f
+awk -f exch.awk i=$1 j=$2 $argv[3-]

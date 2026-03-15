@@ -1,0 +1,21 @@
+grids.max_level = 0
+
+grids.max_box_size = 16
+
+grids.block_factor = 8
+grids.fill_ratio   = 0.8
+
+grids.ref_ratio = 2 2 2 2 2 2
+
+# grids.num_cells =   32  16  16
+# grids.num_cells =   64  32  32
+# grids.num_cells =  128  64  64
+# grids.num_cells =  256 128 128
+grids.num_cells =  512 256 256
+# grids.num_cells = 1024 512 512
+
+# units of PI*radians
+# grids.domain_origin =  0.00  0.00  0.00
+# grids.domain_size   =  2.00  2.00  2.00
+grids.domain_origin = -0.2500  0.0625  0.1250
+grids.domain_size   =  0.5000  0.2500  0.2500

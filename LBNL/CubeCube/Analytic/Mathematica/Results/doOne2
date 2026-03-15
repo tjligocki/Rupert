@@ -1,0 +1,11 @@
+#!/bin/csh -f
+set i = 1;
+while ($i < 100)
+  set ii=`echo $i | awk '{printf("%03d",$1);}'`
+  set jj=`echo $i | awk '{printf("%03d",$1+1);}'`
+  set f=case.$ii.$jj
+  echo $i $f
+  awk -f doOne2.awk < $f > doOne2.$$
+  mv -f doOne2.$$ $f
+  @ i++
+end

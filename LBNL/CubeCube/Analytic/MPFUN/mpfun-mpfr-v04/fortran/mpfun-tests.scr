@@ -1,0 +1,22 @@
+./complib2.scr
+echo "tpslq1"
+./complink2.scr tpslq1
+./tpslq1 > tpslq1.txt
+echo "tpslqm1"
+./complink2.scr tpslqm1
+./tpslqm1 > tpslqm1.txt
+echo "tpslqm2"
+./complink2.scr tpslqm2
+./tpslqm2 > tpslqm2.txt
+echo "tpslqm3"
+./complink2.scr tpslqm3
+./tpslqm3 > tpslqm3.txt
+echo "tquadts"
+./complink2.scr tquadts
+./tquadts > tquadts.txt
+echo "tquadtsp"
+./complink2.scr tquadtsp
+./tquadtsp > tquadtsp.txt
+echo "tpphix3"
+./complink2.scr tpphix3
+./tpphix3 > tpphix3.txt

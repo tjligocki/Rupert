@@ -1,0 +1,6 @@
+#!/bin/csh -f
+set tmp=/tmp/transverts$$
+getmatrix3 $2 > $tmp
+tail -2 $2 | head -1 >> $tmp
+awk -f transverts.awk m=$1 $tmp
+/bin/rm $tmp

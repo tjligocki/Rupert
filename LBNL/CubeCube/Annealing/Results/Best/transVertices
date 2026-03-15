@@ -1,0 +1,9 @@
+#!/bin/csh -f
+foreach i (best.matrices/run*)
+  set basename=`basename $i`
+  echo $basename
+  set n=$basename:e
+  set rest=$basename:r
+  set m=$rest:e
+  awk -v n=$n -v m=$m -f transVertices.awk $i > best.vertices/run.$m.$n
+end

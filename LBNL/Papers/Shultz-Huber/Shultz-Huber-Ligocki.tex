@@ -1,0 +1,73 @@
+\documentclass[12pt,titlepage]{article}
+
+\input{preamble.tex}
+
+\title{\bf Largest m-Cube in an n-Cube: \\
+       Partial Solution
+      }
+
+\author{Kay R. Pechenick DeVicci Shultz \\
+        \\
+        With a new preface by \\
+        Greg Huber \\
+        \\
+        Partial (re)typesetting by \\
+        Dr. Jing Yang \\
+        \\
+        Final, complete typesetting by \\
+        Terry J. Ligocki
+       }
+
+\begin{document}
+
+% \iffalse
+\maketitle
+
+\begin{abstract}
+We consider the problem of finding the largest m-dimensional cube (or
+m-cube) which fits into an n-dimensional cube of unit side. Let the side of
+this maximal m-cube be denoted by $f(m,n)$. We solve the problem completely
+for all cases where $m$ divides $n$, as well as for $m = 2$, with all odd
+values of $n$. The solution is essentially unique for these cases, and for
+$m$ divides $n$, $f(m,n) = \sqrt{n/m}$, while for $m = 2$, $n$ odd, $f(m,
+n) = \sqrt{(4n-3)/8}$. We also show that $f(3, 4) = \sqrt{x0}$, where $x0$
+is the (unique) real root of $4x^4-28x^3-7x^2+16x+16=0$ such that $1 < x0 <
+4/3$; thus $\sqrt{x0} \approx 1.007435$. We derive some inequalities involving
+$f(m,n)$ in general. We describe two general methods for attempting to solve
+the general problem, and we discuss some unanswered questions, including the
+relationship to Prince Rupert's problem.
+
+These results were all obtained by 1996; only the Table of Contents, the
+Preface and the Appendices were added in 2013, and this abstract was modified
+slightly. Finally, the entire paper was typeset in 2015.
+\end{abstract}
+
+\pagenumbering{gobble}
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\section*{Preface}
+\addcontentsline{toc}{section}{Preface}
+\input{preface.tex}
+\newpage
+
+\input{part1.tex}
+\newpage
+
+\input{part2.tex}
+\newpage
+
+\section*{Acknowledgments}
+\input{acknowledgments.tex}
+\newpage
+% \fi
+
+\appendix
+
+\input{appendices.tex}
+
+\bibliography{references}
+
+\end{document}

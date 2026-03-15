@@ -1,0 +1,3 @@
+#!/bin/csh -f
+cat ResultsFixedPoint.txt ResultsAnnealing.txt \
+| awk -f combine.awk

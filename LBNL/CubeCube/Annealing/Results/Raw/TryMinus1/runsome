@@ -1,0 +1,50 @@
+#!/bin/csh -f
+set REPORT = 500
+set SAVE   = 1000
+set TRIES  = 1000
+set RATE   = 0.0021604884327801591229336142377946275
+set argc = $#argv
+lockfile runsome.lock
+if (! -e runsome.line) then
+  set curline = 1
+  if ($argc >= 1) then
+      set curline = $1
+  endif
+else
+  set curline = `cat runsome.line`
+endif
+expr $curline + 1 > runsome.line
+/bin/rm -f runsome.lock
+set maxline = `cat runsome.list | wc -l`
+# /bin/rm -f runsome.results
+while ($curline <= $maxline)
+  set values = `/usr/bin/tail +$curline runsome.list | head -1`
+  set indim = $values[1]
+  set outdim = $values[2]
+  set multi = $values[3]
+  set SREPORT = `echo $REPORT $multi | awk '{printf("%d",$1*$2);}'`
+  set SSAVE   = `echo $SAVE   $multi | awk '{printf("%d",$1*$2);}'`
+  set STRIES  = `echo $TRIES  $multi | awk '{printf("%d",$1*$2);}'`
+  set SRATE   = `echo $RATE   $multi | awk '{printf("%33.31f",$1/$2);}'`
+  set lines = `echo "3 + ($outdim + 1)" | /usr/bin/bc`
+  set ext = `echo $indim $outdim | awk '{ printf("%03d.%03d",$1,$2); }'`
+  echo $indim $outdim
+  sed -e "s/OUTDIM/$outdim/"      \
+      -e "s/INDIM/$indim/"        \
+      -e "s/REPORT/$SREPORT/"     \
+      -e "s/SAVE/$SSAVE/"         \
+      -e "s/TRIES/$STRIES/"       \
+      -e "s/RATE/$SRATE/"         \
+      < runsome.param > runsome.temp
+  echo "$indim $outdim" | awk '{ printf("%3d %3d    ",$1,$2); }' >>! runsome.results
+  (../../Code/cube -p runsome.temp | tail -$lines > runsome.vertices/run.$ext) |& tee runsome.stats
+  awk 'NF == 4 { side = -$3; } \
+       END { printf("%20.17f\n",side); }' < runsome.stats \
+       >>! runsome.results
+  echo ""
+  lockfile runsome.lock
+  set curline = `cat runsome.line`
+  expr $curline + 1 > runsome.line
+  /bin/rm -f runsome.lock
+end
+/bin/rm -f runsome.temp runsome.stats

@@ -1,0 +1,1689 @@
+\section*{Part 2}
+\addcontentsline{toc}{section}{Part 2}
+
+\begin{center}
+Copyright \copyright~1996 by \\
+Kay R. DeVicci \\
+131 Haines Drive \\
+Moorestown, NJ  08057
+\end{center}
+
+Here we complete the work on the largest cube in a tesseract, proving that the
+previously found candidate is, in fact, the largest cube in a tesseract of
+unit side; this cube has a side of 1.0074..., as shown previously.
+
+We have to show that the remaining possibilities in the previous
+paper cannot be optimal. Fortunately, we can do this without having to
+solve large systems of simultaneous polynomial equations, so that a
+computer-assisted proof is not necessary.
+
+Previously we found that an optimal cube in a tesseract had to be
+one (or more) of the following cases:
+\begin{enumerate}
+\vspace{-0.1in}
+\item{No zeros in the V matrix}
+\label{case1}
+\vspace{-0.1in}
+\item{Exactly one zero}
+\label{case2}
+\vspace{-0.1in}
+\item{Exactly two zeros in the same row}
+\label{case3}
+\vspace{-0.1in}
+\item{Exactly two zeros in the same column}
+\label{case4}
+\vspace{-0.1in}
+\item{Exactly two zeros in neither the same row nor the same column}
+\label{case5}
+\vspace{-0.1in}
+\item{Exactly three zeros in a diagonal}
+\label{case6}
+\vspace{-0.1in}
+\item{Exactly three zeros in a triangle}
+\label{case7}
+\end{enumerate}
+Furthermore, in cases~\ref{case1} through \ref{case5}, and case~\ref{case7},
+the cube must be snug-fitting.  In case~\ref{case6}, the cube must either be
+snug-fitting or have 3 ``column-sums'' equal - the ones for the 3 columns
+containing a zero - and the remaining ``column-sum'' less than the others.
+Recall that what we all ``column-sum'' is actually a sum of absolute values.
+In all of these cases except \ref{case7}, we shall assume that the cube is
+optional and derive a contradiction.
+
+We shall find it convenient to normalize the $V$ matrix so that the maximum
+column-sum is 1.  Thus the three rows of $V$ will all have squared length
+$l^2$, where $l$ is the length of the side of the cube inscribed in a
+tesseract of unit side.
+
+We will need the following theorem:
+\begin{theorem}[Identical Columns]
+For a cube in a tesseract, if any two columns of $V$ are identical then the
+cube is no optimal.
+\label{refpage12}
+\end{theorem}
+\begin{proof}
+Assume that $V$ is normalized as above.  Assume that, say, columns 1 and 2 are
+identical.  That is, if $V$ is
+\begin{equation*}
+\begin{bmatrix}
+A & B & C & D \\
+F & G & H & J \\
+K & L & M & P
+\end{bmatrix}
+\end{equation*}
+then $A = B$, $F = G$, and $K = L$. We have already shown that an optimal cube
+cannot have a column of all zeros in $V$. Thus the inner product of the first
+two columns is positive. Now, let us add another row to $V$, such that the
+resulting 4x4 matrix, which we shall call $W$, is the scalar $l$ times an
+orthogonal matrix. Thus $W$ can be written as
+\begin{equation*}
+\begin{bmatrix}
+A & A & C & D \\
+F & F & H & J \\
+K & K & M & P \\
+w & x & y & z
+\end{bmatrix}
+\end{equation*}
+Since columns 1 and 2 of $W$ must be orthogonal and of equal squared
+length, $w$ and $x$ must be nonzero and $w = -x$. However, column 3 of $W$ must
+be orthogonal to both columns 1 and 2. This is possible only if $y = o$.
+However, the squared length of each column is $l^2$, which must be greater
+than 1 for optimality. Thus $C^2+H^2+M^2 = l^2$. But $|C|+|H|+|M| \leq 1$,
+and $C^2 \leq |C|$, and similarly for $H$ and $M$. Thus $l^2 \leq 1$, so the
+cube is not optimal.
+\end{proof}
+
+{\bf Case 1: All matrix elements of $V$ are nonzero.}
+\label{refpage13start}
+With no loss of generality,
+the first row and the first column may all be assumed positive ($A$, $B$,
+$C$, $D$, $F$, and $K$ are all $> 0$).  First we consider the
+case in which at least 2 columns have the same pattern of signs. Thus we
+may assume that $G$ and $L$ are also positive. $H$ and $J$ may not both be
+positive, for rows 1 and 2 must be orthogonal. The same applies to $M$ and
+$P$. Similarly, $H$ and $J$ cannot have the same pattern of signs as $M$ and
+$P$.  The only possibilities to consider, then, are: $J$, $M$, and $P$
+negative, all others positive; and just $J$ and $M$ negative, the rest positive.
+So we have:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
++ & + & + & + & ~~~~~~~~~ & + & + & + & + \\
++ & + & + & - & ~~~~~~~~~ & + & + & + & - \\
++ & + & - & - & ~~~~~~~~~ & + & + & - & +
+\end{array}
+\end{equation*}
+If in the second of these sub-cases, we multiply column 4 by -1 and then
+interchange rows 1 and 2, we get the first sub-case.  Thus the second is
+essentially equivalent to the first.  This first case was considered in Part 1
+of this paper (pages~\pageref{refpage1start} to \pageref{refpage1end}), where
+it was proved that, for optimality, columns 1 and 2 must be identical.  The
+\label{refpage13end}
+identical column theorem then shows that it cannot be optimal.
+
+We still have the sub-case to consider in which no two columns have the same
+\label{refpage14}
+pattern of signs:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
++ & + & + & + \\
++ & + & - & - \\
++ & - & + & -
+\end{array}
+\end{equation*}
+On pages~\pageref{refpage2start} and \pageref{refpage2end} in Part 1, we
+showed how to rule out this case.  Here we
+clarify the previous discussion.  The idea is to show that, if this is
+snug-fitting (so that all ``column=sums''  are equal to 1), then two columns
+can be rotated into each other such that both column-sums decrease.  Then
+this shows that this cube is the same size as a cube with only 2 maximal
+columns, and all such cubes were shown in Part 1 to be non-optimal.  We
+use Theorem ?2? (Part 1) to show that 2 column-sums can be decreased
+without affecting any of the others. It is convenient to put a circle or
+square around a + or - sign, where a circle means that the absolute value
+of the matrix element is $< 1/2$, while a square means $> 1/2$. If any matrix
+element were $1/2$ or $-1/2$, then by GPT, $l \leq 1$ and it would not be
+optimal.  Then, using squares and circles, we can use rules such as: each row
+must contain at least one square, or $l^2$ would be $< 1$. No column may
+contain more than 1 square, or the column-sum would be $> 1$. Remember that a
+column-sum means a sum of absolute values, not a sum of the matrix
+elements themselves.
+
+In the above matrix of + and - signs, by comparing columns 1 and 2,
+we see that $v_{31}$ and $v_{32}$ have opposite signs, whereas $v_{11}$ and
+$v_{12}$, as well as $v_{21}$ and $v_{22}$, have the same sign. Thus row 3
+is the ``different'' row, so that $v_{31}$ and $v_{33}$ must have either both
+\label{refpage24}
+circles or both squares.  Similarly, comparing columns 3 and 4, row 3 again
+is different from the others, so $v_{33}$ and $v_{34}$ have either both
+circles or both squares.  Two of these sub-sub-cases are then no good, because
+by applying the rules for circles and squares, we end up with 4 circles in at
+least one row. Then, by comparing columns 1 and 3, or 2 and 4, the entire
+\label{refpage16}
+sub-case is ruled out.
+
+We have now proved that a matrix with no zeros cannot be an
+\label{refpage27}
+optimal square in a tesseract. To rule out more cases, we have to
+investigate when we can simultaneously reduce two column-sums when
+exactly one of the two columns contains exactly one zero. This is a little
+harder. When we consider dRi/de we find that if column i contains a zero
+we have different one-sided derivatives for positive and negative e. This
+is because when the zero gets rotated, the absolute value always
+increases. If we have, say,
+\begin{equation*}
+\myarrset
+\begin{array}{cc}
+0 & D \\
+B & E \\
+C & F
+\end{array}
+\end{equation*}
+then if $BE$ and $CF$ have opposite signs, and $R_1 = R_2$, then the rule is
+that if the cube is optimal and $B$ gets a circle, then $E$ must also get a
+circle, which if $C$ gets a circle then so does $F$.  Otherwise either $l$
+would be $\leq 1$ by GPT or it would be possible to decrease $R_1$ and $R_2$
+simultaneously.  If instead, $R_1 > R_2$ above, then in order that $R_1$
+cannot be decreased by rotating these 2 columns into each other, and still
+assuming that $BE$ and $CF$ have opposite signs, and again applying GPT, we
+must have $|D| + |E| > |F|$ and $|D| + |F| > |E|$.  These rules will be proved
+in detail later.
+
+Now we can rule out the 2 cases with 3 zeros in a diagonal - both
+snug and non-snug. The $V$ matrix is:
+\begin{equation*}
+\begin{bmatrix}
+0 & B & C & D \\
+F & 0 & H & J \\
+K & L & 0 & P
+\end{bmatrix}
+\end{equation*}
+We may assume $D$, $J$, and $P$ to be all positive.  We have $|F| + |K| = 1$,
+while from orthogonality $|F||K| = JP$.  We now find an expression for $F^2 +
+K^2$.  We have $F^2 + K^2 = (|F| + |K|)^2 - 2|F||K| = 1-2JP$.  Similarly, $B^2
++ L^2 = 1-2DP$, and $C^2 + H^2 = 1-2DJ$.  Since each row of V has a squared
+length of $l^2$, the sum of the squares of all the matrix elements is $3 l^2$.
+Thus, $3l^2 = F^2+K^2+B^2+L^2+C^2+H^2+D^2+J^2+P^2 = 3-2JP-2DJ-2DP+D^2+J^2+P^2
+=3 + D(D-J-P) + J(J-P-D) + P(P-D-J)$.  We will soon prove that $D$, $J$, and
+$P$ satisfy the triangle inequality, so that $D-J-P$, $J-P-D$, and $P-D-J$ are
+all negative, so it will follow that $3l^2 < 3$ so $l^2 < 1$ (not optimal).
+
+To prove the triangle inequality, first we consider the snug-fitting case.
+Suppose that $|F| < 1/2$, so that $F$ gets a circle around it.  Then $J$ also
+gets a circle, by our new theorem applied to columns 1 and 4 (and using
+the fact that $FJ$ and $KP$ have opposite signs). But row 2 cannot have all
+circles and zeros, so $H$ must get a square. Thus $C$ must be a circle.
+Applying the new theorem now to columns 3 and 4, since $C$ and $H$ have
+opposite signs, $D$ gets a circle. Since row 1 cannot have all circles and
+zeros, $B$ must be a square, so $L$ must be a circle, and applying the new
+theorem again, $P$ must be a circle. Since $D$, $J$, and $P$ are all $< 1/2$
+and their sum is 1, the triangle inequality is thus proved.  We also have to
+consider $|F| > 1/2$, but the proof is similar.
+
+Proving the triangle inequality for the non-snug case, where $R_1 = R_2 = R_3
+> R_4$, is slightly different since it uses the second part of our theorem.
+The idea is to assume that the cube is optimal, so that we cannot decrease
+$R_1$, $R_2$, or $R_3$ by rotating the corresponding column with the 4th
+column.  We again obtain the same inequalities: $D+J > P$, etc.
+
+This shows that for the snug case, if we assume that 2 column-sums
+cannot be simultaneously decreased without affecting the others, then it
+is not optimal. Thus for optimality, it is possible to find a cube with only
+2 maximal columns, which has the same size. But in Part 1 such cubes
+were shown to be non-optimal. For the non-snug case, if we assume that
+no maximal column-sum can be decreased slightly, then it is not optimal,
+so again there is a cube of the same size with only 2 maximal columns.
+
+Another easy case is 2 zeros in a diagonal, and snug, with all other elements
+of $V$ nonzero.  The $V$ matrix is:
+\begin{equation*}
+\begin{bmatrix}
+0 & B & C & D \\
+F & 0 & H & J \\
+K & L & M & P
+\end{bmatrix}
+\end{equation*}
+We may assume that $D$, $J$, $K$, $L$, $M$, and $P$ are positive.
+
+\section*{No zeros and snug-fitting}
+\addcontentsline{toc}{section}{No zeros and snug-fitting}
+
+Subcase this case:
+\label{refpage15}
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcp & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcm & \ndcm \\
+\ndsp & \ndsm & \ndsp & \ndsm
+\end{array}
+~~~~~\text{Compare columns 1 and 2.}
+\end{equation*}
+Subcase 1:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcp & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcm & \ndcm \\
+\dsp  & \dsm  & \ndsp & \ndsm
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+No 2 squares in the same column:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\dcp  & \dcp  & \ndcp & \ndcp \\
+\dcp  & \dcp  & \ndcm & \ndcm \\
+\dsp  & \dsm  & \ndsp & \ndsm
+\end{array}
+~~~~~\text{Compare columns 3 and 4.}
+\end{equation*}
+Subcase 1a:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\dcp  & \dcp  & \ndcp & \ndcp \\
+\dcp  & \dcp  & \ndcm & \ndcm \\
+\dsp  & \dsm  & \dsp  & \dsm
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+No 2 squares in the same column:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\dcp  & \dcp  & \dcp  & \dcp  \\
+\dcp  & \dcp  & \dcm  & \dcm  \\
+\dsp  & \dsm  & \dsp  & \dsm
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Rows 1 and 2 are all circles $\rightarrow$ non-optimal.
+
+Subcase 1b:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\dcp  & \dcp  & \ndcp & \ndcp \\
+\dcp  & \dcp  & \ndcm & \ndcm \\
+\dsp  & \dsm  & \dcp  & \dcm
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Compare columns 1 and 3, 2 and 4:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\dcp  & \dcp  & \ndcp & \ndcp \\
+\dcp  & \dcp  & \dcm  & \dcm  \\
+\dsp  & \dsm  & \dcp  & \dcm
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Row 2 is all circles $\rightarrow$ non-optimal.
+
+Subcase 2:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcp & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcm & \ndcm \\
+\dcp  & \dcm  & \ndcp & \ndcm
+\end{array}
+~~~~~\text{Compare columns 3 and 4.}
+\end{equation*}
+Subcase 2a:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcp & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcm & \ndcm \\
+\dcp  & \dcm  & \dcp  & \dcm
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Row 3 is all circles $\rightarrow$ non-optimal.
+
+Subcase 2b:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcp & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcm & \ndcm \\
+\dcp  & \dcm  & \dsp  & \dsm
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+No 2 squares in the same column:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcp & \ndcp & \dcp  & \dcp  \\
+\ndcp & \ndcp & \dcm  & \dcm  \\
+\dcp  & \dcm  & \dsp  & \dsm
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Compare columns 1 and 3:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcp & \ndcp  & \dcp  & \dcp  \\
+\dcp  & \ndcp  & \dcm  & \dcm  \\
+\dcp  & \dcm   & \dsp  & \dsm
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Compare columns 2 and 4:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcp & \ndcp  & \dcp  & \dcp  \\
+\dcp  & \dcp   & \dcm  & \dcm  \\
+\dcp  & \dcm   & \dsp  & \dsm
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Row 2 is all circles $\rightarrow$ non-optimal.
+
+\section*{Three zeros on a diagonal}
+\addcontentsline{toc}{section}{Three zeros on a diagonal}
+
+Let $V$ be given by:
+\begin{equation*}
+\begin{bmatrix}
+0 & B & C & D \\
+F & 0 & H & J \\
+K & L & 0 & P
+\end{bmatrix}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+It is either snug ($R_1 = R_2 = R_3 = R_4$) or $R_1 = R_2 = R_3 > R_4$.  We
+may assume that $D$, $J$, and $P$ are all positive.  Then $|F|+|K|=1$ and from
+orthogonality of the rows $|F||K| = JP$ with either $F > 0$, $K < 0$ or vice
+versa.  $F^2+K^2 = (|F|+|K|)^2 - 2|F||K| = 1-2|F||K| = 1-2JP$.  Similarly,
+$B^2+L^2 = 1-2DP$ and $C^2+H^2=1-2DJ$.  Since each row of $V$ has a squared
+length of $l^2$, the sum of the squares of all matrix elements is $3l^2$.
+Thus, $3l^2 = 3-2JP-2DP-2DJ+D^2+J^2+P^2 = 3+D(D-J-P)+J(J-P-D)+P(P-D-J)$.  We
+will soon prove that $D-J-P$, $J-P-D$, and $P-D-J$ are all negative, so that
+$3l^2 < 3$ and $l < 1$ $\rightarrow$ non-optimal.
+
+Thus we want to prove the triangle inequalities: $J+P>D$, $P+D>J$, and $D+J>P$
+in both the snug and non-snug cases.  With no loss of generality, we can
+assume $F$, $L$, and $C$ are positive so by orthogonality $K$, $B$, and $H$
+are negative.
+
+Suppose $|F| < 1/2$, so $|K| > 1/2$.
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcm & \ndcp & \ndcp \\
+\dcp  & \ndcz & \ndsm & \ndcp \\
+\dsm  & \ndcp & \ndcz & \ndsp
+\end{array}
+~~~=~~~
+\myarrset
+\begin{array}{cccc}
+\ndc{$0$} & \ndc{$B$} & \ndc{$C$} & \ndc{$D$} \\
+\ndc{$F$} & \ndc{$0$} & \ndc{$H$} & \ndc{$J$} \\
+\ndc{$K$} & \ndc{$L$} & \ndc{$0$} & \ndc{$P$}
+\end{array}
+\end{equation*}
+Since, for optimality, columns 1 and 4 cannot be simultaneously decreased in
+the snug case. $J < 1/2$ and gets a circle.
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcm & \ndcp & \ndcp \\
+\dcp  & \ndcz & \ndsm & \dcp  \\
+\dsm  & \ndcp & \ndcz & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+But row 2 cannot have all circles and zeros, so $|H| > 1/2$, and gets a
+square:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcm & \ndcp & \ndcp \\
+\dcp  & \ndcz & \dsm  & \dcp  \\
+\dsm  & \ndcp & \ndcz & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+But $|C|+|H|=1$, so $C$ gets a circle.  Since columns 3 and 4 cannot be
+simultaneously decreased, so $D$ gets a circle.  Continuing in this
+manner, $D$, $J$, and $P$ all have circles.  $D$, $J$, and $P$ are each $<
+1/2$, and their sum is 1, so the triangle inequality is proved.  If we had
+assumed $|F| > 1/2$ and $|K| < 1/2$, the proof would have been similar.
+
+Non-snug case:  Assume that the cube is optimal so that we cannot decrease
+$R_1$, $R_2$, or $R_3$ by rotating the corresponding column with column 4.
+This also leads to $D+J > P$, etc.
+
+This shows that for the snug case, if we assume that 2 column-sums cannot be
+simultaneously decreased without affecting the others, then it is not optimal.
+Thus for optimality, it is possible to find a cube with only 2 maximal
+columns, which has the same size.  But in Part 1, such cubes were shown to be
+non-optimal.  For the non-snug case, if we assume that no maximal column-sum
+can be decreased slightly, then it is not optimal, so again there is a cube of
+the same size with only 2 maximal columns.
+
+\section*{Two zeros on a diagonal and snug-fitting}
+\addcontentsline{toc}{section}{Two zeros on a diagonal and snug-fitting}
+
+We are also assuming all other matrix elements are nonzero and begin with:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcd & \ndcd & \ndcp \\
+\ndcd & \ndcz & \ndsd & \ndcp \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Since rows 1 and 2 are orthogonal, there are two sub-cases:
+Subcase 1:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcd & \ndcp & \ndcp \\
+\ndcd & \ndcz & \ndsm & \ndcp \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Subcase 2:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcd & \ndcm & \ndcp \\
+\ndcd & \ndcz & \ndsp & \ndcp \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Switch rows 1 and 2:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcd & \ndcz & \ndsp & \ndcp \\
+\ndcz & \ndcd & \ndcm & \ndcp \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Then switch columns 1 and 2:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcd & \ndsp & \ndcp \\
+\ndcd & \ndcz & \ndcm & \ndcp \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Which is subcase 1.  Since rows 1 and 3 are orthogonal we get:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcm & \ndsp & \ndcp \\
+\ndcd & \ndcz & \ndcm & \ndcp \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+with two sub-cases.  Subcase 1:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcm & \ndsp & \ndcp \\
+\ndcp & \ndcz & \ndcm & \ndcp \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Subcase 2:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcm & \ndsp & \ndcp \\
+\ndcm & \ndcz & \ndcm & \ndcp \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Multiply row 2 by -1:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcm & \ndsp & \ndcp \\
+\ndcp & \ndcz & \ndcp & \ndcm \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+and switch columns 3 and 4:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcm & \ndsp & \ndcp \\
+\ndcp & \ndcz & \ndcm & \ndcp \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+which is equivalent to subcase 1 so this is the only case.
+Now compare columns 3 and 4:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcz & \ndcm & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcm & \ndcp & \ndcp \\
+\ndcp & \ndcz & \dcm  & \dcp  & ~~~~~~~~~ & \ndcp & \ndcz & \dsm  & \dsp  \\
+\ndcp & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcp & \ndcp & \ndcp & \ndcp
+\end{array}
+\end{equation*}
+Now apply our rules:  Every row must contain at least one square; no 2 squares
+in a column.  For the left hand case this leads to:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcm & \ndsp & \ndcp \\
+\dsp  & \ndcz & \dcm  & \dcp  \\
+\dcp  & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Comparing columns 1 and 3, $v_{33}$ must be a circle:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcm & \ndsp & \ndcp \\
+\dsp  & \ndcz & \dcm  & \dcp  \\
+\dcp  & \ndcp & \dcp  & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+There are two possibilities for column 2.  Subcase 1:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \dcm  & \ndsp & \ndcp \\
+\dsp  & \ndcz & \dcm  & \dcp  \\
+\dcp  & \dsp  & \dcp  & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Comparing columns 2 and 3 $\rightarrow$ $v_{13}$ is a circle.
+Comparing columns 2 and 4 $\rightarrow$ $v_{14}$ is a circle.
+Since row 1 is then all zero or circles this is non-optimal.
+
+For the right hand case one obtains:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \dsm  & \dsp  & \dcp  \\
+\dcp  & \ndcz & \dsm  & \dsp  \\
+\dsp  & \dcp  & \dcp  & \dcp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Now, compare columns 1 and 3.  Since $v_{21}$ is a circle and $v_{11}$ is
+zero and $v_{21}v_{23}$ and $v_{31}v_{33}$ have opposite signs, $v_{23}$ must
+be a circle but this is a contradiction.
+
+So, we have eliminated 2 zeros on a diagonal.
+
+\section*{Two zeros in a row and snug-fitting}
+\addcontentsline{toc}{section}{Two zeros in a row and snug-fitting}
+\label{refpage22}
+
+The form of $V$ is:
+\begin{equation*}
+\begin{bmatrix}
+A & B & C & D \\
+F & G & H & J \\
+0 & 0 & M & P
+\end{bmatrix}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Assuming all the other matrix elements are nonzero leads to:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcp & \ndcp & \ndcp & \ndcp \\
+\ndcd & \ndcd & \ndsd & \ndcp \\
+\ndsz & \ndcz & \ndcd & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Because rows 1, 2, and 3 are orthogonal:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcp & \ndcp & \ndcp & \ndcp \\
+\ndcd & \ndcd & \ndsp & \ndcp \\
+\ndsz & \ndcz & \ndcm & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+This leads to two possibilities:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcp & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcp & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcm & \ndcp & \ndcp & ~~~~~~~~~ & \ndcm & \ndcm & \ndcp & \ndcp \\
+\ndcz & \ndcz & \ndcm & \ndcp & ~~~~~~~~~ & \ndcz & \ndcz & \ndcm & \ndcp
+\end{array}
+\end{equation*}
+In the first case, examining columns 3 and 4 gives:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcp & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcm & \ndcp & \ndcp \\
+\ndcz & \ndcz & \dsm  & \dsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+and then:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcp & \ndcp & \dcp  & \dcp  \\
+\ndcp & \ndcm & \dcp  & \dcp  \\
+\ndcz & \ndcz & \dsm  & \dsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Comparing columns 1 and 2, either $F$ and $G$ are both circles or $A$ and $B$
+are.  Either way, 1 row is all circles which makes this case non-optimal.
+
+In the second case, write $V$ as:
+\begin{equation*}
+\left[
+\begin{array}{rrrr}
+A & B &  x~cos\theta & x~sin\theta \\
+F & G &  y~cos\theta & y~sin\theta \\
+0 & 0 & -z~sin\theta & z~cos\theta
+\end{array}
+\right]
+~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+where $x$, $y$, $z$ are all positive, $0^o < \theta < 90^o$, $A$ and $B$ are
+positive, and $F$ and $G$ are negative.  Further, $A|F|+B|G| = x y$ since rows
+1 and 2 are orthogonal and $F = -(1-A)$ and $G = -(1-B)$.  So, $A(1-A) +
+B(1-B) = x y$.  Because the length of all the sides are equal $A^2 + B^2 + x^2
+= (1-A)^2 + (1-B)^2 + y^2 = z^2 = l^2$. Summing the absolute value of columns
+3 and 4 yields $(x+y)~cos\theta + z~sin\theta = (x+y)~sin\theta + z~cos\theta
+= 1$ or $(x+y-z)~cos\theta = (x+y-z)~sin\theta$.  This implies the either
+$\theta = 45^o$, $x+y=z$, or both. If $x+y=z$ then $z(sin\theta + cos\theta) =
+1$ but then:
+\begin{equation*}
+l = z = \frac{1}{sin\theta + cos\theta},
+~~\text{but}~~ sin\theta + cos\theta > 1,
+~~\text{so}~~ l < 0
+\end{equation*}
+which implies this case is non-optimal.
+
+Thus, $\theta = 45^o$ implying $sin\theta = cos\theta$ so $C=D$, $H=J$, and
+$M=-P$, giving $V$ the form:
+\begin{equation*}
+\left[
+\begin{array}{rrrr}
+  A\;\; &   B\;\; &  C &  C \\
+-|F|    & -|G|    &  H &  H \\
+  0~    &   0~    & -P &  P
+\end{array}
+\right]
+\end{equation*}
+The $T_{mod}$ matrix is then:
+\begin{equation*}
+\begin{bmatrix}
+~~aB\!+\!fG & ~~aC\!+\!fH & ~~aD\!+\!fJ &   ~~0   &   ~~0   &     ~~0    \\
+  ~~0   &  ~\;M   &   ~~P   &   ~~0   &   ~~0   &     ~~0    \\
+ -bA\!-\!gF &   ~~0   &   ~~0   & ~~bC\!+\!gH & ~~bD\!+\!gJ &     ~~0    \\
+  ~~0   &   ~~0   &   ~~0   &  ~\;M   &   ~~P   &     ~~0    \\
+  ~~0   &  -cA\!-\!hF &   ~~0   &  -cB\!-\!hG &   ~~0   & ~~cD\!+\!hJ\!+\!mP \\
+  ~~0   &   ~~0   &  -dA\!-\!jF &   ~~0   &  -dB\!-\!jG &  -dC\!-\!jH\!-\!pM 
+\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+=
+\begin{bmatrix}
+~~B-G & ~~C-H & ~~D-J &  ~~0  &  ~~0  &  ~~0    \\
+ ~~0  & ~\;M  &  ~~P  &  ~~0  &  ~~0  &  ~~0    \\
+ -A+F &  ~~0  &  ~~0  & ~~C-H & ~~D-J &  ~~0    \\
+ ~~0  &  ~~0  &  ~~0  & ~\;M  &  ~~P  &  ~~0    \\
+ ~~0  &  -A-F &  ~~0  &  -B-G &  ~~0  & ~~D+J-P \\
+ ~~0  &  ~~0  &  -A-F &  ~~0  &  -B-G &  -C-H-M
+\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+=
+\begin{bmatrix}
+~~B+|G| & ~~C-H   & ~~C-H   &   ~0    &   ~0    &      0      \\
+  ~0    & -\!P    &   ~P    &   ~0    &   ~0    &      0      \\
+ -A-|F| &   ~0    &   ~0    & ~~C-H   & ~~C-H   &      0      \\
+  ~0    &   ~0    &   ~0    & -\!P    &   ~P    &      0      \\
+  ~0    &  -A+|F| &   ~0    &  -B+|G| &   ~0    & ~~1\!-\!2P  \\
+  ~0    &   ~0    &  -A+|F| &   ~0    &  -B+|G| & -(1\!-\!2P)
+\end{bmatrix}
+\end{equation*}
+If
+\begin{equation*}
+\sum_{i=1}^{6} a_i \times row_i~\text{of}~T_{mod} = 0
+\end{equation*}
+then looking at the last column of $T_{mod}$, $a_5 = a_6$.  Also,
+$A+|F|=B+|G|-1$ so $a_1 = a_3$ from column 1 of $T_{mod}$.  Comparing columns
+2 and 3 imply $a_2 = 0$ and comparing columns 4 and 5 imply $a_4 = 0$. Since
+\begin{align*}
+a_1 (C-H) + a_5 (-A+|F|) & = 0 \\
+a_3 (C-H) + a_5 (-B+|G|) & = 0
+\end{align*}
+and $a_1 = a_3$, we obtain
+\begin{equation*}
+a_5 (-A+|F|) = a_5(-B+|G|)
+\end{equation*}
+so $a_5 = 0$, $-A+|F|=-B+|G|$, or both.
+
+If $-A+|F|=-B+|G|$ then $-1+2|F|=-1+2|G|$ which implies that $F=G$ and $A=B$.
+Thus, columns 1 and 2 of $V$ are identical and this case is non-optimal.
+
+If $a_5 = 0$ then $a_1(C-H)=0$.  If $a_1 = 0$ then $a_3 = 0$.  This makes all
+the $a_i$ zero, which isn't possible. If $C=H$ then $V$ is:
+\begin{equation*}
+\begin{bmatrix}
+  ~\;A     &   ~\;B     & ~~\;C & C~\; \\
+-(1\!-\!A) & -(1\!-\!B) & ~~\;C & C~\; \\
+  ~\;0     &   ~\;0     &    -P & P~\;
+\end{bmatrix}
+\end{equation*}
+Taking the squared length of each row yields:
+\begin{equation*}
+l^2 = A^2 + B^2 + 2 C^2 = (1-A)^2 + (1-B)^2 + 2 C^2
+\end{equation*}
+This leads to $2-2A-2B=0$ or $A+B=1$. Since rows 1 and 2 are orthogonal, $2
+C^2 = 2A(1-A)$ or $C^2 = A(1-A)$.  Combining all this:
+\begin{align*}
+l^2 &= A^2 + (1-A)^2 + 2A(1-A) \\
+    &= [A + (1-A)]^2           \\
+    &= 1
+\end{align*}
+Thus, $l = 1$ and this is not optimal.
+
+\section*{Two zeros in a column}
+\addcontentsline{toc}{section}{Two zeros in a column}
+
+The form of $V$ is:
+\begin{equation*}
+\begin{bmatrix}
+0 & B & C & D \\
+0 & G & H & J \\
+K & L & M & P
+\end{bmatrix}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Assuming all the other matrix elements are nonzero leads to:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcd & \ndcd & \ndcp \\
+\ndcz & \ndcd & \ndsd & \ndcp \\
+\ndsp & \ndcp & \ndcp & \ndsp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+This leads to two cases:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcz & \ndcp & \ndcm & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcm & \ndcp \\
+\ndcz & \ndcm & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcm & \ndcm & \ndcp \\
+\ndcp & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcp & \ndcp & \ndcp & \ndcp
+\end{array}
+\end{equation*}
+If you take the right hand case, multiply row 2 by -1, and switch columns 2
+and 4, you get the left hand case.  Continuing with that case, we get two
+sub-cases.  Subcase 1:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcp & \ndcm & \ndcp \\
+\ndcz & \ndcm & \ndcp & \ndcp \\
+\ndcp & \dsp  & \dsp  & \ndcp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Which becomes:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \dcp  & \dcm  & \dsp  \\
+\ndcz & \dcm  & \dcp  & \dsp  \\
+\ndcp & \dsp  & \dsp  & \ndcp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+But there are two squares in column 4 so this is no good.  Subcase 2:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcp & \ndcm & \ndcp \\
+\ndcz & \ndcm & \ndcp & \ndcp \\
+\ndcp & \dcp  & \dcp  & \ndcp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Working on columns 3 and 4 yields two cases.  Subcase 2a:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcp & \dsm  & \dsp  \\
+\ndcz & \ndcm & \ndcp & \ndcp \\
+\ndcp & \dcp  & \dcp  & \ndcp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Which becomes:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \dcp  & \dsm  & \dsp  \\
+\ndcz & \dsm  & \dcp  & \dcp  \\
+\ndcp & \dcp  & \dcp  & \dcp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+but comparing columns 1 and 3 show that this is no good.  Subcase 2b:
+\label{refpage25}
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcp & \dcm  & \dcp  \\
+\ndcz & \ndcm & \ndcp & \ndcp \\
+\ndcp & \dcp  & \dcp  & \ndcp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Working on columns 1 and 3 results in two more cases.  Subcase 2b1:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcp & \dcm  & \dcp  \\
+\ndcz & \dsm  & \ndcp & \dsp  \\
+\ndcp & \dcp  & \dcp  & \ndcp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+This would mean that $B$ would be a circle which is no good.  Subcase 2b2:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcp & \dcm  & \dcp  \\
+\ndcz & \dcm  & \ndcp & \dcp  \\
+\ndcp & \dcp  & \dcp  & \ndcp
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Which becomes:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \dsp  & \dcm  & \dcp  \\
+\ndcz & \dcm  & \dsp  & \dcp  \\
+\ndcp & \dcp  & \dcp  & \ndcp
+\end{array}
+~~~=~~~
+\myarrset
+\begin{array}{cccc}
+\ndc{$0$} & \ndc{$B$} & \ndc{$C$} & \ndc{$D$} \\
+\ndc{$0$} & \ndc{$G$} & \ndc{$H$} & \ndc{$J$} \\
+\ndc{$1$} & \ndc{$L$} & \ndc{$M$} & \ndc{$P$}
+\end{array}
+\end{equation*}
+Add a 4th row with $w$, $x$, $y$, $z$ to get a 4x4 matrix $W$ which is $l$
+times a 4x4 orthogonal matrix.  Let $w < 0$.
+\begin{equation*}
+W = 
+\begin{bmatrix}
+0 & B & C & D \\
+0 & G & H & J \\
+1 & L & M & P \\
+w & x & y & z
+\end{bmatrix}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Then $w = -\sqrt{l^2-1}$.  We must choose $x$, $y$, $z$ so that columns 2, 3,
+and 4 are all orthogonal to column 1.  This results in:
+\begin{equation*}
+x = \frac{L}{\sqrt{l^2-1}},~~~
+y = \frac{M}{\sqrt{l^2-1}},~~~
+z = \frac{P}{\sqrt{l^2-1}}
+\end{equation*}
+Thus, $x$, $y$, and $z$ are all $> 0$.  Columns 3 and 4 of $W$ are orthogonal,
+so
+\begin{align*}
+|C|D &= HJ + MP + yz                          \\
+     &= HJ + MP\left(1+\frac{1}{l^2-1}\right) \\
+     &= HJ + MP\left(\frac{l^2}{l^2-1}\right)
+\end{align*}
+Similarly, Columns 2 and 4 of $W$ are orthogonal so
+\begin{equation*}
+|G|J = BD + LP\left(\frac{l^2}{l^2-1}\right)
+\end{equation*}
+Also, $D + J + P = 1$ which implies $D^2 + J^2 + P^2 < 1$.  This along with
+$D^2 + J^2 + P^2 + z^2 = l^2$ implies $l^2 - z^2 = D^2 + J^2 + P^2 < 1$.
+Since $z = P/\sqrt{l^2-1}$ implies $z^2 = P^2/(l^2-1)$, we have
+\begin{align*}
+l^2 - \frac{P^2}{l^2-1} &< 1     \\
+       (l^2-1)l^2 - P^2 &< l^2-1 \\
+            l^4-l^2-P^2 &< l^2-1 \\
+             l^4-2l^2+1 &< P^2   \\
+              (l^2-1)^2 &< P^2   \\
+                  l^2-1 &< P
+\end{align*}
+so
+\begin{equation*}
+\frac{P}{l^2-1} > 1.
+\end{equation*}
+Further
+\begin{alignat*}{3}
+H &> \half ~~&&\rightarrow~~ HJ+Ml^2 &&> \half J+Ml^2 \\
+B &> \half ~~&&\rightarrow~~ BD+Ll^2 &&> \half D+Ll^2
+\end{alignat*}
+But $|C|D = HJ+MP(\frac{l^2}{l^2-1})$, so $|C|D >
+\half J+Ml^2$.  Similarly, $|G|J > \half D+Ll^2$.
+Adding these, $|C|D + |G|J > \half(D+J)+(L+M)l^2$ or $(\half-|C|)D
++ (\half-|G|)J + (L+M)l^2 < 0$.  Since $|C|$ and $|G|$ are $<
+\half$ this implies that the lefthand side is both positive and
+negative yielding a contradiction.
+
+\section*{One zero and snug-fitting}
+\addcontentsline{toc}{section}{One zero and snug-fitting}
+
+The form of $V$ is:
+\begin{equation*}
+\begin{bmatrix}
+0 & B & C & D \\
+F & G & H & J \\
+K & L & M & P
+\end{bmatrix}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Assuming all the other matrix elements are nonzero leads to:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcd & \ndsd & \ndcd \\
+\ndsp & \ndcd & \ndcd & \ndsd
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+This gives rise to two cases:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcp & \ndcm & ~~~~~~~~~ & \ndcp & \ndcp & \ndcm & \ndcm \\
+\ndcp & \ndcd & \ndcd & \ndcd & ~~~~~~~~~ & \ndcp & \ndcd & \ndcd & \ndcd
+\end{array}
+\end{equation*}
+The left case leads to three more sub-cases:
+\begin{equation*}
+\myarrset
+\begin{array}{cccccccccccccc}
+\ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcp & \ndcm & ~~~~~~~~~ & \ndcp & \ndcp & \ndcp & \ndcm & ~~~~~~~~~ & \ndcp & \ndcp & \ndcp & \ndcm \\
+\ndcp & \ndcp & \ndcp & \ndcd & ~~~~~~~~~ & \ndcp & \ndcp & \ndcm & \ndcd & ~~~~~~~~~ & \ndcp & \ndcm & \ndcm & \ndcd
+\end{array}
+\end{equation*}
+The first won't work because the rows can't be made orthogonal.  In the
+second, $P$ can be + or -.  In the third, $P$ must be + so rows 1 and 3 can be
+orthogonal.
+
+The original case on the right also leads to three more sub-cases:
+\begin{equation*}
+\myarrset
+\begin{array}{cccccccccccccc}
+\ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcm & \ndcm & ~~~~~~~~~ & \ndcp & \ndcp & \ndcm & \ndcm & ~~~~~~~~~ & \ndcp & \ndcp & \ndcm & \ndcm \\
+\ndcp & \ndcd & \ndcp & \ndcp & ~~~~~~~~~ & \ndcp & \ndcd & \ndcp & \ndcm & ~~~~~~~~~ & \ndcp & \ndcd & \ndcm & \ndcm
+\end{array}
+\end{equation*}
+$L$ must be - in the first one.  $L$ can be + or - in the second.  The third
+case won't work.
+
+So, there are six cases left:
+\begin{align*}
+&\myarrset
+\begin{array}{cccccccccccccc}
+\ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcp & \ndcm & ~~~~~~~~~ & \ndcp & \ndcp & \ndcp & \ndcm & ~~~~~~~~~ & \ndcp & \ndcp & \ndcp & \ndcm \\
+\ndcp & \ndcp & \ndcm & \ndcp & ~~~~~~~~~ & \ndcp & \ndcp & \ndcm & \ndcm & ~~~~~~~~~ & \ndcp & \ndcm & \ndcm & \ndcp
+\end{array} \\
+&\begin{array}{ccc}
+\hspace{0.47in}(1) & \hspace{1.43in}(2) & \hspace{1.43in}(3)
+\end{array} \\
+\end{align*}
+\begin{align*}
+&\myarrset
+\begin{array}{cccccccccccccc}
+\ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcm & \ndcm & ~~~~~~~~~ & \ndcp & \ndcp & \ndcm & \ndcm & ~~~~~~~~~ & \ndcp & \ndcp & \ndcm & \ndcm \\
+\ndcp & \ndcm & \ndcp & \ndcp & ~~~~~~~~~ & \ndcp & \ndcp & \ndcp & \ndcm & ~~~~~~~~~ & \ndcp & \ndcm & \ndcp & \ndcm
+\end{array} \\
+&\begin{array}{ccc}
+\hspace{0.47in}(4) & \hspace{1.43in}(5) & \hspace{1.43in}(6)
+\end{array}
+\end{align*}
+Exchanging rows 2 and 3 in (5) you get case (2) so these are equivalent.
+Begin working on case (1) in column 1 which gives two possibilities:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp \\
+\dcp  & \ndcp & \ndcp & \ndcm & ~~~~~~~~~ & \dsp  & \ndcp & \ndcp & \ndcm \\
+\dsp  & \ndcp & \ndcm & \ndcp & ~~~~~~~~~ & \dcp  & \ndcp & \ndcm & \ndcp
+\end{array}
+\end{equation*}
+The left subcase become:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcp & \ndcp & \ndcp \\
+\dcp  & \dsp  & \dcp  & \dcm  \\
+\dsp  & \ndcp & \ndcm & \ndcp 
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Comparing columns 1 and 3 along with 1 and 4 means $G$ must be a square.
+Comparing columns 2 and 4 is no good because $G$ is a square and $J$ is a
+circle.
+
+The right subcase becomes
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcp & \ndcp & \ndcp \\
+\dsp  & \ndcp & \ndcp & \ndcm \\
+\dcp  & \dsp  & \dcm  & \dcp 
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+Comparing columns 1 and 3 along with 1 and 4 means $M$ is a square.  Comparing
+2 and 3 shows this is also no good.  This eliminates case(1).
+
+Case (3) has two sub-cases that occur when we start with column 1.
+In both sub-cases we then look at columns 1 and 2, 1 and 3, and 1 and 4 to
+obtain:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp \\
+\dcp  & \dcp  & \dcp  & \dcm  & ~~~~~~~~~ & \dsp  & \ndcp & \ndcp & \ndcm \\
+\dsp  & \ndcm & \ndcm & \ndcp & ~~~~~~~~~ & \dcp  & \dcm  & \dcm  & \dcp
+\end{array}
+\end{equation*}
+The result in both sub-cases is four circles in a row which is no good.  The
+eliminates case(3).  Case (4) is eliminated in a similar manner.
+
+Case (6) has two sub-cases that occur when we start with column 1.
+In both sub-cases we then look at columns 1 and 2 follow by 1 and 3.
+Then in the first subcase we look at columns 3 and 4, while in the second
+subcase we look at columns 2 and 4.  We obtain:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcz & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcp & \ndcp \\
+\dsp  & \ndcp & \ndcm & \ndcm & ~~~~~~~~~ & \dcp  & \dcp  & \dcm  & \dsm  \\
+\dcp  & \dcm  & \dcp  & \dsm  & ~~~~~~~~~ & \dsp  & \ndcm & \ndcp & \ndcm
+\end{array}
+\end{equation*}
+The first subcase is no good because $M$ is a circle and $P$ is a square.
+The second subcase is also no good.  This eliminates case (6).
+
+Transform case (2) by multiplying column 4 by -1, switching columns 3 and 4
+and then 2 and 4, and finally switch rows 2 and 3:
+\begin{equation*}
+\myarrset
+\begin{array}{cccc}
+\ndcz & \ndcp & \ndcm & \ndcp \\
+\ndcp & \ndcm & \ndcp & \ndcp \\
+\ndcp & \ndcp & \ndcp & \ndcp 
+\end{array}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{equation*}
+This has two sub-cases that occur when we start with column 1:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcz & \ndcp & \ndcm & \ndcp & ~~~~~~~~~ & \ndcz & \ndcp & \ndcm & \ndcp \\
+\dsp  & \ndcm & \ndcp & \ndcp & ~~~~~~~~~ & \dcp  & \ndcm & \ndcp & \ndcp \\
+\dcp  & \ndcp & \ndcp & \ndcp & ~~~~~~~~~ & \dsp  & \ndcp & \ndcm & \ndcp
+\end{array}
+\end{equation*}
+In the first subcase we then look at columns 1 and 2, 2 and 3, and 3 and 4.
+In the second subcase we look at columns 1 and 2, 2 and 4, and 3 and 4.  Doing
+this we obtain:
+\begin{equation*}
+\myarrset
+\begin{array}{ccccccccc}
+\ndcz & \dsp  & \dcm  & \dcp  & ~~~~~~~~~ & \ndcz & \dsp  & \dcm  & \dcp  \\
+\dsp  & \dcm  & \ndcp & \dcp  & ~~~~~~~~~ & \dcp  & \dcm  & \dsp  & \dcp  \\
+\dcp  & \dcp  & \dcp  & \dsp  & ~~~~~~~~~ & \dsp  & \dcp  & \dcm  & \ndcp
+\end{array}
+\end{equation*}
+These two subcase are equivalent:  Start with the right subcase,
+interchange rows 2 and 3, then columns 3 and 4.  Multiply column 2 and row 1
+by -1 and you get the left subcase.
+
+We don't yet know whether $H$ is greater than or less than a half.
+\begin{equation*}
+T_{mod} =
+\begin{bmatrix}
+G\!+\!L & ~~H\!+\!M & ~~J\!+\!P &       0       &       ~~0       &      ~~0       \\
+   B    &    ~~C    &    ~~D    &       0       &       ~~0       &      ~~0       \\
+F\!-\!K &    ~~0    &    ~~0    & C\!-\!H\!+\!M & ~~D\!-\!J\!+\!P &      ~~0       \\
+   0    &  -F\!-\!K &    ~~0    & B\!-\!G\!-\!L &       ~~0       & -D\!+\!J\!-\!P \\
+   0    &    ~~0    &  -F\!-\!K &       0       &  -B\!-\!G\!-\!L & -C\!-\!H\!-\!M
+\end{bmatrix}
+\end{equation*}
+Observe:
+\begin{align*}
+ C-H+M &= -|C|-H+M = -1+2M   \\
+ D-J+P &= 1-2J               \\
+ B-G-L &= B+|G|-L = 1-2L     \\
+-D+J+P &= 1-2D               \\
+-B-G-L &= -B+|G|-L = -1+2|G| \\
+-C-H-M &= |C|-H-M = -1+2|C|  \\
+   F-K &= 1-2K               \\
+  -F-K &= -1                 \\
+   G+L &= -|G|+L
+\end{align*}
+Replacing row 1 of $T_{mod}$ with the sum of row 1 and 2 doesn't effect it's
+rank and allows us to use:
+\begin{align*}
+B+G+L &= 1-2|G| \\
+C+H+M &= 1-2|C| \\
+D+J+P &= 1
+\end{align*}
+Using all these $T_{mod}$ becomes
+\begin{equation*}
+\begin{bmatrix}
+1-2|G| & 1-2|C| &  1 &    0    &    0      &    0      \\
+  B    & -|C|   &  D &    0    &    0      &    0      \\
+1-2K   &   0    &  0 & -(1-2M) &   1-2J    &    0      \\
+  0    &  -1    &  0 &   1-2L  &    0      &   1-2D    \\
+  0    &   0    & -1 &    0    & -(1-2|G|) & -(1-2|C|)
+\end{bmatrix}
+\end{equation*}
+For optimality, this matrix must not have maximum rank, i.e., some linear
+combination of the rows must be zero where not all of the coefficients, call
+them $a_1$ through $a_5$, are zero.  This yields:
+\begin{align*}
+a_3 (1-2M) &= a_4 (1-2L)   \\
+a_3 (1-2J) &= a_5 (1-2|G|) \\
+a_4 (1-2D) &= a_5 (1-2|C|)
+\end{align*}
+If one or more of $a_3$, $a_4$, $a_5$ is zero then they all are zero.  This
+leads to:
+\begin{alignat*}{3}
+&a_1 (1-2|G|) &&+ a_2  B  &&= 0 \\
+&a_1 (1-2|C|) &&- a_2 |C| &&= 0 \\
+&a_1          &&+ a_2  D  &&= 0
+\end{alignat*}
+If $a_1$ or $a_2$ is zero then both are zero and so are all the $a_i$.  So we
+may assume the $a_1 \neq 0$ and $a_2 \neq 0$.  But $|G| < \half$ and
+$|C| < \half$, so $a_1/a_2$ would have to be both positive and negative,
+a contradiction.
+
+So $a_3$, $a_4$, and $a_5$ are all nonzero.  $\frac{a_3}{a_4} \frac{a_4}{a_5}
+\frac{a_5}{a_3} = 1$ so
+\begin{equation*}
+\left(\frac{1-2 L }{1-2 M }\right)
+\left(\frac{1-2|C|}{1-2 D }\right)
+\left(\frac{1-2 J }{1-2|G|}\right)
+= 1
+\end{equation*}
+\begin{equation*}
+(1-2L)(1-2|C|)(1-2J) = (1-2M)(1-2D)(1-2|G|).
+\end{equation*}
+Further
+\begin{alignat*}{4}
+&a_1          &&+ a_2 ~D  &&=         &&a_5 \\
+&a_1 (1-2|C|) &&- a_2 |C| &&=         &&a_4 \\
+&a_1 (1-2|G|) &&+ a_2 ~B  &&= -(1-2K) &&a_3
+\end{alignat*}
+This leads to
+\begin{align}
+a_3             &= \frac{a_1 (1-2|G|) + a_2  B }{-(1-2K)}     \\
+\frac{a_4}{a_5} &= \frac{a_1 (1-2|C|) + a_2 |C|}{a_1 + a_2 D}
+\end{align}
+but from before
+\begin{equation*}
+\frac{a_4}{a_5} = \frac{1-2|C|}{1-2D}
+\end{equation*}
+so
+\begin{equation*}
+(a_1 + a_2 D)(1-2|C|) = (1-2D)[a_1 (1-2|C|) + a_2 |C|].
+\end{equation*}
+Can $a_2$ be zero?  If so, then $a_1(1-2|C|) = a_1(1-2D)(1-2|C|)$ which
+simplifies to $a_1(1-2|C|)(2D) = 0$ so either $a_1 = 0$ or $D = 0$ or $|C| =
+\half$ - the last two are impossible.  If $a_1$ and $a_2$ equal 0 then
+$a_5 = 0$, so all the $a_i$ are zero.  Thus, $a_2 \neq 0$ implying
+\begin{align*}
+a_1(1-2|C|)(2D) &= -a_2(|C|+D-4|C|D)
+\frac{a_1}{a_2} &= \frac{|C|+D-4|C|D}{-2D(1-2|C|)}
+\end{align*}
+Also, $a_1(1-2|C|)-a_2|C| = a_4$ so
+\begin{equation*}
+\frac{a_1}{a_2}(1-2|C|) - |C| = \frac{a_4}{a_2}
+\end{equation*}
+and from before
+\begin{align*}
+a_3 &= \frac{a_1(1-2|G|) + a_2 B}{-(1-2K)}
+a_5 &= a_1 + a_2 D
+\end{align*}
+implying
+\begin{equation*}
+\frac{a_3}{a_5} = \frac{a_1(1-2|G|) + a_2 B}{-(1-2K)(a_1 + a_2 D)}
+\end{equation*}
+We also have
+\begin{equation*}
+\frac{a_3}{a_5} = \frac{1-2|G|}{1-2J}
+\end{equation*}
+which combine to give
+\begin{equation*}
+\frac{a_3}{a_5}
+= \frac{\frac{a_1}{a_2}(1-2|G|) + B}{-(1-2K)(\frac{a_1}{a_2} + D)}
+= \frac{1-2|G|}{1-2J}
+\end{equation*}
+so
+\begin{equation*}
+-(1-2|G|)(1-2K)\left(\frac{a_1}{a_2}        +D\right) =
+ (1-2 J )      \left[\frac{a_1}{a_2}(1-2|G|)+B\right]
+\end{equation*}
+\begin{align*}
+B(1\!-\!2J)\!+\!D(1\!-\!2|G|)(1\!-\!2K) &= \frac{a_1}{a_2}[-(1\!-\!2|G|)(1\!-\!2K)\!-\!(1\!-\!2J)(1\!-\!2|G|)] \\
+                        &= \frac{a_1}{a_2}[-(1\!-\!2|G|)((1\!-\!2K)\!-\!(1\!-\!2J))]
+\end{align*}
+or
+\begin{equation*}
+\frac{a_1}{a_2} = \frac{B(1-2J)+D(1-2|G|)(1-2K)}{-(1-2|G|)[(1-2K)+(1-2J)]}
+\end{equation*}
+Comparing with the other expression for $\frac{a_1}{a_2}$, we obtain
+\begin{align*}
+  2D &(1-2|C|)[B(1-2J)+D(1-2|G|)(1-2K)]                           \\
+     &= (1-2|G|)[(1-2K)+(1-2J)][|C|(1-2D)+D(1-2|C|)]              \\
+     &~                                                           \\
+  2DB&(1-2J)(1-2|C|)+2D^2(1-2|C|)(1-2|G|)(1-2K)                   \\
+     &=    [D(1-2|C|)+|C|(1-2D)](1-2|G|)(1-2K) +                  \\
+     &~~~~ [D(1-2|C|)+|C|(1-2D)](1-2|G|)(1-2J)                    \\
+     &~                                                           \\
+[2D^2&(1-2|C|)-(D(1-2|C|)+|C|(1-2D))](1-2|G|)(1-2K)               \\
+     &= (1\!-\!2|G|)(1\!-\!2J)[|C|(1\!-\!2D)\!+\!D(1\!-\!2|C|)]\!
+      - \!2DB(1\!-\!2J)(1\!-\!2|C|)
+\end{align*}
+The lefthand side simplifies to
+\begin{equation*}
+(1-2D)(1-2|G|)(1-2K)(-|C|-D+2|C|D)
+\end{equation*}
+The righthand side becomes
+\begin{align*}
+(1-&2J)[(1-2|G|)(|C|(1-2D)+D(1-2|C|))-2DB(1-2|C|)] \\
+   &= (1-2J)[|C|(1-2D)(1-2|G|)+D(1-2|C|)(1-2|G|-2B)]
+\end{align*}
+but $B+|G|=1-L$ so $1-2|G|-2B = -1+2L$ which makes the righthand side
+\begin{align*}
+~~~~&= (1-2J)[|C|(1-2D)(1-2|G|)-D(1-2|C|)(1-2L)]     \\
+~~~~&= (1-2J)|C|(1-2D)(1-2|G|)-D(1-2|C|)(1-2L)(1-2J) \\
+~~~~&= (1-2J)|C|(1-2D)(1-2|G|)-D(1-2D)(1-2G)(1-2M)   \\
+~~~~&= (1-2D)(1-2|G|)[|C|(1-2J)-D(1-2M)]
+\end{align*}
+Canceling $(1-2D)$ and $(1-2|G|)$ on both sides of the original equation gives
+us
+\begin{align*}
+            -(1-2K)(|C|+D-2|C|D) &= |C|(1-2J)-D(1-2M) \\
+             (1-2K)(|C|+D-2|C|D) &= -|C|+2|C|J+D-2DM  \\
+   |C|+D-2|C|D-2|C|K-2DK+4|C|DK) &= -|C|+D+2|C|J-2DM  \\
+          2|C|-2|C|D-2|C|K-2|C|J &= 2DK-2DM-4D|C|K    \\
+                      |C|(1-K-J) &= D(K-M-2|C|K)
+\end{align*}
+Given $D+J+P=1$ this becomes
+\begin{equation*}
+|C|(P-K) = D(K-M-2|C|K)
+\end{equation*}
+Now add a fourth row to $V$ consisting of $(w,x,y,z)$ and call the result is
+$W$.  $P-K$ is positive, so $K-M-2|C|K > 0$ implying $K(1-2|C|) > M$.  Also,
+$|C|+H+M=1$ so $1-2|C| = H+M-|C|$ which means $K(H+M-|C|) > M$ implying
+$K(H-|C|) > M(1-K)$.  Since $K<1$ then $H-|C|>0$.  Recalling $F+K=1$ means
+$K(H-|C|) > MF > \half M$ and $\half(H-|C|) > K(H-|C|)$ so
+$H-|C| > M$ making $H > M+|C| = 1-H$ so $H > \half$.
+
+In row 4, let $w$ be negative so $F^2+K^2=l^2-w^2$ meaning
+\begin{align*}
+w &= -\sqrt{l^2-F^2-K^2}              \\
+x &= \frac{FG+KL}{\sqrt{l^2-F^2-K^2}} \\
+y &= \frac{FH+KM}{\sqrt{l^2-F^2-K^2}} \\
+z &= \frac{FJ+KP}{\sqrt{l^2-F^2-K^2}}
+\end{align*}
+where $y$ and $z$ are positive.
+\begin{align*}
+CD+HJ+MP+yz &= 0    \\
+   HJ+MP+yz &= |C|D \\
+   HJ+MP+yz &> \half J+\half M+yz
+\end{align*}
+so $\half(J+M)+yz < |C|D$.  Similar reasoning leads to
+$\half(D+L)+xz < |G|J$.  This means
+\begin{align*}
+                      \half(J+M)+\half(D+L)+xz+yz &< |C|D+|G|J \\
+                                  \half(D+L+J+M)+(x+y)z &< |C|D+|G|J \\
+  \half D-|C|D+\half J-|G|J+\half(L+M)+(x+y)z &< 0         \\
+(\half-|C|)D+(\half-|G|)J+\half(L+M)+(x+y)z &< 0
+\end{align*}
+Everything except $(x+y)z$ sums to something positive so $(x+y)z < 0$.  Since
+$z > 0$, $x+y < 0$.  This means
+\begin{align*}
+   F G +KL+FH+KM &< 0 \\
+  -F|G|+KL+FH+KM &< 0 \\
+ F(H-|G|)+K(L+M) &< 0
+\end{align*}
+with $H-|G|$ positive.  This is a contradiction.
+
+\section*{Important Theorems}
+\addcontentsline{toc}{section}{Important Theorems}
+
+For a cube in a tesseract, concerning plane rotations involving two columns of
+$V$
+\begin{equation*}
+\begin{array}{cc}
+A & D \\
+B & E \\
+C & F
+\end{array}
+\end{equation*}
+called column 1 and column 2.  Consider
+\begin{align*}
+\text{column 1} &\rightarrow (\text{column 1}) cos\theta + (\text{column 2}) sin\theta \\
+\text{column 2} &\rightarrow (\text{column 2}) cos\theta - (\text{column 1}) sin\theta
+\end{align*}
+where $a = \text{sign}A, b = \text{sign}B$, etc. so that $a = 1$ for $A$
+positive, $a = -1$ for $A$ negative, and $a = 0$ for $A = 0$.  Then
+\begin{equation*}
+|A| = aA \rightarrow a(A cos\theta + D sin\theta)
+\end{equation*}
+for $\theta$ sufficiently small and $a \neq 0$.
+\begin{equation*}
+\frac{d}{d\theta}|A| = a(-A sin\theta + D cos\theta)
+\end{equation*}
+At $\theta = 0$, this becomes
+\begin{equation*}
+\left.\frac{d}{d\theta}|A|\right|_{\theta=0} = aD = ad|D|.
+\end{equation*}
+Similarly, if $D \neq 0$ then
+\begin{equation*}
+|D| = dD \rightarrow d(D cos\theta - A sin\theta)
+\end{equation*}
+\begin{equation*}
+\left.\frac{d}{d\theta}|D|\right|_{\theta=0} = -dA = -ad|A|.
+\end{equation*}
+If $A$, $B$, $C$, $D$, $E$, $F$ are all nonzero, then
+\begin{equation*}
+\left.\frac{d}{d\theta}(R_1)\right|_{\theta=0} =
+\left.\frac{d}{d\theta}(|A|+|B|+|C|)\right|_{\theta=0} =
+ad|D|+be|E|+cf|F|.
+\end{equation*}
+This cannot be zero by GPT (Generalization of Phil's theorem) or the cube is
+not optimal. Similarly
+\begin{equation*}
+\left.\frac{d}{d\theta}(R_2)\right|_{\theta=0} =
+-ad|A|-be|B|-cf|C|.
+\end{equation*}
+Since $\left.\frac{d}{d\theta}(R_1)\right|_{\theta=0} \neq 0$ for an optimal
+cube, we can increase or decrease $R_1$ by a small rotation if we don't care
+what happens to $R_2$.
+
+Now, suppose $R_1 = R_2$.  When is it possible to decrease $R_1$ and $R_2$
+simultaneously?  It is impossible if $\frac{dR_1}{d\theta}$ and
+$\frac{dR_2}{d\theta}$ have opposite signs.  When do they have opposite signs?
+
+Suppose $ad = 1$ and $be = cf = -1$.  Then
+\begin{alignat*}{2}
+\frac{dR_1}{d\theta} &=  &&|D|-|E|-|F| \\
+\frac{dR_2}{d\theta} &= -&&|A|+|B|+|C| 
+\end{alignat*}
+Assume we have normalized $V$ so that $R_1 = R_2 = 1$, then $|A|+|B|+|C| =
+|D|+|E|+|F| = 1$.
+\begin{alignat*}{3}
+ &|D|-|E|-|F| &&= -1+2|D| = -(&&1-2|D|) \\
+-&|A|+|B|+|C| &&=             &&1-2|A|
+\end{alignat*}
+If $|A|$ and $|D|$ are both $> \half$ or both $< \half$, then
+$\frac{dR_1}{d\theta}$ and $\frac{dR_2}{d\theta}$ have opposite signs and
+conversely.
+
+If a cube is optimal and it is impossible to decrease $R_1$ and $R_2$
+simultaneously, then $|A|$ and $|D|$ are both $> \half$ or both $<
+\label{refpage17}
+\half$.  This is if $ad$ has one sign and $be$ and $cf$ have the other.
+
+Now suppose that $A = 0$ and all the other entries are nonzero.
+\begin{alignat*}{4}
+ A  &\rightarrow A cos\theta + D sin\theta &&= D~ sin\theta \\
+|A| &\rightarrow ~~~~|D sin\theta|         &&=
+\begin{cases}
+    ~\:\,|D| sin\theta,& \text{if}~\theta > 0 \\
+     -|D| sin\theta,& \text{if}~\theta < 0
+\end{cases} \\
+    & ~~~~~~~~~~\left.\frac{d|A|}{d\theta}\right|_{\theta=0} &&=
+\begin{cases}
+    ~\:\,|D|,& \text{if}~\theta > 0 \\
+        -|D|,& \text{if}~\theta < 0 
+\end{cases}
+\end{alignat*}
+So
+\begin{alignat*}{3}
+\frac{dR_1}{d\theta} &= \text{sign}(\theta)&&|D| + &&be|E| + cf|F| \\
+\frac{dR_2}{d\theta} &=    ~~           -ad&&|A| + &&be|B| + cf|C| \\
+                     &=                    &&      &&be|B| + cf|C|
+\end{alignat*}
+If the cube is optimal and we cannot decrease $R_1$ then
+\begin{align*}
+ &|D|+be|E|+cf|F| > 0 \\
+-&|D|+be|E|+cf|F| < 0
+\end{align*}
+If $be = 1$ and $cf = -1$ then
+\begin{align*}
+ |F| &< |D|+|E| \\
+ |E| &< |D|+|F|
+\end{align*}
+If $R_1 = R_2$ and if the cube is optimal and we cannot decrease $R_1$ and
+$R_2$ simultaneously then $|D|+be|E|+cf|F|$ and $-be|B|-cf|C|$ are not both
+negative and $-|D|+be|E|+cf|F|$ and $-be|B|-cf|C|$ are not both positive.
+If we can decrease $R_1$ with $\theta$ positive then $|D|+|E|-|F| < 0$ but we
+cannot decrease $R_2$ with $\theta$ positive so $-|B|+|C|>0$.  So, if $|F| >
+\half$ then $|C| > \half$ but if $|C| < \half$ then $|F| <
+\half$.
+
+Similarly, if we can decrease $R_1$ with $\theta$ negative, then $-|B|+|C| <
+0$ so if $|E| > \half$ then $|B| > \half$ but if $|B| <
+\half$ then $|E| < \half$.
+
+There was a mistake in the cube paper on page 8 of the old single-spaced
+version - $\gamma' = 45^o$ should be $\alpha' = 45^o$.
+\begin{equation*}
+V =
+\left[
+\begin{array}{lllc}
+s\alpha                & ~~\:c\alpha                &  ~~~0              & 0       \\
+c\alpha~s\beta         &    -s\alpha~s\beta         & ~~\:c\beta         & 0       \\
+c\alpha~c\beta~s\gamma &    -s\alpha~s\beta~s\gamma &    -s\beta~s\gamma & c\gamma
+\end{array}
+\right]
+\end{equation*}
+Then
+\begin{align*}
+\vec{v}_1 &= \left(
+               \frac{s\alpha}{c\gamma},
+               \frac{c\alpha}{c\gamma},
+               0,
+               0
+             \right) \\
+\vec{v}_2 &= \left(
+               \frac{ c\alpha~s\beta}{c\gamma},
+               \frac{-s\alpha~s\beta}{c\gamma},
+               \frac{c\beta}{c\gamma},
+               0
+             \right) \\
+\vec{v}_3 &= \left(
+               c\alpha~c\beta~tan\gamma,
+              -s\alpha~c\beta~tan\gamma,
+              -s\beta~tan\gamma,
+               1
+             \right) \\
+\end{align*}
+Choose $\alpha' = 45^o$ and $\alpha$, $\beta$, $\gamma$ = $\alpha'$, $\beta'$,
+$\gamma'$
+\begin{align*}
+\vec{v}_1 &= \left(
+               \hs2~sec\gamma,
+               \hs2~sec\gamma,
+               0,
+               0
+             \right) \\
+\vec{v}_2 &= \left(
+               \hs2~s\beta~sec\gamma,
+              -\hs2~s\beta~sec\gamma,
+                    c\beta~sec\gamma,
+               0
+             \right) \\
+\vec{v}_3 &= \left(
+               \hs2~c\beta~tan\gamma,
+              -\hs2~c\beta~tan\gamma,
+                   -s\beta~tan\gamma,
+               1
+             \right)
+\end{align*}
+Let $\sqrt{x_0} = sec\gamma$, then $s\gamma = \sqrt{1-\frac{1}{x_0}}$,
+$c\gamma = \frac{1}{\sqrt{x_0}}$, $tan\gamma = s\gamma~sec\gamma =
+\sqrt{x_0-1}$.  So
+\begin{align*}
+\vec{v}_1 \!+\! \vec{v}_2 &= \left(
+                           \hs2(1\!+\!s\beta)\sqrt{x_0},
+                           \hs2(1\!-\!s\beta)\sqrt{x_0},
+                                  c\beta \sqrt{x_0},
+                           0
+                         \right) \\
+\vec{v}_1 \!+\! \vec{v}_3 &= \left(
+                           \hs2(\sqrt{x_0}\!+\!c\beta\sqrt{x_0\!-\!1}\,),
+                           \hs2(\sqrt{x_0}\!-\!c\beta\sqrt{x_0\!-\!1}\,),
+                                            -  s\beta\sqrt{x_0\!-\!1} ,
+                           1
+                         \right) \displaybreak \\
+\vec{v}_2 \!+\! \vec{v}_3 &= \left(
+                           \hs2(s\beta\sqrt{x_0}\!+\!c\beta\sqrt{x_0\!-\!1}\,),
+                          -\hs2(s\beta\sqrt{x_0}\!+\!c\beta\sqrt{x_0\!-\!1}\,),
+                             \right. \\
+                          &  \left.
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+                                ~~~~~~~
+                                c\beta\sqrt{x_0}\!-\!s\beta\sqrt{x_0\!-\!1} ,
+                           1
+                             \right) \\
+\vec{v}_1 \!+\! \vec{v}_2 \!+\! \vec{v}_3 &= \left(
+                           \hs2[(1+s\beta)\sqrt{x_0}\!+\!c\beta\sqrt{x_0\!-\!1}\,],
+                           \hs2[(1-s\beta)\sqrt{x_0}\!-\!c\beta\sqrt{x_0\!-\!1}\,],
+                             \right. \\
+                          &  \left.
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+                                ~~~~~~~
+                                c\beta\sqrt{x_0}\!-\!s\beta\sqrt{x_0\!-\!1} ,
+                           1
+                             \right)
+\end{align*}
+Let $\sqrt{y} = c\beta$ then
+\begin{align*}
+          c  \gamma &= \sqrt{y} + s\gamma\sqrt{1-y}             \\
+          c^2\gamma &= y + 2\sqrt{y}\sqrt{1-y} + (1-y)s^2\gamma \\
+2\sqrt{y}\sqrt{1-y} &= c^2\gamma - y - (1-y)s^2\gamma
+\end{align*}
+From old notes page 25
+\begin{alignat*}{2}
+R &= c\gamma &&= \frac{1}{\sqrt{x_0}} \\
+S &= c\beta  &&= \frac{\sqrt{2}R-1}{\sqrt{2}-R} \\
+  &          &&= \frac{\frac{\sqrt{2}}{\sqrt{x_0}}-1}{\sqrt{2}-\frac{1}{\sqrt{x_0}}} \\
+  &          &&= \frac{\sqrt{2}-\sqrt{x_0}}{\sqrt{2x_0}-1} \\
+  &          &&= \left(\frac{\sqrt{2}-\sqrt{x_0}}{\sqrt{2x_0}-1}\right)
+                 \left(\frac{\sqrt{2x_0}+1}{\sqrt{2x_0}+1}\right) \\
+  &          &&= \frac{2\sqrt{x_0}+\sqrt{2}-\sqrt{2}x_0-\sqrt{x_0}}{2x_0-1} \\
+  &          &&= \frac{\sqrt{2}+\sqrt{x_0}-\sqrt{2}x_0}{2x_0-1} \\
+  &          &&= \frac{\sqrt{x_0} - \sqrt{2}(x_0-1)}{2x_0-1}
+\end{alignat*}
+Is $S < 1$?  If so, $S = \frac{\sqrt{2}R-1}{\sqrt{2}-R} < 1$ implies
+$\sqrt{2}R-1 < \sqrt{2}-R$ which simplifies to $R < 1$ so the answer is yes.
+
+\section*{Numerics}
+\addcontentsline{toc}{section}{Numerics}
+
+Below are the approximate values for the quantities that define the optimal
+cube within a unit tesseract.
+\begin{alignat*}{2}
+\alpha &=       45&&      ^o \\
+\beta  &\approx 16&&.71675^o \\
+\gamma &\approx ~\,6&&.96526^o
+\end{alignat*}
+\begin{align*}
+s\beta &\approx 0.287640520 \\
+c\beta &\approx 0.957738446
+\end{align*}
+\begin{align*}
+s\gamma &\approx 0.121267437 \\
+c\gamma &\approx 0.992619871 \\
+t\gamma &\approx 0.122169060
+\end{align*}
+\begin{equation*}
+\sqrt{x_0} = \frac{1}{c\beta} \approx 1.007435
+\end{equation*}
+\begin{align*}
+R &\approx 0.992619871 \\
+S &\approx 0.957738439
+\end{align*}
+Then the vertices of the cube are
+\begin{alignat*}{4}
+\text{Vertex 1} ~~~~& (0.0         &&,~0.287640526 &&,~0.035140772 &&,~0.0) \\
+\text{Vertex 2} ~~~~& (0.712364120 &&,~1.0         &&,~0.035140772 &&,~0.0) \\
+\text{Vertex 3} ~~~~& (0.204904786 &&,~0.082735740 &&,~1.0         &&,~0.0) \\
+\text{Vertex 4} ~~~~& (0.082735740 &&,~0.204904786 &&,~0.0         &&,~1.0) \\
+\text{Vertex 5} ~~~~& (0.917268906 &&,~0.795099860 &&,~1.0         &&,~0.0) \\
+\text{Vertex 6} ~~~~& (0.795099860 &&,~0.917268906 &&,~0.0         &&,~1.0) \\
+\text{Vertex 7} ~~~~& (0.287640526 &&,~0.0         &&,~0.964859231 &&,~1.0) \\
+\text{Vertex 8} ~~~~& (1.0         &&,~0.712364120 &&,~0.964859231 &&,~1.0)
+\end{alignat*}
+The edges connect these vertices pairs:
+$1\!-\!2$, $1\!-\!3$, $1\!-\!4$, $2\!-\!5$, $2\!-\!6$, $3\!-\!5$,
+$3\!-\!7$, $4\!-\!6$, $4\!-\!7$, $5\!-\!8$, $6\!-\!8$, $7\!-\!8$
+
+Finally, the angles corresponding to the direction cosine matrix
+\begin{equation*}
+\begin{array}{llll}
+ 45    ^o & ~\,45    ^o &  90    ^o &   90    ^o \\
+ 78.265^o &   101.735^o &  16.717^o &   90    ^o \\
+ 85.289^o & ~\,94.711^o &  91.999^o & ~\,6.965^o
+\end{array}
+\end{equation*}
+A projection of the optimal cube inside the unit tesseract is shown in
+Figure~\ref{fig3}.
+\begin{figure}
+\begin{center}
+\epsfig{file=figure3.eps,width=4.5in}
+\end{center}
+\vspace{-0.2in}
+\caption{The largest cube in a tesseract.}
+\label{fig3}
+\end{figure}

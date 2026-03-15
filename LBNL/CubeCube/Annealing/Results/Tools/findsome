@@ -1,0 +1,10 @@
+#!/bin/csh -f
+set len=`echo -n $2 | wc -c`
+cd ..
+if ($len == 1) then
+  grep "$1   $2" `find . \( -name '*.results' -o -name 'results*.raw' \) -print` | sed -e 's/^\(.*\):\(.*\)$/\2  ->  \1/' | sort -nr +2 -3
+else if ($len == 2) then
+  grep "$1  $2" `find . \( -name '*.results' -o -name 'results*.raw' \) -print` | sed -e 's/^\(.*\):\(.*\)$/\2  ->  \1/' | sort -nr +2 -3
+else if ($len == 3) then
+  grep "$1 $2" `find . \( -name '*.results' -o -name 'results*.raw' \) -print` | sed -e 's/^\(.*\):\(.*\)$/\2  ->  \1/' | sort -nr +2 -3
+endif

@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+import sys,fractions
+import list_io
+
+file = sys.stdin
+if len(sys.argv) > 1:
+  file = open(sys.argv[1],"r")
+
+list_key = list_io.read_key(file)
+(maxm,maxn,list_pairs) = list_io.read_body(file)
+
+file.close()
+
+list_key["b"] = ("common-factor",)
+
+for n in xrange(1,maxn+1):
+  for m in xrange(1,maxm+1):
+    if (m,n) in list_pairs:
+      d = fractions.gcd(m,n)
+      if d > 1:
+        list_pairs[(m,n)].add("b")
+
+file = sys.stdout
+if len(sys.argv) > 1:
+  file = open(sys.argv[1],"w")
+
+list_io.write_key(list_key,file)
+list_io.write_body(maxm,maxn,list_pairs,file)

@@ -1,0 +1,12 @@
+#!/bin/csh -f
+# Start with a LaTeX document and produce a DVI and PostScript version.
+set target=Shultz-Huber-Ligocki
+python3 figure3.py > figure3.fig
+fig2eps --nogv -C -f figure3.fig
+latex $target.tex
+bibtex $target
+latex $target.tex
+latex $target.tex
+latex $target.tex
+dvips -f -D 600 -t letter $target.dvi > $target.ps
+dvips -Ppdf -Pamz -Pcmz -t letter -D 8000 -o - $target.dvi | ps2pdf - $target.pdf

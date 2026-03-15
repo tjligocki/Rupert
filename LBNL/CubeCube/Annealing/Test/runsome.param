@@ -1,0 +1,10 @@
+outdim		OUTDIM
+indim		INDIM
+report		REPORT
+save		SAVE
+tries		TRIES
+fail	        100000000
+rate		RATE
+temperature	  1.0
+mintemp		    0.0000000001
+sdrate		    0.2

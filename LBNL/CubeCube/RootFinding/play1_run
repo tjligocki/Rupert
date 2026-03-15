@@ -1,0 +1,8 @@
+#!/bin/csh -f
+set n=2
+/bin/rm -f rupert_play1.out
+while ($n < = 50)
+  echo $n
+  (time rupert_play1.py 1 $n) >>&! rupert_play1.out
+  @ n++
+end

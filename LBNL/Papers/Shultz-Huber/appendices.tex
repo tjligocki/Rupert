@@ -1,0 +1,343 @@
+\section{Explanations}
+\begin{center}
+{\bf A Note to the Reader}
+\end{center}
+\vspace{-0.2in}
+Some parts of this paper are written as if I had not yet completed the
+analysis of the largest cube in a tesseract.  This is because the paper was
+written in two stages; the first at a time when I didn't think I would be able
+to rule out (or in) the most difficult cases.  However, both stages were
+completed in 1996.  Only the Table of Contents and Appendices were added in
+2013, and the abstract was updated slightly to reflect work which was actually
+completed in 1996.
+
+The is a break in the paper between Part 1 and Part 2.  This probably occurred
+because I realized that I would not be able to type the little squares and
+circles surrounding the plus and minus signs.  This is why the rest of the
+paper is handwritten.
+\newpage
+
+\renewcommand\thetheorem{\thesection.\arabic{theorem}}
+\setcounter{theorem}{0}
+
+\section{Theorems}
+\label{appendix:theorems}
+\begin{theorem}[Phil's Theorem]
+For $m=2$, $n=3$, if $\pm\vec{v}_1 \pm\vec{v}_2$ (with any combination of the
++ and - signs) contains one or more zeros, then $l \leq 1$ (non-optimal)
+\end{theorem}
+\begin{proof}
+Use the normalization where the n-cube has unit side.  $\vec{v}_1 -
+\vec{v}_2$, say, fits into the cube since it's a diagonal of a face.  So, its
+components have absolute values $\leq 1$.  If one or more components are zero,
+then the maximum squared length of $\vec{v}_1 - \vec{v}_2$ is 2 ($= 1^2 +
+1^2$).  So $|\vec{v}_1 - \vec{v}_2| \leq \sqrt{2}$, and so $|\vec{v}_1| \leq
+1$.
+\end{proof}
+\vspace{0.2in}
+\begin{theorem}[GPT - Generalization of Phil's Theorem]
+For $m=3$, $n=4$, if $\pm\vec{v}_1 \pm\vec{v}_2 \pm\vec{v}_3$ has 1 or more
+zeros or if $\pm\vec{v}_1 \pm\vec{v}_2$ or $\pm\vec{v}_1 \pm\vec{v}_2$ or
+etc., has 2 or more zeros or if $\pm\vec{v}_1$, etc. has 3 or more zeros, the
+$l \leq 1$ (non-optimal).
+\end{theorem}
+\begin{proof}
+The proof is similar to Phil's Theorem: $|\pm\vec{v}_1 \pm\vec{v}_2
+\pm\vec{v}_3| \leq \sqrt{1^2+1^2+1^2} = \sqrt{3}$ so $|\vec{v}_1| \leq 1$.
+$|\pm\vec{v}_1 \pm\vec{v}_2| \leq \sqrt{1^2+1^2} = \sqrt{2}$ so
+$|\vec{v}_1| \leq 1$, etc. $|\pm\vec{v}_1| \leq \sqrt{1^2} = \sqrt{1}$ so
+$|\vec{v}_1| \leq 1$, etc.
+\end{proof}
+\vspace{0.2in}
+\begin{theorem}[The Zero Theorem]
+For a cube in a tesseract, suppose we add a 4th row to $V$ to convert it into
+a 4x4 orthogonal matrix.  Call the 4x4 matrix $W$.  If one
+or more elements in the 4th row are zero, then the cube is not optimal.
+\end{theorem}
+\begin{proof}
+Since all the elements of $W$ have absolute values $\leq 1$, it follows that
+$w_{ij}^2 \leq |w_{ij}|$ for all $(i,j)$.  Assume that $w_{4j} = 0$.  Then
+$R_j = \sum_{i=1}^{3} |w_{ij}| \geq \sum_{i=1}^{3} w_{ij}^2 = 1$.  Since $R_j
+\geq 1$ for at least one value of $j$, $R \geq 1$ and the cube is not optimal.
+\end{proof}
+\newpage
+
+\section{Additions}
+On page~\pageref{refpage3}, there is an easier way
+to rule out $\alpha'$, $\beta'$, and $\gamma' = 90^o$.  Since $R_1 = s\alpha'
++ c\alpha' s\beta' + c\alpha' c\beta' s\gamma'$, then $\alpha' = 90^o$ implies
+$R_1 \geq 1$.  If $s\beta' = 1$ then $R_2 = c\alpha' + s\alpha' +s\alpha'
+c\beta' s\gamma' \geq c\alpha' + s\alpha' \geq 1$.  If $s\gamma' = 1$ the $R_3
+= c\beta' + s\beta' \geq 1$.  This method seems to work even in higher
+dimensions for an m-cube in an (m+1)-cube.
+
+Here is yet another way to prove that the minimum $R$ does not occur on the
+boundary:  On page~\pageref{refpage4}, we add a fourth row to the matrix
+parameterized by 3 angles \footnote{so as to produce a 4x4 orthogonal matrix.}.
+If this 4th row is $(w~x~y~z)$ then we can take $z = s\gamma$, $y = s\beta
+c\gamma$, $x = s\alpha c\beta c\gamma$, and $w = -c\alpha c\beta c\gamma$. If
+$s\alpha = 0$ then $x = 0$.  If $s\beta = 0$ then $y = 0$.  If $s\gamma = 0$
+then $z = 0$.  If $c\alpha = 0$ then $w = 0$.  If $c\beta = 0$ then $w = x =
+0$.  Finally, if $c\gamma = 0$ and $w = x = y = 0$.  In all cases, we can use
+the Zero Theorem
+\footnote{\label{footnote:zerotheorem}see Appendix~\ref{appendix:theorems}.},
+proving that the cube is not optimal because $R \geq 1$.
+
+On page~\pageref{refpage5}, we consider
+\begin{equation*}
+\begin{array}{cccc}
+0 & X & X & X \\
+0 & X & X & X \\
+X & 0 & X & X
+\end{array}
+\end{equation*}
+where the $X$'s may be zero or nonzero.  There is a parameterization of $V$
+following that may not be correct.  However, it doesn't matter because this
+case is easily ruled out by the Zero Theorem\footnote{See
+footnote~\ref{footnote:zerotheorem}}, which states that if we add a fourth row
+to the 3x4 matrix so as to produce a 4x4 orthogonal matrix and the fourth row
+contains one or more zeros then the case is not optimal.  Here, let us call
+the fourth row $(w~x~y~z)$.  Since the first two columns must be orthogonal,
+$w$ or $x$ or both must be zero.
+
+On page~\pageref{refpage6}, we decided to omit the analysis of two cases.
+Here we describe them for the sake of completeness.
+\newpage
+
+{\bf Two zeros in the first column:}  Assume
+that $F = K = 0$ and $R = R_1 > R_2, R_3, R_4$, then we have:
+\begin{equation*}
+V =
+\begin{bmatrix}
+A & B & C & D \\
+0 & G & H & J \\
+0 & L & M & P
+\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+T_{mod} =
+\begin{bmatrix}
+aB & aC & aD & 0 & 0 & 0 \\
+ G &  H &  J & 0 & 0 & 0 \\
+ L &  M &  P & 0 & 0 & 0
+\end{bmatrix}
+\end{equation*}
+with $a = \pm1$.
+
+Suppose $a_1 a(B,C,D) + a_2(G,H,J) + a_3(L,M,P) = 0$.  Then, since $(B,C,D)$,
+$(G,H,J)$, and $(L,M,P)$ are all mutually orthogonal, we can multiply by
+$(B,C,D)$ to get $a_1 a(B^2+C^2+D^2) = 0$.  Since $B = C = D =
+0$ would lead to a non-optimal cube, it must be that $a_1 = 0$.  Similarly,
+multiplying by $(G,H,J)$ yields either $a_2 = 0$ or $G = H = J = 0$.  But the
+latter case means that $\vec{v}_2 = 0$ which is impossible.  Thus, $a_2 = 0$.
+Then similarly, $a_3 = 0$.  Thus $T_{mod}$ has maximum rank and the cube is
+not optimal.
+
+{\bf Two zeros in a row:}  Assume that $K = L = 0$ and $R = R_1 = R_2 > R_3,
+R_4$, then we have:
+\begin{equation*}
+V =
+\begin{bmatrix}
+A & B & C & D \\
+F & G & H & J \\
+0 & 0 & M & P
+\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+T_{mod} =
+\begin{bmatrix}
+ aB+fG & aC+fH & aD+fJ &   0   &   0   & 0 \\
+   0   &   M   &   P   &   0   &   0   & 0 \\
+-bA-gF &   0   &   0   & bC+gH & bD+gJ & 0 \\
+   0   &   0   &   0   &   M   &   P   & 0
+\end{bmatrix}
+\end{equation*}
+If $a_1 \neq 0$ and $a_2 = a_3 = a_4 = 0$ then use columns 2 and 3 of
+$T_{mod}$: $a_1[a(C,D)+f(H,J)] = 0$.  If $a_1 = 0$ then we have a
+contradiction.  If $a(C,D)+f(H,J) = 0$ then this is non-optimal by the GPT.
+
+If only $a_2 \neq 0$, use columns 2 and 3 to determined either $M = P = 0$ or
+$a_2 = 0$.  We know that $a_2 \neq 0$, but if $M = P = 0$ then $\vec{v}_3 = 0$
+which isn't allowed.
+
+If only $a_3 \neq 0$, use columns 4 and 5 and proceed similarly to $a_1 \neq
+0$.  If only $a_4 \neq 0$, use columns 4 and 5 and process similarly to $a_2 \neq
+0$.
+
+If only $a_1$ and $a_2$ are nonzero, use columns 2 and 3: $a_1[a(C,D)+f(H,J)]
++ a_2(M,P) = 0$.  Multiply through by $(M,P)$ to get $a_2(M^2+P^2) = 0$.
+Since $a_2 \neq 0$, $M = P = 0$ which isn't allowed.
+
+If only $a_1$ and $a_3$ are nonzero, use columns 2 and 3 - it's similar to the
+case where $a_1 \neq 0$.
+
+If only $a_1$ and $a_4$ are nonzero: similar.
+
+If only $a_2$ and $a_3$ are nonzero: similar to just $a_2$.
+
+If only $a_2$ and $a_4$ are nonzero: similar to just $a_2$ or just $a_4$.
+
+If only $a_3$ and $a_4$ are nonzero: use columns 4 and 5 and it's like $a_1$
+and $a_2$ nonzero.
+
+If $a_1$, $a_2$ and $a_3$ are nonzero: use columns 4 and 5 and it's like just $a_3$.
+
+If $a_1$, $a_2$ and $a_4$ are nonzero: it's like just $a_4$ nonzero.
+
+If $a_1$, $a_3$ and $a_4$ are nonzero: it's like just $a_1$ nonzero.
+
+If $a_2$, $a_3$ and $a_4$ are nonzero: it's like just $a_2$ nonzero.
+
+If $a_1$, $a_2$, $a_3$ and $a_4$ are nonzero: it's like $a_1$ and $a_2$ nonzero.
+
+On page~\pageref{refpage7}, we are discussing the case of two zeros on a
+diagonal:  $A = G = 0$ with $R = R_1 = R_2 > R_3, R_4$.  I want to show how to
+do only $a_3$ and $a_4$ nonzero (i.e., $a_1 = a_2 = 0$).  Use columns 4 and 5:
+$a_3(-lK,bC+lM,bD+lP) + a_4(-F,H,J) = 0 \rightarrow a_3[b(0,C,D)+l(-K,M,P)] +
+a_4 (-F,H,J) = 0$.  Since
+\begin{equation*}
+V =
+\begin{bmatrix}
+0 & B & C & D \\
+F & 0 & H & J \\
+K & L & M & P
+\end{bmatrix}
+\end{equation*}
+if follows that $(-F,H,J)$ is orthogonal to both $(0,C,D)$ and $(-K,M,P)$.
+Thus, we can multiply through by $(-F,H,J)$ to get $a_4(F^2+H^2+J^2) = 0$.  So
+again we get a contradiction.
+
+Note:
+
+For $a_1$, $a_2$, and $a_3$ nonzero, $a_4 = 0$, use columns 4 and 5 of $T_{mod}$
+to rule it out.
+
+For $a_1$, $a_2$, and $a_4$ nonzero, $a_3 = 0$, use columns 4 and 5 as well.
+
+For $a_1$, $a_3$, and $a_4$ nonzero, $a_2 = 0$, use columns 2 and 3.
+
+For $a_2$, $a_3$, and $a_4$ nonzero, $a_1 = 0$, use columns 2 and 3.
+\newpage
+
+\section{Clarifications}
+\begin{center}
+{\bf Snug case with no zeros}
+\end{center}
+\vspace{-0.1in}
+The proof that the snug case with no zeros is not optimal is somewhat
+fragmented, so we will clarify it here.
+\begin{equation*}
+V =
+\begin{bmatrix}
+A & B & C & D \\
+F & G & H & J \\
+K & L & M & P
+\end{bmatrix}
+\end{equation*}
+On page~\pageref{refpage8}, we assume that only $J$, $M$, and $P$ are
+negative.  On page~\pageref{refpage9}, we assume that some linear combination
+of the rows of $T$ is zero, where $T$ is given on page~\pageref{refpage10}.
+On page~\pageref{refpage11}, we find that two columns of $V$ are identical.
+On page~\pageref{refpage12}, we prove the
+Identical Column Theorem, which shows that $V$ is not optimal because it has
+two identical columns.  On
+pages~\pageref{refpage13start}-\pageref{refpage13end}, we show that for the
+subcase in which two columns have the same pattern of signs so there was no
+loss of generality in assuming the $J$, $M$, and $P$ were the negative
+entries.
+
+On pages~\pageref{refpage14} and \pageref{refpage15}, we consider the other
+sub-case, where no two columns have the same pattern of signs, and we rule it
+out, using the results from pages~\pageref{refpage16} and \pageref{refpage17}.
+\newpage
+
+\section{Corrections}
+On page~\pageref{refpage18} (The Largest Square in an Odd-dimensional Cube),
+I don't know why I wrote ``all equal'' above and below the matrix.  Also, when
+I was working on the proof, I don't think I realized that in rotating the
+maximal column with both entries nonzero with a non-maximal column with a
+zero, the zero would become nonzero.  However, this doesn't affect the
+validity of the proof.
+
+On page~\pageref{refpage19}, this
+\begin{itemize}
+\item[]{If $w_{1j} \geq 0$ for some $j$, then $v_{ij} \geq 0$ for all $i \leq m/2$}
+\item[]{If $w_{1j} \leq 0$ for some $j$, then $v_{ij} \leq 0$ for all $i \leq m/2$}
+\end{itemize}
+should be changed to
+\begin{itemize}
+\item[]{If $w_{1j} > 0$ for some $j$, then $v_{ij} \geq 0$ for all $i \leq m/2$}
+\item[]{If $w_{1j} = 0$ for some $j$, then $v_{ij} =    0$ for all $i \leq m/2$}
+\item[]{If $w_{1j} < 0$ for some $j$, then $v_{ij} \leq 0$ for all $i \leq m/2$}
+\end{itemize}
+The paragraph beginning with ``However'' is correct.  The rest of
+page~\pageref{refpage20}, beginning with ``Therefore'', and continuing to
+``General Infinitesimal Rotations'', should be replaced by the following:
+\begin{adjustwidth}{0.35in}{}
+Therefore, in the upper half of $V$, all of the matrix elements are zero
+except for one in each column equal to the corresponding $w_{1j}$, and if that
+$w_{1j}$ is zero, then they are all zero.  Similarly for the lower half of $V$
+and $w_{2j}$.
+
+Thus, all $v_{ij}$ can only be 0, $\pm1$, $\pm\frac{1}{4}$, and
+$\pm\frac{3}{4}$.  Now the squared length must be $\frac{4n-3}{4m}$, which can
+never be an integer, since the numerator is odd and the denominator is even.
+But only four of the $v_{ij}$ have non-integral squared length:
+$\pm\frac{3}{4}$ appears twice and $\pm\frac{1}{4}$ also appears twice.  So if
+$m > 4$, some rows will contain only zeros and $\pm$ ones, with an integral
+squared length.  The only hope is $m = 4$, where each row must contain one
+fraction.  But then two rows will have a squared length of an integer plus
+$\frac{9}{16}$, and the other two will have a squared length of an integer
+plus $\frac{1}{16}$, so these cannot be equal.
+
+This is a pity because we have not found any more values of $f(m,n)$.
+However, we have proved that for $m$ even and $\geq 4$, and $n$ odd, $f(m,n)$
+is {\bf strictly} less than $\sqrt{\frac{4n-3}{4m}}$.
+\end{adjustwidth}
+
+On page~\pageref{refpage24} in ``so that $v_{31}$ and $v_{33}$ must have'',
+the $v_{33}$ should be $v_{32}$.
+
+On page~\pageref{refpage25}, both references to ``columns 1 and 3'' should be
+changed to ``columns 2 and 4''.
+
+On page~\pageref{refpage26}, just before ``$(B,C,D) \bot (L,M,P)$'', it should
+say ``since $\vec{v}_1 \bot \vec{v}_3$''.  Also ``$(G,H,J) \pm (L,M,P)$''
+should be ``$\pm (G,H,J) \pm (L,M,P)$'' and ``$\vec{v}_2 \pm \vec{v}_3$''
+should be ``$\pm \vec{v}_2 \pm \vec{v}_3$'' in all 3 places.
+
+On page~\pageref{refpage27} in ``We have now proved that a matrix with no zeros
+cannot be an optimal square in a tesseract'', ``square'' should be ``cube''.
+
+\begin{center}
+{\bf A Mystery}
+\end{center}
+\vspace{-0.1in}
+On page~\pageref{refpage21}, it says that we omit the proof for the snug case
+with exactly two zeros in the same row of $V$.  However, we do prove it
+starting on page~\pageref{refpage22}.  And, it's not shown on
+page~\pageref{refpage23} where that other cases are shown.
+
+Why I did this is a mystery to me.
+\newpage
+
+\section{Other}
+\begin{center}
+{\bf Lower bound for $f(m,m+1)$}
+\end{center}
+\vspace{-0.1in}
+On page~\pageref{refpage28} there is a formula for a lower bound for
+$f(m,m+1)$.  Unfortunately, I no longer have my derivation of this formula and
+I have not succeeded in re-deriving it.
+
+I know that I used the idea on page~\pageref{refpage29}, showing that $f(3,4)
+> 1$ and assuming that it generalizes to higher dimensions, but I just haven't
+been able to get a closed-form formula like the one on
+page~\pageref{refpage28}.
+
+I also know that I used the formula $\frac{v+w}{1+\frac{vw}{c^2}}$ with $c =
+1$.  This is the velocity addition formula from special relativity.  If $0
+\leq v < c$ and $0 \leq w < c$, then $\frac{v+w}{1+\frac{vw}{c^2}}$ is larger
+than $v$ or $w$ but less that $c$.  It's a nice substitute for the ``max''
+function.
+\newpage

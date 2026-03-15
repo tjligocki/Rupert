@@ -1,0 +1,25 @@
+#!/bin/csh -f
+set mat=(`awk -f view23.awk $*`)
+
+set orx=`echo $mat[1] $mat[2] $mat[3] $mat[10] | awk '{printf("%9.6f",(-$1-$2)/$4);}'`
+set ory=`echo $mat[4] $mat[5] $mat[6] $mat[10] | awk '{printf("%9.6f",(-$1-$2)/$4);}'`
+set orz=`echo $mat[7] $mat[8] $mat[9] $mat[10] | awk '{printf("%9.6f",(-$1-$2)/$4);}'`
+
+set p1x=`echo $mat[1] $mat[2] $mat[3] $mat[10] | awk '{printf("%9.6f",( $1-$2)/$4);}'`
+set p1y=`echo $mat[4] $mat[5] $mat[6] $mat[10] | awk '{printf("%9.6f",( $1-$2)/$4);}'`
+set p1z=`echo $mat[7] $mat[8] $mat[9] $mat[10] | awk '{printf("%9.6f",( $1-$2)/$4);}'`
+
+set p2x=`echo $mat[1] $mat[2] $mat[3] $mat[10] | awk '{printf("%9.6f",(-$1+$2)/$4);}'`
+set p2y=`echo $mat[4] $mat[5] $mat[6] $mat[10] | awk '{printf("%9.6f",(-$1+$2)/$4);}'`
+set p2z=`echo $mat[7] $mat[8] $mat[9] $mat[10] | awk '{printf("%9.6f",(-$1+$2)/$4);}'`
+
+sed -e "s/ORX/$orx/" \
+    -e "s/ORY/$ory/" \
+    -e "s/ORZ/$orz/" \
+    -e "s/P1X/$p1x/" \
+    -e "s/P1Y/$p1y/" \
+    -e "s/P1Z/$p1z/" \
+    -e "s/P2X/$p2x/" \
+    -e "s/P2Y/$p2y/" \
+    -e "s/P2Z/$p2z/" \
+    < view23.tcl.template > view23.tcl

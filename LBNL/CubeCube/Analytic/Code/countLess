@@ -1,0 +1,7 @@
+#!/bin/csh -f
+foreach i ('out.*' 'MP.096/out.*' 'MP.192/out.*' 'MP.384/out.*')
+  wc $i                                                   \
+  | awk '{printf("%10d %10d %10d   %0s\n",$1,$2,$3,$4);}' \
+  | sed -e '/total$/d'
+  echo ""
+end

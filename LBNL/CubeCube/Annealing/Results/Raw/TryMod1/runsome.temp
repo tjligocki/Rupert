@@ -1,0 +1,10 @@
+outdim		55
+indim		6
+report		133650000
+save		267300000
+tries		267300000
+fail	       100000000
+rate		0.0000000080826353639362486779786
+temperature	  1.0
+mintemp		    0.000000000000001
+sdrate		    0.2

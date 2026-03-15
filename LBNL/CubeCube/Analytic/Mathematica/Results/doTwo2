@@ -1,0 +1,11 @@
+#!/bin/csh -f
+set i = 2;
+while ($i < 50)
+  set ii=`echo $i | awk '{printf("%03d",2*$1-1);}'`
+  set jj=`echo $i | awk '{printf("%03d",2*$1+1);}'`
+  set f=case.$ii.$jj
+  echo $i $f
+  awk -f doTwo2.awk < $f > doTwo2.$$
+  mv -f doTwo2.$$ $f
+  @ i++
+end

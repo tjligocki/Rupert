@@ -1,0 +1,8 @@
+#!/bin/csh -f
+set n=3
+while ($n <= 30)
+  echo $n
+  set nn=`echo $n | awk '{printf("%02d",$1);}'`
+  oneLess2 $n |& tee out.$nn
+  @ n++
+end

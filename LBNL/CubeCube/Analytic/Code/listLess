@@ -1,0 +1,24 @@
+#!/bin/csh -f
+set base=/tmp/listLess$$
+/bin/rm -f $base
+foreach i (. MP.096 MP.192 MP.384)
+  foreach j ($i/out.*)
+    if ("$j:e" == "gz") then
+      zcat $j   \
+      | tail -2 \
+      | sed -e '/^==/d' -e '/^ *$/d' >> ${base}
+    else
+      cat $j    \
+      | tail -2 \
+      | sed -e '/^==/d' -e '/^ *$/d' >> ${base}
+    endif
+  end
+end
+
+cat ${base}            \
+| awk -f listLess1.awk \
+| sort +1n -2 +0n -1   \
+| awk -f listLess2.awk \
+| awk -f listLess3.awk
+
+/bin/rm ${base}*

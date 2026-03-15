@@ -1,0 +1,2 @@
+ifort -openmp -O3 -fno-alias -fno-fnalias -msse3 -axSSE3 -xSSE3 -o $1 -assume nounderscore $1.f90 mpmodule.o mpmodulem.o mpfuna.o mpfunf.o mpfunfm.o mpfung2.o mpfungm2.o \
+  mpinterface.o second.o -lmpfr

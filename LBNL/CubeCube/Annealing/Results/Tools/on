@@ -1,0 +1,4 @@
+#!/bin/csh -f
+set dir=$HOME/ANAG/TJLigocki/Research/Rupert/CubeCube/Annealing/Results/Tools
+
+awk -f ${dir}/on.awk row=$1 $argv[2-]

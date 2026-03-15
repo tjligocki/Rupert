@@ -1,0 +1,70 @@
+#/bin/csh -f
+set dir=$HOME/ANAG/TJLigocki/Research/Rupert/CubeCube/Annealing/Results/Tools
+
+set l1=`expr length $1`
+set l2=`expr length $2`
+
+switch ($l1)
+  case 1:
+    switch ($l2)
+      case 1:
+        set string="  $1   $2"
+        breaksw
+
+      case 2:
+        set string="  $1  $2"
+        breaksw
+
+      case 3:
+        set string="  $1 $2"
+        breaksw
+
+      default
+        breaksw
+    endsw
+    breaksw
+
+  case 2:
+    switch ($l2)
+      case 1:
+        set string=" $1   $2"
+        breaksw
+
+      case 2:
+        set string=" $1  $2"
+        breaksw
+
+      case 3:
+        set string=" $1 $2"
+        breaksw
+
+      default
+        breaksw
+    endsw
+    breaksw
+
+  case 3:
+    switch ($l2)
+      case 1:
+        set string="$1   $2"
+        breaksw
+
+      case 2:
+        set string="$1  $2"
+        breaksw
+
+      case 3:
+        set string="$1 $2"
+        breaksw
+
+      default
+        breaksw
+    endsw
+    breaksw
+
+  default
+    echo "Strings $1 ($l1) and $2 ($l2) have lengths too small or large"
+    exit 1
+    breaksw
+endsw
+grep "^$string" `find . -name '*.results*' -print` | awk -f ${dir}/analresults.awk | sort -nr +2 -3

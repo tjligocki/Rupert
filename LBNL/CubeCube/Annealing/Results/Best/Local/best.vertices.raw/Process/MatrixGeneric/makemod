@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+
+import sys,os,operator
+
+mod_dir = "Mod"
+
+if len(sys.argv) > 1:
+  m = int(sys.argv[1])
+else:
+  sys.stderr.write("Usage:  makemod m\n")
+  sys.exit(1)
+
+files = [o for o in os.walk(mod_dir)][0][2]
+
+mn_pairs = []
+for f in files:
+  parts = f.split(".")
+  if parts[0] == "matrix":
+    cm = int(parts[1])
+    cn = int(parts[2])
+
+    if cm == m:
+      mn_pairs.append([cm,cn])
+
+mn_pairs.sort(key=operator.itemgetter(1))
+
+for r in xrange(m):
+  outputfile = "matrix.%03d.m%03d.%03d" % (m,m,r)
+
+  os.system("rm -f %s" % outputfile)
+
+  command = "combine "
+
+  for (cm,cn) in mn_pairs:
+    if cn % cm == r:
+      command += "%s/matrix.%03d.%03d " % (mod_dir,cm,cn)
+
+  command += ">> %s" % outputfile
+
+  os.system(command)

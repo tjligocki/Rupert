@@ -1,0 +1,2 @@
+gfortran -fopenmp -O3 -o $1 -fno-underscoring $1.f90 mpmodule.o mpmodulem.o mpfuna.o mpfunf.o mpfunfm.o mpfung2.o mpfungm2.o \
+  mpinterface.o second.o -lmpfr

@@ -1,0 +1,11 @@
+#!/bin/csh -f
+foreach i (2 3 4 5 6 7 8 9 10)
+  echo $i
+  set m=`echo $i | awk '{printf("%03d",$1-1);}'`
+  set n=`echo $i | awk '{printf("%03d",$1);}'`
+  set j=`expr $i + 2`
+  ../Code/iterate1 $i |& tail -$j > /tmp/ideal$$
+  head -$i /tmp/ideal$$ > ideal.mat.$m.$n
+  tail -1 /tmp/ideal$$ > ideal.len.$m.$n
+end
+/bin/rm -f /tmp/ideal$$

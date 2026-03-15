@@ -1,0 +1,3 @@
+ifort -openmp -O3 -fno-alias -fno-fnalias -msse3 -axSSE3 -xSSE3 -assume nounderscore -c mpmodule.f90 mpmodulem.f90 mpfuna.f90 mpfunf.f90 mpfunfm.f90 mpfung2.f90 mpfungm2.f90 second.f90
+ifort -openmp -O3 -fno-alias -fno-fnalias -msse3 -axSSE3 -xSSE3 -assume nounderscore -c mpmodule.f90 mpmodulem.f90 mpfuna.f90 mpfunf.f90 mpfunfm.f90 mpfung2.f90 mpfungm2.f90 second.f90
+icc -c mpinterface.c

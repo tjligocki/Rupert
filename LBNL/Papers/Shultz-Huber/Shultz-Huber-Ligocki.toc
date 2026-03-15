@@ -1,0 +1,31 @@
+\contentsline {section}{Preface}{1}{section*.2}%
+\contentsline {section}{Introduction}{4}{section*.3}%
+\contentsline {section}{Method of Solution}{4}{section*.4}%
+\contentsline {section}{When does $f(m,n) = \sqrt {n/m}$?}{6}{section*.5}%
+\contentsline {section}{Looking for the Largest Cube in a Tesseract}{8}{section*.6}%
+\contentsline {section}{Other cases where $n = m+1$}{11}{section*.7}%
+\contentsline {section}{Plane (2-dimensional) rotations}{13}{section*.8}%
+\contentsline {section}{Using small rotations to decrease $R_i$ (or ``column-sums'')}{13}{section*.9}%
+\contentsline {section}{The Largest Square in an Odd-Dimensional Cube}{14}{section*.10}%
+\contentsline {section}{Inequalities involving $f(m,n)$}{19}{section*.11}%
+\contentsline {section}{When does $f(m,n) = f(2,n)/f(2,m)$?}{20}{section*.12}%
+\contentsline {section}{General Infinitesimal Rotations}{22}{section*.13}%
+\contentsline {section}{Zeros in the $V$ matrix for $m = 3$, $n = 4$}{31}{section*.14}%
+\contentsline {section}{Lagrange Multipliers (again)}{33}{section*.15}%
+\contentsline {section}{Further Comments and Unsolved Problems}{34}{section*.16}%
+\contentsline {section}{Prince Rupert's Problem}{36}{section*.17}%
+\contentsline {section}{Part 2}{37}{section*.18}%
+\contentsline {section}{No zeros and snug-fitting}{41}{section*.19}%
+\contentsline {section}{Three zeros on a diagonal}{44}{section*.20}%
+\contentsline {section}{Two zeros on a diagonal and snug-fitting}{45}{section*.21}%
+\contentsline {section}{Two zeros in a row and snug-fitting}{48}{section*.22}%
+\contentsline {section}{Two zeros in a column}{51}{section*.23}%
+\contentsline {section}{One zero and snug-fitting}{55}{section*.24}%
+\contentsline {section}{Important Theorems}{63}{section*.25}%
+\contentsline {section}{Numerics}{69}{section*.26}%
+\contentsline {section}{\numberline {A}Explanations}{72}{appendix.A}%
+\contentsline {section}{\numberline {B}Theorems}{73}{appendix.B}%
+\contentsline {section}{\numberline {C}Additions}{74}{appendix.C}%
+\contentsline {section}{\numberline {D}Clarifications}{78}{appendix.D}%
+\contentsline {section}{\numberline {E}Corrections}{79}{appendix.E}%
+\contentsline {section}{\numberline {F}Other}{81}{appendix.F}%

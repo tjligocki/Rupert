@@ -1,0 +1,20 @@
+#!/bin/csh -f
+set dir=$HOME/ANAG/TJLigocki/Research/Rupert/CubeCube/Annealing/Results/Tools
+
+set tmp=/tmp/findbest$$
+set tmp1=$tmp.1
+set tmp2=$tmp.2
+/bin/rm -f $tmp* >&! /dev/null
+foreach f (`find ../../../Annealing/Results -name '*.results' -print; find ../../../Analytic/Mathematica -name '*.txt' -print; find ../../../Analytic/Mathematica2010 -name '*.txt' -print; find ../../../Analytic/Mathematica2012 -name '*.txt' -print`)
+  echo $f >> $tmp1
+  cat $f  >> $tmp1
+  echo "" >> $tmp1
+end
+awk -f ${dir}/findbest1.awk $tmp1 \
+| sort -n +0 -1 -n +1 -2          \
+| awk -f ${dir}/findbest2.awk     \
+| findbest2                       \
+> $tmp2
+findbest3 < $tmp2 >&! findbest.out
+cat $tmp2
+/bin/rm -f $tmp* >&! /dev/null

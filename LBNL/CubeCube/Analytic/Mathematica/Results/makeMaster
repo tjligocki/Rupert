@@ -1,0 +1,11 @@
+#!/bin/csh -f
+/bin/rm -f Master.txt
+awk -f makeMasterOneInN.awk                 OneInNOut.txt    >> Master.txt
+awk -f makeMasterTwoInN.awk                 TwoInNOut.txt    >> Master.txt
+awk -f makeMasterOneLess.awk                OneLessOut.txt   >> Master.txt
+awk -f makeMasterTwoLess.awk                TwoLessOut.txt   >> Master.txt
+awk -f makeMasterOneOff.awk  max=100 step=2 OneOffAllOut.txt >> Master.txt
+sort +1n -2 +0n -1 < Master.txt               \
+| uniq -w8                                    \
+| awk -f makeMasterBreak.awk > temp$$.txt
+/bin/mv -f temp$$.txt Master.txt

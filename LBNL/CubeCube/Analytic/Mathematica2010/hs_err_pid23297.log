@@ -1,0 +1,423 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007ffe4c8feca4, pid=23297, tid=140730106378000
+#
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0-b15 mixed mode linux-amd64)
+# Problematic frame:
+# C  [libJLinkNativeLibrary.so+0xccca4]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x00007ffe4ca7e478, RBX=0x00007ffe4ca7e478, RCX=0x00007ffe67c15464, RDX=0x0000000000000001
+RSP=0x00007ffe47ffee70, RBP=0x0000000000000000, RSI=0x00007ffe47ffee80, RDI=0x0000000000000000
+R8 =0x00007ffe482ce550, R9 =0x0000000000005b0d, R10=0x0000000000000000, R11=0x0000000000000202
+R12=0x00007ffe482ce8c0, R13=0x0000000000000000, R14=0x0000000000000000, R15=0x0000000000000000
+RIP=0x00007ffe4c8feca4, EFL=0x0000000000010297, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffe47ffee70)
+0x00007ffe47ffee70:   00007ffe4ca7e478 0000000000000000
+0x00007ffe47ffee80:   0000000000000001 0000000000000000
+0x00007ffe47ffee90:   0000000000000000 0000000000000000
+0x00007ffe47ffeea0:   0000000000000000 0000000000000004
+0x00007ffe47ffeeb0:   0000000000000000 00007ffe67c0d9ca
+0x00007ffe47ffeec0:   00007ffe47fff710 0000000000000000
+0x00007ffe47ffeed0:   0000000000000000 0000000000000000
+0x00007ffe47ffeee0:   0000000000000000 0000000000000000
+0x00007ffe47ffeef0:   0000000000000000 0000000000000000
+0x00007ffe47ffef00:   0000000000000000 0000000000000000
+0x00007ffe47ffef10:   0000000000000000 0000000000000000
+0x00007ffe47ffef20:   0000000000000000 0000000000000000
+0x00007ffe47ffef30:   0000000000000000 0000000000000000
+0x00007ffe47ffef40:   0000000000000000 0000000000000000
+0x00007ffe47ffef50:   00007ffe47fff710 472a567c0066e6e2
+0x00007ffe47ffef60:   0000000000000000 0000000000000000
+0x00007ffe47ffef70:   0000000000000004 0000000000000000
+0x00007ffe47ffef80:   b8d6d983dde6e6e2 b8d699fdb344e6e2
+0x00007ffe47ffef90:   0000000000000000 0000000000000000
+0x00007ffe47ffefa0:   0000000000000000 0000000000000000
+0x00007ffe47ffefb0:   0000000000000000 0000000000000000
+0x00007ffe47ffefc0:   0000000000000000 00007ffe47fff710
+0x00007ffe47ffefd0:   0000000000000000 0000000000000000
+0x00007ffe47ffefe0:   0000000000000000 0000000000000004
+0x00007ffe47ffeff0:   0000000000000000 00007ffe6776670d
+0x00007ffe47fff000:   0000000000000000 0000000000000000
+0x00007ffe47fff010:   0000000000000000 0000000000000000
+0x00007ffe47fff020:   0000000000000000 0000000000000000
+0x00007ffe47fff030:   0000000000000000 0000000000000000
+0x00007ffe47fff040:   0000000000000000 0000000000000000
+0x00007ffe47fff050:   0000000000000000 0000000000000000
+0x00007ffe47fff060:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x00007ffe4c8feca4)
+0x00007ffe4c8fec94:   7d 7b 48 89 1c 24 66 66 90 66 66 90 48 8b 04 24
+0x00007ffe4c8feca4:   4b 8b 34 f7 b9 08 00 00 00 ba 14 00 00 00 48 8b 
+
+Stack: [0x00007ffe477ff000,0x00007ffe48000000],  sp=0x00007ffe47ffee70,  free space=8191k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libJLinkNativeLibrary.so+0xccca4]
+
+[error occurred during error reporting (printing native stack), id 0xb]
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 24896K, used 6336K [0x00007ffe5d5f0000, 0x00007ffe5f6c0000, 0x00007ffe62b40000)
+  eden space 20160K, 8% used [0x00007ffe5d5f0000,0x00007ffe5d783f10,0x00007ffe5e9a0000)
+  from space 4736K, 99% used [0x00007ffe5f220000,0x00007ffe5f6bc158,0x00007ffe5f6c0000)
+  to   space 5888K, 0% used [0x00007ffe5eb40000,0x00007ffe5eb40000,0x00007ffe5f100000)
+ PSOldGen        total 14912K, used 7615K [0x00007ffe52b40000, 0x00007ffe539d0000, 0x00007ffe5d5f0000)
+  object space 14912K, 51% used [0x00007ffe52b40000,0x00007ffe532affd0,0x00007ffe539d0000)
+ PSPermGen       total 21248K, used 8288K [0x00007ffe4d740000, 0x00007ffe4ec00000, 0x00007ffe52b40000)
+  object space 21248K, 39% used [0x00007ffe4d740000,0x00007ffe4df58138,0x00007ffe4ec00000)
+
+Dynamic libraries:
+40000000-40009000 r-xp 00000000 08:05 244728                             /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/bin/java
+40108000-4010a000 rwxp 00008000 08:05 244728                             /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/bin/java
+41660000-41b8b000 rwxp 00000000 00:00 0                                  [heap]
+7ffe40000000-7ffe4016f000 rwxp 00000000 00:00 0 
+7ffe4016f000-7ffe44000000 ---p 00000000 00:00 0 
+7ffe4459b000-7ffe4459e000 ---p 00000000 00:00 0 
+7ffe4459e000-7ffe4469c000 rwxp 00000000 00:00 0 
+7ffe4469c000-7ffe4469f000 ---p 00000000 00:00 0 
+7ffe4469f000-7ffe4479d000 rwxp 00000000 00:00 0 
+7ffe4479d000-7ffe447a0000 ---p 00000000 00:00 0 
+7ffe447a0000-7ffe4489e000 rwxp 00000000 00:00 0 
+7ffe4489e000-7ffe448a1000 ---p 00000000 00:00 0 
+7ffe448a1000-7ffe4499f000 rwxp 00000000 00:00 0 
+7ffe4499f000-7ffe449a2000 rwxp 00000000 00:00 0 
+7ffe449a2000-7ffe44aa0000 rwxp 00000000 00:00 0 
+7ffe44aa0000-7ffe44aa3000 ---p 00000000 00:00 0 
+7ffe44aa3000-7ffe44ba1000 rwxp 00000000 00:00 0 
+7ffe44bc3000-7ffe44bc4000 r-xs 00005000 08:05 232246                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Applications/DocumentationSearch/Java/lucene-highlighter-2.1.0.jar
+7ffe44bc4000-7ffe44bc8000 r-xs 00038000 08:05 232242                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Applications/DocumentationSearch/Java/commons-lang-2.3.jar
+7ffe44bc8000-7ffe44bd1000 r-xs 00069000 08:05 232245                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Applications/DocumentationSearch/Java/lucene-core-2.1.0.jar
+7ffe44bd1000-7ffe44bd2000 r-xs 00014000 08:05 232247                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Applications/DocumentationSearch/Java/lucene-snowball-2.1.0.jar
+7ffe44bd2000-7ffe44bd4000 r-xs 0000e000 08:05 232244                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Applications/DocumentationSearch/Java/lucene-analyzers-2.1.0.jar
+7ffe44bd4000-7ffe44bd5000 r-xs 00005000 08:05 232243                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Applications/DocumentationSearch/Java/function.jar
+7ffe44bd5000-7ffe44bd6000 r-xs 00000000 08:05 232224                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Applications/ClusterIntegration/Java/Wolfram_SGE.jar
+7ffe44bd6000-7ffe44bd8000 r-xs 0000a000 08:05 249236                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/XMLSchema/Java/commons-codec-1.3.jar
+7ffe44bd8000-7ffe44bdb000 r-xs 0001b000 08:05 249230                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/WebServices/Java/junit-3.8.1.jar
+7ffe44bdb000-7ffe44be0000 r-xs 00040000 08:05 249228                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/WebServices/Java/commons-httpclient-3.0.jar
+7ffe44be0000-7ffe44be2000 r-xs 00008000 08:05 249229                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/WebServices/Java/commons-logging-1.0.4.jar
+7ffe44be2000-7ffe44be4000 r-xs 00009000 08:05 247566                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/DatabaseLink/Java/commons-pool-1.2.jar
+7ffe44be4000-7ffe44bec000 r-xs 00096000 08:05 247568                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/DatabaseLink/Java/hsqldb-1.8.0.7.jar
+7ffe44bec000-7ffe44bf3000 r-xs 000a7000 08:05 247570                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/DatabaseLink/Java/mysql-connector-java-commercial-5.1.7-bin.jar
+7ffe44bf3000-7ffe44bf6000 r-xs 00043000 08:05 247569                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/DatabaseLink/Java/jtds-1.2.jar
+7ffe44bf6000-7ffe44bf9000 r-xs 00018000 08:05 247565                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/DatabaseLink/Java/commons-dbcp-1.2.1.jar
+7ffe44bf9000-7ffe44c06000 r-xs 0007c000 08:05 247564                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/DatabaseLink/Java/commons-collections-3.1.jar
+7ffe44c06000-7ffe44c0c000 r-xs 00027000 08:05 247567                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/DatabaseLink/Java/glazedlists.jar
+7ffe44c0c000-7ffe44c10000 r-xs 00026000 08:05 233190                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Packages/GUIKit/Java/bsf.jar
+7ffe44c10000-7ffe44c15000 r-xs 00010000 08:05 233195                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Packages/GUIKit/Java/xmlParserAPIs.jar
+7ffe44c15000-7ffe44c17000 r-xs 0000d000 08:05 233189                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Packages/GUIKit/Java/bsf-Wolfram.jar
+7ffe44c17000-7ffe44c1e000 r-xs 00036000 08:05 233191                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Packages/GUIKit/Java/concurrent.jar
+7ffe44c1e000-7ffe44c30000 r-xs 000ba000 08:05 233194                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Packages/GUIKit/Java/xercesImpl.jar
+7ffe44c30000-7ffe44c55000 r-xs 002ba000 08:05 242789                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/netcdfUI-2.2.16.jar
+7ffe44c55000-7ffe44c58000 rwxp 00000000 00:00 0 
+7ffe44c58000-7ffe44d56000 rwxp 00000000 00:00 0 
+7ffe44d56000-7ffe44d5d000 r-xp 00000000 08:05 244802                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libnio.so
+7ffe44d5d000-7ffe44e5c000 ---p 00007000 08:05 244802                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libnio.so
+7ffe44e5c000-7ffe44e5e000 rwxp 00006000 08:05 244802                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libnio.so
+7ffe44e5e000-7ffe44e8b000 r-xp 00000000 08:05 9399                       /lib/libpcre.so.3.12.1
+7ffe44e8b000-7ffe4508a000 ---p 0002d000 08:05 9399                       /lib/libpcre.so.3.12.1
+7ffe4508a000-7ffe4508b000 r-xp 0002c000 08:05 9399                       /lib/libpcre.so.3.12.1
+7ffe4508b000-7ffe4508c000 rwxp 0002d000 08:05 9399                       /lib/libpcre.so.3.12.1
+7ffe4508c000-7ffe45167000 r-xp 00000000 08:05 14755                      /lib/libglib-2.0.so.0.2400.1
+7ffe45167000-7ffe45367000 ---p 000db000 08:05 14755                      /lib/libglib-2.0.so.0.2400.1
+7ffe45367000-7ffe45368000 r-xp 000db000 08:05 14755                      /lib/libglib-2.0.so.0.2400.1
+7ffe45368000-7ffe45369000 rwxp 000dc000 08:05 14755                      /lib/libglib-2.0.so.0.2400.1
+7ffe45369000-7ffe4536a000 rwxp 00000000 00:00 0 
+7ffe4536a000-7ffe4536e000 r-xp 00000000 08:05 14761                      /usr/lib/libgthread-2.0.so.0.2400.1
+7ffe4536e000-7ffe4556d000 ---p 00004000 08:05 14761                      /usr/lib/libgthread-2.0.so.0.2400.1
+7ffe4556d000-7ffe4556e000 r-xp 00003000 08:05 14761                      /usr/lib/libgthread-2.0.so.0.2400.1
+7ffe4556e000-7ffe4556f000 rwxp 00004000 08:05 14761                      /usr/lib/libgthread-2.0.so.0.2400.1
+7ffe4556f000-7ffe455b4000 r-xp 00000000 08:05 14757                      /usr/lib/libgobject-2.0.so.0.2400.1
+7ffe455b4000-7ffe457b4000 ---p 00045000 08:05 14757                      /usr/lib/libgobject-2.0.so.0.2400.1
+7ffe457b4000-7ffe457b5000 r-xp 00045000 08:05 14757                      /usr/lib/libgobject-2.0.so.0.2400.1
+7ffe457b5000-7ffe457b6000 rwxp 00046000 08:05 14757                      /usr/lib/libgobject-2.0.so.0.2400.1
+7ffe457b6000-7ffe457b7000 rwxp 00000000 00:00 0 
+7ffe457b7000-7ffe457f4000 r-xp 00000000 08:05 8005                       /lib/libdbus-1.so.3.4.0
+7ffe457f4000-7ffe459f4000 ---p 0003d000 08:05 8005                       /lib/libdbus-1.so.3.4.0
+7ffe459f4000-7ffe459f5000 r-xp 0003d000 08:05 8005                       /lib/libdbus-1.so.3.4.0
+7ffe459f5000-7ffe459f6000 rwxp 0003e000 08:05 8005                       /lib/libdbus-1.so.3.4.0
+7ffe459f6000-7ffe45a17000 r-xp 00000000 08:05 2138                       /usr/lib/libdbus-glib-1.so.2.1.0
+7ffe45a17000-7ffe45c16000 ---p 00021000 08:05 2138                       /usr/lib/libdbus-glib-1.so.2.1.0
+7ffe45c16000-7ffe45c17000 r-xp 00020000 08:05 2138                       /usr/lib/libdbus-glib-1.so.2.1.0
+7ffe45c17000-7ffe45c18000 rwxp 00021000 08:05 2138                       /usr/lib/libdbus-glib-1.so.2.1.0
+7ffe45c18000-7ffe45c74000 r-xp 00000000 08:05 20113                      /usr/lib/libORBit-2.so.0.1.0
+7ffe45c74000-7ffe45e74000 ---p 0005c000 08:05 20113                      /usr/lib/libORBit-2.so.0.1.0
+7ffe45e74000-7ffe45e83000 r-xp 0005c000 08:05 20113                      /usr/lib/libORBit-2.so.0.1.0
+7ffe45e83000-7ffe45e86000 rwxp 0006b000 08:05 20113                      /usr/lib/libORBit-2.so.0.1.0
+7ffe45e86000-7ffe45e89000 r-xp 00000000 08:05 14759                      /usr/lib/libgmodule-2.0.so.0.2400.1
+7ffe45e89000-7ffe46088000 ---p 00003000 08:05 14759                      /usr/lib/libgmodule-2.0.so.0.2400.1
+7ffe46088000-7ffe46089000 r-xp 00002000 08:05 14759                      /usr/lib/libgmodule-2.0.so.0.2400.1
+7ffe46089000-7ffe4608a000 rwxp 00003000 08:05 14759                      /usr/lib/libgmodule-2.0.so.0.2400.1
+7ffe4608a000-7ffe460c2000 r-xp 00000000 08:05 20623                      /usr/lib/libgconf-2.so.4.1.5
+7ffe460c2000-7ffe462c2000 ---p 00038000 08:05 20623                      /usr/lib/libgconf-2.so.4.1.5
+7ffe462c2000-7ffe462c4000 r-xp 00038000 08:05 20623                      /usr/lib/libgconf-2.so.4.1.5
+7ffe462c4000-7ffe462c7000 rwxp 0003a000 08:05 20623                      /usr/lib/libgconf-2.so.4.1.5
+7ffe462c7000-7ffe462da000 r-xp 00000000 08:05 244801                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libnet.so
+7ffe462da000-7ffe463db000 ---p 00013000 08:05 244801                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libnet.so
+7ffe463db000-7ffe463de000 rwxp 00014000 08:05 244801                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libnet.so
+7ffe463de000-7ffe463df000 ---p 00000000 00:00 0 
+7ffe463df000-7ffe46bdf000 rwxp 00000000 00:00 0 
+7ffe46bdf000-7ffe46bf5000 r-xp 00000000 08:05 1798                       /lib/libresolv-2.11.1.so
+7ffe46bf5000-7ffe46df4000 ---p 00016000 08:05 1798                       /lib/libresolv-2.11.1.so
+7ffe46df4000-7ffe46df5000 r-xp 00015000 08:05 1798                       /lib/libresolv-2.11.1.so
+7ffe46df5000-7ffe46df6000 rwxp 00016000 08:05 1798                       /lib/libresolv-2.11.1.so
+7ffe46df6000-7ffe46df8000 rwxp 00000000 00:00 0 
+7ffe46df8000-7ffe46dfd000 r-xp 00000000 08:05 1810                       /lib/libnss_dns-2.11.1.so
+7ffe46dfd000-7ffe46ffc000 ---p 00005000 08:05 1810                       /lib/libnss_dns-2.11.1.so
+7ffe46ffc000-7ffe46ffd000 r-xp 00004000 08:05 1810                       /lib/libnss_dns-2.11.1.so
+7ffe46ffd000-7ffe46ffe000 rwxp 00005000 08:05 1810                       /lib/libnss_dns-2.11.1.so
+7ffe46ffe000-7ffe46fff000 ---p 00000000 00:00 0 
+7ffe46fff000-7ffe477ff000 rwxp 00000000 00:00 0 
+7ffe477ff000-7ffe47800000 ---p 00000000 00:00 0 
+7ffe47800000-7ffe48000000 rwxp 00000000 00:00 0 
+7ffe48000000-7ffe48be3000 rwxp 00000000 00:00 0 
+7ffe48be3000-7ffe4c000000 ---p 00000000 00:00 0 
+7ffe4c001000-7ffe4c009000 r-xs 00040000 08:05 233193                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Packages/GUIKit/Java/diva-canvas-core.jar
+7ffe4c009000-7ffe4c010000 r-xs 0003d000 08:05 233187                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Packages/GUIKit/Java/GUIKit.jar
+7ffe4c010000-7ffe4c012000 r-xs 0000a000 08:05 242770                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/commons-codec-1.3.jar
+7ffe4c012000-7ffe4c013000 r-xs 00001000 08:05 242780                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/jdbf.jar
+7ffe4c013000-7ffe4c017000 r-xs 00031000 08:05 242779                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/jackcess-1.1.18.jar
+7ffe4c017000-7ffe4c01b000 r-xs 0002f000 08:05 242773                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/commons-lang-2.1.jar
+7ffe4c01b000-7ffe4c020000 r-xs 00040000 08:05 242772                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/commons-httpclient-3.0.jar
+7ffe4c020000-7ffe4c028000 r-xs 00028000 08:05 242799                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/xml-apis.jar
+7ffe4c028000-7ffe4c029000 r-xs 00009000 08:05 242777                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/gnu-regexp-1.1.4.jar
+7ffe4c029000-7ffe4c02a000 r-xs 00003000 08:05 242794                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/slf4j-jdk14.jar
+7ffe4c02a000-7ffe4c02d000 r-xs 00074000 08:05 242768                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/bufr.jar
+7ffe4c02d000-7ffe4c02e000 r-xs 00006000 08:05 242769                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/bzip2.jar
+7ffe4c02e000-7ffe4c030000 r-xs 00014000 08:05 242765                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/Exif.jar
+7ffe4c030000-7ffe4c035000 r-xs 0002e000 08:05 242790                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/nlog4j-1.2.21.jar
+7ffe4c035000-7ffe4c036000 r-xs 00002000 08:05 242764                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/Convert.jar
+7ffe4c036000-7ffe4c03d000 r-xs 00083000 08:05 242766                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/JPEG2000.jar
+7ffe4c03d000-7ffe4c03e000 r-xs 00011000 08:05 242775                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/customizer.jar
+7ffe4c03e000-7ffe4c042000 r-xs 0002f000 08:05 242791                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/prefsAll.jar
+7ffe4c042000-7ffe4c044000 r-xs 0000e000 08:05 242788                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/multiplayer.jar
+7ffe4c044000-7ffe4c05a000 r-xs 00110000 08:05 242798                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/xercesImpl.jar
+7ffe4c05a000-7ffe4c05b000 r-xs 00004000 08:05 242776                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/externalservice.jar
+7ffe4c05b000-7ffe4c068000 r-xs 0007f000 08:05 242771                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/commons-collections-3.2.jar
+7ffe4c068000-7ffe4c06e000 r-xs 00055000 08:05 242786                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/mail.jar
+7ffe4c06e000-7ffe4c070000 r-xs 00005000 08:05 242796                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/tar.jar
+7ffe4c070000-7ffe4c095000 r-xs 003ca000 08:05 242797                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/visadNoDods.jar
+7ffe4c095000-7ffe4c0a0000 r-xs 000a5000 08:05 242784                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/jxl.jar
+7ffe4c0a0000-7ffe4c0aa000 r-xs 00086000 08:05 242785                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/ldap.jar
+7ffe4c0db000-7ffe4c0dd000 r-xp 00000000 08:05 639167                     /lib/libnss_mdns4_minimal.so.2
+7ffe4c0dd000-7ffe4c2dc000 ---p 00002000 08:05 639167                     /lib/libnss_mdns4_minimal.so.2
+7ffe4c2dc000-7ffe4c2dd000 r-xp 00001000 08:05 639167                     /lib/libnss_mdns4_minimal.so.2
+7ffe4c2dd000-7ffe4c2de000 rwxp 00002000 08:05 639167                     /lib/libnss_mdns4_minimal.so.2
+7ffe4c2de000-7ffe4c2f4000 r-xp 00000000 08:05 7261                       /lib/libgcc_s.so.1
+7ffe4c2f4000-7ffe4c4f3000 ---p 00016000 08:05 7261                       /lib/libgcc_s.so.1
+7ffe4c4f3000-7ffe4c4f4000 r-xp 00015000 08:05 7261                       /lib/libgcc_s.so.1
+7ffe4c4f4000-7ffe4c4f5000 rwxp 00016000 08:05 7261                       /lib/libgcc_s.so.1
+7ffe4c4f5000-7ffe4c5eb000 r-xp 00000000 08:05 3627                       /usr/lib/libstdc++.so.6.0.13
+7ffe4c5eb000-7ffe4c7eb000 ---p 000f6000 08:05 3627                       /usr/lib/libstdc++.so.6.0.13
+7ffe4c7eb000-7ffe4c7f2000 r-xp 000f6000 08:05 3627                       /usr/lib/libstdc++.so.6.0.13
+7ffe4c7f2000-7ffe4c7f4000 rwxp 000fd000 08:05 3627                       /usr/lib/libstdc++.so.6.0.13
+7ffe4c7f4000-7ffe4c809000 rwxp 00000000 00:00 0 
+7ffe4c809000-7ffe4c80b000 r-xs 00008000 08:05 242774                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/commons-logging-1.0.4.jar
+7ffe4c80b000-7ffe4c80d000 r-xs 00036000 08:05 242778                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/grib.jar
+7ffe4c80d000-7ffe4c80f000 r-xs 00008000 08:05 242787                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/mediaplayer.jar
+7ffe4c80f000-7ffe4c811000 r-xs 0000b000 08:05 242795                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/tagsoup-1.0rc9.jar
+7ffe4c811000-7ffe4c814000 r-xs 00023000 08:05 242781                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/jdom.jar
+7ffe4c814000-7ffe4c82c000 r-xs 001b9000 08:05 242782                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/jmf.jar
+7ffe4c82c000-7ffe4c832000 r-xs 00091000 08:05 244762                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/jsse.jar
+7ffe4c832000-7ffe4c975000 r-xp 00000000 08:05 248091                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/JLink/SystemFiles/Libraries/Linux-x86-64/libJLinkNativeLibrary.so
+7ffe4c975000-7ffe4ca75000 ---p 00143000 08:05 248091                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/JLink/SystemFiles/Libraries/Linux-x86-64/libJLinkNativeLibrary.so
+7ffe4ca75000-7ffe4ca7e000 rwxp 00143000 08:05 248091                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/JLink/SystemFiles/Libraries/Linux-x86-64/libJLinkNativeLibrary.so
+7ffe4ca7e000-7ffe4ca7f000 rwxp 00000000 00:00 0 
+7ffe4ca7f000-7ffe4ca81000 r-xs 0000c000 08:05 242767                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Converters/Java/activation.jar
+7ffe4ca81000-7ffe4ca83000 r-xs 0000a000 08:05 242631                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Autoload/PacletManager/Java/commons-codec-1.3.jar
+7ffe4ca83000-7ffe4caa0000 r-xs 0042e000 08:05 244722                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/icu4j-3_8_1.jar
+7ffe4caa0000-7ffe4caa1000 ---p 00000000 00:00 0 
+7ffe4caa1000-7ffe4cba1000 rwxp 00000000 00:00 0 
+7ffe4cba1000-7ffe4cba4000 ---p 00000000 00:00 0 
+7ffe4cba4000-7ffe4cca2000 rwxp 00000000 00:00 0 
+7ffe4cca2000-7ffe4cca5000 ---p 00000000 00:00 0 
+7ffe4cca5000-7ffe4cda3000 rwxp 00000000 00:00 0 
+7ffe4cda3000-7ffe4cda6000 ---p 00000000 00:00 0 
+7ffe4cda6000-7ffe4cea4000 rwxp 00000000 00:00 0 
+7ffe4cea4000-7ffe4cee3000 r-xp 00000000 08:05 1246                       /usr/lib/locale/en_US.utf8/LC_CTYPE
+7ffe4cee3000-7ffe4cee6000 ---p 00000000 00:00 0 
+7ffe4cee6000-7ffe4cfe4000 rwxp 00000000 00:00 0 
+7ffe4cfe4000-7ffe4cfe7000 ---p 00000000 00:00 0 
+7ffe4cfe7000-7ffe4d0e5000 rwxp 00000000 00:00 0 
+7ffe4d0e5000-7ffe4d0e6000 ---p 00000000 00:00 0 
+7ffe4d0e6000-7ffe4d25b000 rwxp 00000000 00:00 0 
+7ffe4d25b000-7ffe4d3eb000 r-xs 02eed000 08:05 244771                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/rt.jar
+7ffe4d3eb000-7ffe4d413000 rwxp 00000000 00:00 0 
+7ffe4d413000-7ffe4d414000 ---p 00000000 00:00 0 
+7ffe4d414000-7ffe4d514000 rwxp 00000000 00:00 0 
+7ffe4d514000-7ffe4d515000 ---p 00000000 00:00 0 
+7ffe4d515000-7ffe4d620000 rwxp 00000000 00:00 0 
+7ffe4d620000-7ffe4d63f000 rwxp 00000000 00:00 0 
+7ffe4d63f000-7ffe4d647000 rwxp 00000000 00:00 0 
+7ffe4d647000-7ffe4d695000 rwxp 00000000 00:00 0 
+7ffe4d695000-7ffe4d6a0000 rwxp 00000000 00:00 0 
+7ffe4d6a0000-7ffe4d6bf000 rwxp 00000000 00:00 0 
+7ffe4d6bf000-7ffe4d6c7000 rwxp 00000000 00:00 0 
+7ffe4d6c7000-7ffe4d714000 rwxp 00000000 00:00 0 
+7ffe4d714000-7ffe4d725000 rwxp 00000000 00:00 0 
+7ffe4d725000-7ffe4d73f000 rwxp 00000000 00:00 0 
+7ffe4d73f000-7ffe4ec00000 rwxp 00000000 00:00 0 
+7ffe4ec00000-7ffe52b40000 rwxp 00000000 00:00 0 
+7ffe52b40000-7ffe539d0000 rwxp 00000000 00:00 0 
+7ffe539d0000-7ffe5d5f0000 rwxp 00000000 00:00 0 
+7ffe5d5f0000-7ffe5f6c0000 rwxp 00000000 00:00 0 
+7ffe5f6c0000-7ffe62b40000 rwxp 00000000 00:00 0 
+7ffe62b40000-7ffe62b42000 r-xs 0001e000 08:05 242627                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Autoload/PacletManager/Java/PacletManager.jar
+7ffe62b42000-7ffe62db2000 rwxp 00000000 00:00 0 
+7ffe62db2000-7ffe65b42000 rwxp 00000000 00:00 0 
+7ffe65b42000-7ffe65b50000 r-xp 00000000 08:05 244809                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libzip.so
+7ffe65b50000-7ffe65c52000 ---p 0000e000 08:05 244809                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libzip.so
+7ffe65c52000-7ffe65c55000 rwxp 00010000 08:05 244809                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libzip.so
+7ffe65c55000-7ffe65c56000 rwxp 00000000 00:00 0 
+7ffe65c56000-7ffe65c7f000 r-xp 00000000 08:05 244789                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libjava.so
+7ffe65c7f000-7ffe65d7e000 ---p 00029000 08:05 244789                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libjava.so
+7ffe65d7e000-7ffe65d85000 rwxp 00028000 08:05 244789                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libjava.so
+7ffe65d85000-7ffe65d92000 r-xp 00000000 08:05 244808                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libverify.so
+7ffe65d92000-7ffe65e91000 ---p 0000d000 08:05 244808                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libverify.so
+7ffe65e91000-7ffe65e94000 rwxp 0000c000 08:05 244808                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/libverify.so
+7ffe65e94000-7ffe65ea0000 r-xp 00000000 08:05 1815                       /lib/libnss_files-2.11.1.so
+7ffe65ea0000-7ffe6609f000 ---p 0000c000 08:05 1815                       /lib/libnss_files-2.11.1.so
+7ffe6609f000-7ffe660a0000 r-xp 0000b000 08:05 1815                       /lib/libnss_files-2.11.1.so
+7ffe660a0000-7ffe660a1000 rwxp 0000c000 08:05 1815                       /lib/libnss_files-2.11.1.so
+7ffe660a1000-7ffe660ab000 r-xp 00000000 08:05 1802                       /lib/libnss_nis-2.11.1.so
+7ffe660ab000-7ffe662aa000 ---p 0000a000 08:05 1802                       /lib/libnss_nis-2.11.1.so
+7ffe662aa000-7ffe662ab000 r-xp 00009000 08:05 1802                       /lib/libnss_nis-2.11.1.so
+7ffe662ab000-7ffe662ac000 rwxp 0000a000 08:05 1802                       /lib/libnss_nis-2.11.1.so
+7ffe662ac000-7ffe662b4000 r-xp 00000000 08:05 1801                       /lib/libnss_compat-2.11.1.so
+7ffe662b4000-7ffe664b3000 ---p 00008000 08:05 1801                       /lib/libnss_compat-2.11.1.so
+7ffe664b3000-7ffe664b4000 r-xp 00007000 08:05 1801                       /lib/libnss_compat-2.11.1.so
+7ffe664b4000-7ffe664b5000 rwxp 00008000 08:05 1801                       /lib/libnss_compat-2.11.1.so
+7ffe664b5000-7ffe664cc000 r-xp 00000000 08:05 1793                       /lib/libnsl-2.11.1.so
+7ffe664cc000-7ffe666cb000 ---p 00017000 08:05 1793                       /lib/libnsl-2.11.1.so
+7ffe666cb000-7ffe666cc000 r-xp 00016000 08:05 1793                       /lib/libnsl-2.11.1.so
+7ffe666cc000-7ffe666cd000 rwxp 00017000 08:05 1793                       /lib/libnsl-2.11.1.so
+7ffe666cd000-7ffe666cf000 rwxp 00000000 00:00 0 
+7ffe666cf000-7ffe666d6000 r-xp 00000000 08:05 244813                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/native_threads/libhpi.so
+7ffe666d6000-7ffe667d7000 ---p 00007000 08:05 244813                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/native_threads/libhpi.so
+7ffe667d7000-7ffe667d9000 rwxp 00008000 08:05 244813                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/native_threads/libhpi.so
+7ffe667d9000-7ffe667da000 rwxp 00000000 00:00 0 
+7ffe667da000-7ffe667e1000 r-xp 00000000 08:05 1797                       /lib/librt-2.11.1.so
+7ffe667e1000-7ffe669e0000 ---p 00007000 08:05 1797                       /lib/librt-2.11.1.so
+7ffe669e0000-7ffe669e1000 r-xp 00006000 08:05 1797                       /lib/librt-2.11.1.so
+7ffe669e1000-7ffe669e2000 rwxp 00007000 08:05 1797                       /lib/librt-2.11.1.so
+7ffe669e2000-7ffe669e5000 ---p 00000000 00:00 0 
+7ffe669e5000-7ffe66ae3000 rwxp 00000000 00:00 0 
+7ffe66ae3000-7ffe66b65000 r-xp 00000000 08:05 141                        /lib/libm-2.11.1.so
+7ffe66b65000-7ffe66d64000 ---p 00082000 08:05 141                        /lib/libm-2.11.1.so
+7ffe66d64000-7ffe66d65000 r-xp 00081000 08:05 141                        /lib/libm-2.11.1.so
+7ffe66d65000-7ffe66d66000 rwxp 00082000 08:05 141                        /lib/libm-2.11.1.so
+7ffe66d66000-7ffe673f3000 r-xp 00000000 08:05 244816                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/server/libjvm.so
+7ffe673f3000-7ffe674f2000 ---p 0068d000 08:05 244816                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/server/libjvm.so
+7ffe674f2000-7ffe67643000 rwxp 0068c000 08:05 244816                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/server/libjvm.so
+7ffe67643000-7ffe67680000 rwxp 00000000 00:00 0 
+7ffe67680000-7ffe677fa000 r-xp 00000000 08:05 1811                       /lib/libc-2.11.1.so
+7ffe677fa000-7ffe679f9000 ---p 0017a000 08:05 1811                       /lib/libc-2.11.1.so
+7ffe679f9000-7ffe679fd000 r-xp 00179000 08:05 1811                       /lib/libc-2.11.1.so
+7ffe679fd000-7ffe679fe000 rwxp 0017d000 08:05 1811                       /lib/libc-2.11.1.so
+7ffe679fe000-7ffe67a03000 rwxp 00000000 00:00 0 
+7ffe67a03000-7ffe67a05000 r-xp 00000000 08:05 1816                       /lib/libdl-2.11.1.so
+7ffe67a05000-7ffe67c05000 ---p 00002000 08:05 1816                       /lib/libdl-2.11.1.so
+7ffe67c05000-7ffe67c06000 r-xp 00002000 08:05 1816                       /lib/libdl-2.11.1.so
+7ffe67c06000-7ffe67c07000 rwxp 00003000 08:05 1816                       /lib/libdl-2.11.1.so
+7ffe67c07000-7ffe67c1f000 r-xp 00000000 08:05 1809                       /lib/libpthread-2.11.1.so
+7ffe67c1f000-7ffe67e1e000 ---p 00018000 08:05 1809                       /lib/libpthread-2.11.1.so
+7ffe67e1e000-7ffe67e1f000 r-xp 00017000 08:05 1809                       /lib/libpthread-2.11.1.so
+7ffe67e1f000-7ffe67e20000 rwxp 00018000 08:05 1809                       /lib/libpthread-2.11.1.so
+7ffe67e20000-7ffe67e24000 rwxp 00000000 00:00 0 
+7ffe67e24000-7ffe67e44000 r-xp 00000000 08:05 1794                       /lib/ld-2.11.1.so
+7ffe67e45000-7ffe67e4a000 r-xs 00040000 08:05 242632                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Autoload/PacletManager/Java/commons-httpclient-3.0.jar
+7ffe67e4a000-7ffe67e54000 rwxp 00000000 00:00 0 
+7ffe67e54000-7ffe67f0a000 rwxp 00000000 00:00 0 
+7ffe67f0a000-7ffe67f0d000 rwxp 00000000 00:00 0 
+7ffe67f0d000-7ffe67f14000 r-xp 00000000 08:05 244811                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/jli/libjli.so
+7ffe67f14000-7ffe68015000 ---p 00007000 08:05 244811                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/jli/libjli.so
+7ffe68015000-7ffe68017000 rwxp 00008000 08:05 244811                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/jli/libjli.so
+7ffe68017000-7ffe68018000 rwxp 00000000 00:00 0 
+7ffe68018000-7ffe68019000 r-xs 00009000 08:05 233188                     /usr/local/Wolfram/Mathematica/7.0/AddOns/Packages/GUIKit/Java/OculusLayout.jar
+7ffe68019000-7ffe6801a000 r-xs 0000f000 08:05 242636                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Autoload/PacletManager/Java/mexprparser.jar
+7ffe6801a000-7ffe6801b000 r-xs 00007000 08:05 242633                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Autoload/PacletManager/Java/commons-logging.jar
+7ffe6801b000-7ffe6801d000 r-xs 00003000 08:05 242635                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Autoload/PacletManager/Java/mexpr.jar
+7ffe6801d000-7ffe68023000 r-xs 0006e000 08:05 242629                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Autoload/PacletManager/Java/antlr.jar
+7ffe68023000-7ffe68025000 r-xs 00006000 08:05 242630                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Autoload/PacletManager/Java/commons-cli-1.0.jar
+7ffe68025000-7ffe68027000 r-xs 00013000 08:05 242628                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Autoload/PacletManager/Java/WRIjdbm.jar
+7ffe68027000-7ffe6802a000 r-xs 00023000 08:05 244721                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/WolframSSHKeyGen.jar
+7ffe6802a000-7ffe6802d000 r-xs 00023000 08:05 244720                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/WolframSSH.jar
+7ffe6802d000-7ffe68030000 r-xs 00036000 08:05 247795                     /usr/local/Wolfram/Mathematica/7.0/SystemFiles/Links/JLink/JLink.jar
+7ffe68030000-7ffe68037000 r-xs 00000000 08:05 5382                       /usr/lib/gconv/gconv-modules.cache
+7ffe68037000-7ffe6803f000 rwxs 00000000 08:02 773                        /tmp/hsperfdata_ligocki/23297
+7ffe6803f000-7ffe68040000 rwxp 00000000 00:00 0 
+7ffe68040000-7ffe68041000 r-xp 00000000 00:00 0 
+7ffe68041000-7ffe68043000 rwxp 00000000 00:00 0 
+7ffe68043000-7ffe68044000 r-xp 0001f000 08:05 1794                       /lib/ld-2.11.1.so
+7ffe68044000-7ffe68045000 rwxp 00020000 08:05 1794                       /lib/ld-2.11.1.so
+7ffe68045000-7ffe68046000 rwxp 00000000 00:00 0 
+7fff68062000-7fff68079000 rwxp 00000000 00:00 0                          [stack]
+7fff6814e000-7fff6814f000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx256m -Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader -Djava.util.prefs.PreferencesFactory=com.wolfram.jlink.DisabledPreferencesFactory 
+java_command: com.wolfram.jlink.Install -init /tmp/m000001228401 -mathlink -linkmode connect -linkprotocol SharedMemory -linkname p6f_shm
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/Wolfram/Mathematica/7.0/Executables:/usr/local/Wolfram/Mathematica/7.0/SystemFiles/Graphics/Binaries/Linux-x86-64:/usr/bin:/bin:/usr/local/Wolfram/Mathematica/7.0/Executables:/home/lugosi/users/ligocki/ANAG/Temp/MPICH-1.2.5.2/pkg/mpich-1.2.5.2/bin:/usr/local/anag/pkg/python-2.6.4/bin:/home/lugosi/users/ligocki/Adabas/bin:/home/lugosi/users/ligocki/Adabas/pgm:/usr/local/anag/pkg/cmake-1.8.2/bin:/usr/local/anag/pkg/LeakTracer:/usr/local/anag/pkg/mayavi-1.5:/usr/local/matlabr12/bin:/usr/local/anag/pkg/CorporateTime-9.0.4/bin:/usr/local/anag/pkg/doxygen-1.5.5/bin:/usr/local/anag/pkg/VisIt-2.1.0/bin:/usr/local/anag/pkg/pyChomboVis-cvs/bin:/usr/local/anag/pkg/vtk-4.4/bin:/usr/local/anag/pkg/mpeg2/bin:/usr/local/anag/pkg/Mesa-6.2/bin:/usr/local/anag/pkg/fftw-3.0.1_64/bin:/usr/local/anag/pkg/mpich-1.2.5.2/bin:/usr/local/anag/pkg/mpich-1.2.5.2/sbin:/usr/local/anag/pkg/tkcvs-8.0.4/bin:/usr/local/anag/pkg/hdf5-1.6.5.serial/bin:/usr/local/anag/pkg/gdb-6.1.1/bin:/usr/local/anag/pkg/valgrind-3.4.1/bin:/home/lugosi/users/ligocki/Bin/Linux:/home/lugosi/users/ligocki/Bin:/home/lugosi/users/ligocki/Software/Linux/bin:/home/lugosi/users/ligocki/ANAG/Misc/HDF5Viewer/bin:/home/lugosi/users/ligocki/Software/Linux/jre1.5.0_11/bin:/home/lugosi/users/ligocki/ANAG/TJLigocki/Research/Rupert/CubeCube/Annealing/Results/Tools:/usr/local/bin:/sbin:/usr/sbin:/usr/X11R6/bin:/usr/local/sbin:/usr/games:/usr/bin/X11
+LD_LIBRARY_PATH=/usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64/server:/usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/lib/amd64:/usr/local/Wolfram/Mathematica/7.0/SystemFiles/Java/Linux-x86-64/../lib/amd64:/usr/local/Wolfram/Mathematica/7.0/SystemFiles/Libraries/Linux-x86-64:/usr/local/anag/pkg/python-2.6.4/lib:/usr/local/anag/pkg/python-2.6.4/lib/python2.5:/usr/local/anag/pkg/vtk-4.4/lib/vtk:/usr/local/anag/pkg/blas-fortran/lib:/usr/local/anag/pkg/fftw-3.0.1_64/lib:/usr/local/anag/pkg/mpich-1.2.5.2/lib:/usr/local/anag/pkg/hdf5-1.6.5.serial/lib:/usr/local/anag/pkg/gdb-6.1.1/lib:/usr/local/anag/pkg/valgrind-3.4.1/lib:/usr/local/lib:/usr/local/lib
+SHELL=/bin/tcsh
+DISPLAY=localhost:11.0
+HOSTTYPE=x86_64-linux
+OSTYPE=linux
+MACHTYPE=x86_64
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x5fcb20], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x5fcb20], sa_mask[0]=0x7ffbfeff, sa_flags=0x00000004
+SIGFPE: [libjvm.so+0x4e0d10], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libJLinkNativeLibrary.so+0x824c0], sa_mask[0]=0x00000000, sa_flags=0x00000004
+SIGXFSZ: [libjvm.so+0x4e0d10], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x4e0d10], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x4e3430], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libJLinkNativeLibrary.so+0x824c0], sa_mask[0]=0x00000000, sa_flags=0x00000004
+SIGINT: [libJLinkNativeLibrary.so+0x824c0], sa_mask[0]=0x00000000, sa_flags=0x00000004
+SIGTERM: [libJLinkNativeLibrary.so+0x824c0], sa_mask[0]=0x00000000, sa_flags=0x00000004
+SIGQUIT: [libjvm.so+0x4e3180], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:squeeze/sid
+
+uname:Linux 2.6.32-25-generic #44-Ubuntu SMP Fri Sep 17 20:05:27 UTC 2010 x86_64
+libc:glibc 2.11.1 NPTL 2.11.1 
+rlimit: STACK 8192k, CORE 0k, NPROC infinity, NOFILE 1024, AS infinity
+load average:0.24 0.54 1.08
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 15 model 67 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, mmxext, 3dnow, 3dnowext
+
+Memory: 4k page, physical 4124228k(507300k free), swap 16779852k(16478784k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0-b15) for linux-amd64 JRE (1.6.0_10-b33), built on Sep 26 2008 01:10:29 by "java_re" with gcc 3.2.2 (SuSE Linux)
+
+time: Wed Dec  8 17:13:49 2010
+elapsed time: 2 seconds
+

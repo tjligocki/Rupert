@@ -1,0 +1,5 @@
+gfortran -g -O3 -fno-underscoring -c mpmodule.f90 mpfuna.f90 mpfunf.f90 mpfung1.f90 second.f90
+gfortran -g -O3 -fno-underscoring -c mptjl.f90
+gfortran -g -O3 -fno-underscoring -c mpmodule.f90 mpfuna.f90 mpfunf.f90 mpfung1.f90 second.f90
+gfortran -g -O3 -fno-underscoring -c mptjl.f90
+gcc -c mpinterface.c

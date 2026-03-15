@@ -1,0 +1,29 @@
+#!/bin/tcsh -f
+set count=0
+while (1)
+  set j=($<)
+  if ($#j <= 1) then
+    if ($count > 0) then
+      break
+    else
+      echo $j
+      @ count++
+    endif
+  else
+    set m=`echo $j[1] | awk '{printf("%03d",$1);}'`
+    set n=`echo $j[2] | awk '{printf("%03d",$1);}'`
+    set value=$j[3]
+    set file=$j[4]
+    if (! -e $file:r.vertices) then
+      set details="none"
+    else
+      set details=`find $file:r.vertices -name 'run.'$m'.'$n -print`
+      if ("$details" == "") then
+        set details="none"
+      endif
+    endif
+    echo $j $details \
+    | awk '{printf("%3d %3d    %50.47lf    %-45s    %-45s\n",$1,$2,$3,$4,$5);}'
+    set count=0
+  endif
+end

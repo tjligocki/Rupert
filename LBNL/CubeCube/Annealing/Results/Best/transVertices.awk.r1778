@@ -1,0 +1,62 @@
+BEGIN {
+  i = 1;
+}
+NR > 1 && NR <= n+1 {
+  for (j = 1; j <= n; j++) {
+    t[i "," j] = $(j+1);
+  }
+  i++;
+}
+END {
+  for (i = 1; i <= n; i++) {
+    if (i <= m) {
+      v[i] = -0.5;
+    } else {
+      v[i] =  0;
+    }
+  }
+
+  while (1) {
+    max = 0.0;
+
+    for (i = 1; i <= n; i++) {
+      w[i] = 0.0;
+      for (j = 1; j <= n; j++) {
+        w[i] = w[i] + t[i "," j] * v[j];
+      }
+
+      if (abs(w[i]) > max) {
+        max = abs(w[i]);
+      }
+    }
+
+    for (i = 1; i <= n; i++) {
+      printf("%15.12lf ",w[i]/max/2.0);
+    }
+    printf(" - ");
+    for (i = 1; i <= m; i++) {
+      printf("%15.12lf ",v[i]);
+    }
+    printf("\n");
+
+    i = 1;
+    while (i <= m && v[i] == 0.5) {
+      v[i] = -0.5;
+      i++;
+    }
+
+    if (i > m) {
+      break;
+    }
+
+    v[i] = 0.5;
+  }
+}
+
+function abs(x) {
+  if (x < 0) {
+    return -x;
+  } else {
+    return x;
+  }
+}

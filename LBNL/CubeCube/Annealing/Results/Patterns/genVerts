@@ -1,0 +1,9 @@
+#!/bin/csh -f
+if ($#argv != 2) then
+  echo "Usage: genVerts m n"
+  exit 1
+endif
+set m=$1
+set n=$2
+set file=`echo $m $n | awk '{printf("run.%03d.%03d",$1,$2);}'`
+awk -f genVerts.awk m=$m n=$n $file

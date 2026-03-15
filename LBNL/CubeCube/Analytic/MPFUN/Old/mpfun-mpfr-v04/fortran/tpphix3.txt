@@ -1,0 +1,185 @@
+Poisson Phi_2(kp/kd,kq/kd) computation and analysis:
+kd =  18; kp =   1; kq =   1; mpi =   8; n =  37
+ndp =   700; ndpm =   160; nep =  -670; nepm =  -140
+ cpu time =   1.8971999641507864E-002
+2.221259811975450405853363315611166078939733950337102887096705307437519051593282\
+32619752985350708897777905096268210589413923248712417159463997012092857679937111\
+70174115713372761776101690668549177622914961550324890311327216887950390046098923\
+44207689312127738970903685616415886801825218302068180805336679425932366208618522\
+01494997356057330561519420814182035963273995680528258831179803837911157274278756\
+77020475671872411579899709363776669570147781189746637308101948555682484077046650\
+58283716210393855495284167146583342549437352879983347829615369581147509358454452\
+40772894466978639503423264931333019086519990138593302255342392496162040062660456\
+486804166902271143795552718877266629558558199398034632475553e3                  
+PSLQM3 integer relation detection: n =   37
+Iteration       0   MP initialization
+Iteration       0   Min/max ratio in y =   3.329838e  -121
+Iteration       0   Start MPM iterations: precision =   193 digits
+Iteration       1
+Iteration       2
+Iteration       3
+Iteration       4
+Iteration       5
+Iteration       6
+Iteration       7
+Iteration       8
+Iteration       9
+Iteration      10
+Iteration      10   Min/max ratio in wy =   4.383463e   -91
+Iteration      11
+Iteration      12
+Iteration      13
+Iteration      14
+Iteration      15
+Iteration      16
+Iteration      17
+Iteration      18
+Iteration      19
+Iteration      20
+Iteration      20   Min/max ratio in wy =   1.281772e   -57
+Iteration      21
+Iteration      22
+Iteration      23
+Iteration      24
+Iteration      25
+Iteration      26
+Iteration      27
+Iteration      28
+Iteration      29
+Iteration      30
+Iteration      30   Min/max ratio in wy =   2.696709e   -24
+Iteration      31
+Iteration      32
+Iteration      33
+Iteration      34
+Iteration      35
+Iteration      36
+Iteration      37
+Iteration      38
+Iteration      39
+Iteration      40
+Iteration      40   Min/max ratio in wy =   1.741664e   -18
+Iteration      41
+Iteration      42
+Iteration      43
+Iteration      44
+Iteration      45
+Iteration      46
+Iteration      47
+Iteration      48
+Iteration      49
+Iteration      50
+Iteration      50   Min/max ratio in wy =   6.860372e   -13
+Iteration      51
+Iteration      52
+Iteration      53
+Iteration      54
+Iteration      55
+Iteration      56
+Iteration      57
+Iteration      58
+Iteration      59
+Iteration      60
+Iteration      60   Min/max ratio in wy =   1.745307e   -11
+Iteration      61
+Iteration      62
+Iteration      63
+Iteration      64
+Iteration      65
+Iteration      66
+Iteration      67
+Iteration      68
+Iteration      69
+Iteration      70
+Iteration      70   Min/max ratio in wy =   1.594543e    -3
+Iteration      70   Return to DP iterations
+Iteration     164   updtmpm: Small value in wy =   5.765023e  -148
+Iteration     164   updtmpm: Large value in wa or wb =   7.797689e   143
+Iteration     164   MP update
+Iteration     164   updtmp: Min, max of y =   5.765023e  -148   2.479509e  -144
+Iteration     164   Norm bound =   2.150119e    3   Max. bound =   2.150119e    3
+Iteration     164   Min/max ratio in y =   2.325066e    -4
+Iteration     500
+Iteration     915   updtmpm: Small value in wy =   7.642383e  -142
+Iteration     915   MP update
+Iteration     915   updtmp: Min, max of y =   1.894936e  -285   4.283666e  -283
+Iteration     915   Norm bound =   8.661074e    6   Max. bound =   8.661074e    6
+Iteration     915   Min/max ratio in y =   4.423631e    -3
+Iteration    1000
+Iteration    1500
+Iteration    1694   updtmpm: Small value in wy =   8.750448e  -144
+Iteration    1694   MP update
+Iteration    1694   updtmp: Min, max of y =   3.748400e  -426   1.313785e  -422
+Iteration    1694   Norm bound =   7.909090e   10   Max. bound =   7.909090e   10
+Iteration    1694   Min/max ratio in y =   2.853129e    -4
+Iteration    2000
+Iteration    2464   updtmpm: Small value in wy =   1.333726e  -145
+Iteration    2464   updtmpm: Large value in wa or wb =   6.987756e   142
+Iteration    2464   MP update
+Iteration    2464   updtmp: Min, max of y =   1.752229e  -567   8.622007e  -565
+Iteration    2464   Norm bound =   7.113575e   14   Max. bound =   7.113575e   14
+Iteration    2464   Min/max ratio in y =   2.032276e    -3
+Iteration    2500
+Iteration    2550   updtmpm: Small value in wy =   2.401788e  -164
+Iteration    2550   MP update
+Iteration    2550   updtmp: Min, max of y =   2.070823e  -728   2.775549e  -580
+Iteration    2550   updtmp: Small value in y =   2.070823e  -728
+Iteration    2550   Norm bound =   1.643428e   15   Max. bound =   1.643428e   15
+Iteration    2550   Relation detected
+Min, max of y =   2.070823e  -728   2.775549e  -580
+Max. bound =   1.643428e    15
+Index of relation =   9   Norm =    6.28077e   15   Residual =   2.070823e  -728
+CPU run times:
+        0.00        0.00        0.25        1.58        0.14        0.43
+ pslqm3 time =   2.4697750788182020     
+ total cpu time =   2.4889560802839696     
+
+Recovered relation: 0 =
+                                                             -1. * 1
+                                                          +2172. * al^1
+                                                        +101514. * al^2
+                                                      +17556156. * al^3
+                                                       +5544423. * al^4
+                                                     +266354784. * al^5
+                                                   -12366139536. * al^6
+                                                  +255033429216. * al^7
+                                                 -1640185904244. * al^8
+                                                 +4395208503376. * al^9
+                                                 -6622941819240. * al^10
+                                                +15638559135696. * al^11
+                                               -103452980352516. * al^12
+                                               +519001485429024. * al^13
+                                              -1566424028810736. * al^14
+                                              +2805340921949088. * al^15
+                                              -2788175164196718. * al^16
+                                              +1159019674618536. * al^17
+                                                -74440852371780. * al^18
+                                              +1159019674618536. * al^19
+                                              -2788175164196718. * al^20
+                                              +2805340921949088. * al^21
+                                              -1566424028810736. * al^22
+                                               +519001485429024. * al^23
+                                               -103452980352516. * al^24
+                                                +15638559135696. * al^25
+                                                 -6622941819240. * al^26
+                                                 +4395208503376. * al^27
+                                                 -1640185904244. * al^28
+                                                  +255033429216. * al^29
+                                                   -12366139536. * al^30
+                                                     +266354784. * al^31
+                                                       +5544423. * al^32
+                                                      +17556156. * al^33
+                                                        +101514. * al^34
+                                                          +2172. * al^35
+                                                             -1. * al^36
+Output polynomial in Mathematica notation:
+ -1*1 +2172*al^1 +101514*al^2 +17556156*al^3 +5544423*al^4 +266354784*al^5 \ 
+-12366139536*al^6 +255033429216*al^7 -1640185904244*al^8 +4395208503376*al^9 \ 
+-6622941819240*al^10 +15638559135696*al^11 -103452980352516*al^12 \ 
++519001485429024*al^13 -1566424028810736*al^14 +2805340921949088*al^15 \ 
+-2788175164196718*al^16 +1159019674618536*al^17 -74440852371780*al^18 \ 
++1159019674618536*al^19 -2788175164196718*al^20 +2805340921949088*al^21 \ 
+-1566424028810736*al^22 +519001485429024*al^23 -103452980352516*al^24 \ 
++15638559135696*al^25 -6622941819240*al^26 +4395208503376*al^27 -1640185904244*al^28 \ 
++255033429216*al^29 -12366139536*al^30 +266354784*al^31 +5544423*al^32 \ 
++17556156*al^33 +101514*al^34 +2172*al^35 -1*al^36

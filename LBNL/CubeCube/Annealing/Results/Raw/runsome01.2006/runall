@@ -1,0 +1,8 @@
+#!/bin/csh -f
+foreach l (runsome.*.list)
+  echo ""
+  echo $l
+  echo ""
+  cp $l runsome.list
+  runsome
+end

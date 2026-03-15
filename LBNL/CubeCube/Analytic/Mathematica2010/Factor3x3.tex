@@ -1,0 +1,143 @@
+\documentclass[10pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\pagestyle{empty}
+
+\setlength{\topmargin}{ -0.75in}
+\setlength{\textheight}{10.00in}
+
+\setlength{\parindent}{0in}
+
+\begin{document}
+
+Let:
+\begin{align*}
+N1(\theta) &= 
+\left(
+\begin{array}{ccc}
+ cos(\theta) & -sin(\theta) & 0 \\
+ sin(\theta) &  cos(\theta) & 0 \\
+ 0           & 0            & 1
+\end{array}
+\right) \\
+N2(\theta) &= 
+\left(
+\begin{array}{ccc}
+ cos(\theta) & 0 & -sin(\theta) \\
+ 0           & 1 & 0            \\
+ sin(\theta) & 0 &  cos(\theta)
+\end{array}
+\right) \\
+N3(\theta) &= 
+\left(
+\begin{array}{ccc}
+ 1 & 0           & 0            \\
+ 0 & cos(\theta) & -sin(\theta) \\
+ 0 & sin(\theta) &  cos(\theta)
+\end{array}
+\right)
+\end{align*}
+Then:
+\begin{equation*}
+M = 
+\left(
+\begin{array}{ccc}
+ -\frac{1}{\sqrt{2}} & \frac{1}{3 \sqrt{2}} & \frac{2}{3} \\[0.07in]
+ \frac{1}{\sqrt{2}} & \frac{1}{3 \sqrt{2}} & \frac{2}{3} \\[0.07in]
+ 0 & \frac{2 \sqrt{2}}{3} & -\frac{1}{3}
+\end{array}
+\right)
+= N1(\theta 1) \times N2(0) \times N3(\theta 3)
+\end{equation*}
+Where:
+\begin{align*}
+N1(\theta 1) &=
+\left(
+\begin{array}{ccc}
+ -\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} & 0 \\[0.07in]
+ \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} & 0 \\[0.05in]
+ 0 & 0 & 1
+\end{array}
+\right) \\
+N2(0) &=
+\left(
+\begin{array}{ccc}
+ 1 & 0 & 0 \\
+ 0 & 1 & 0 \\
+ 0 & 0 & 1
+\end{array}
+\right) \\
+N3(\theta 3) &=
+\left(
+\begin{array}{ccc}
+ 1 & 0 & 0 \\
+ 0 & -\frac{1}{3} & -\frac{2 \sqrt{2}}{3} \\[0.07in]
+ 0 & \frac{2 \sqrt{2}}{3} & -\frac{1}{3}
+\end{array}
+\right)
+\end{align*}
+If the first and third rows are permuted (with a sign change) by multiplying on the left by:
+\begin{equation*}
+P1 =
+\left(
+\begin{array}{ccc}
+ 0 & -1 & 0 \\
+ 1 & 0 & 0 \\
+ 0 & 0 & 1
+\end{array}
+\right)
+\end{equation*}
+and the first and second columns are permuted (with a sign change) by multiplying on the right by:
+\begin{equation*}
+P2 =
+\left(
+\begin{array}{ccc}
+ 0 & 0 & -1 \\
+ 0 & 1 & 0 \\
+ 1 & 0 & 0
+\end{array}
+\right)
+\end{equation*}
+then we obtain the matrix:
+\begin{equation*}
+P =
+\left(
+\begin{array}{ccc}
+ -\frac{2 \sqrt{2}}{3} & 0 & \frac{1}{3} \\[0.07in]
+ \frac{1}{3 \sqrt{2}} & -\frac{1}{\sqrt{2}} & \frac{2}{3} \\[0.07in]
+ \frac{1}{3 \sqrt{2}} & \frac{1}{\sqrt{2}} & \frac{2}{3}
+\end{array}
+\right)
+= N1(\phi 1) \times N2(\phi 2) \times N3(\phi 3)
+\end{equation*}
+Where:
+\begin{align*}
+N1(\phi 1) &=
+\left(
+\begin{array}{ccc}
+ -\frac{4}{\sqrt{17}} & -\frac{1}{\sqrt{17}} & 0 \\[0.07in]
+ \frac{1}{\sqrt{17}} & -\frac{4}{\sqrt{17}} & 0 \\[0.05in]
+ 0 & 0 & 1
+\end{array}
+\right) \\
+N2(\phi 2) &=
+\left(
+\begin{array}{ccc}
+ \frac{\sqrt{\frac{17}{2}}}{3} & 0 & -\frac{1}{3 \sqrt{2}} \\[0.05in]
+ 0 & 1 & 0 \\
+ \frac{1}{3 \sqrt{2}} & 0 & \frac{\sqrt{\frac{17}{2}}}{3}
+\end{array}
+\right) \\
+N3(\phi 3) &=
+\left(
+\begin{array}{ccc}
+ 1 & 0 & 0 \\
+ 0 & 2 \sqrt{\frac{2}{17}} & -\frac{3}{\sqrt{17}} \\[0.07in]
+ 0 & \frac{3}{\sqrt{17}} & 2 \sqrt{\frac{2}{17}}
+\end{array}
+\right)
+\end{align*}
+
+\end{document}

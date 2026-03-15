@@ -1,0 +1,67 @@
+#!/usr/bin/env python
+
+import sys
+import list_io
+
+file = sys.stdin
+if len(sys.argv) > 1:
+  file = open(sys.argv[1],"r")
+
+list_keys = list_io.read_key(file)
+
+(maxm,maxn,list_pairs) = list_io.read_body(file)
+
+# sys.stdout.write("\\documentclass[]{article}\n")
+sys.stdout.write("\\documentclass[]{scrartcl}\n")
+sys.stdout.write("\\usepackage{lmodern}\n")
+sys.stdout.write("\\usepackage{array}\n")
+
+sys.stdout.write("\\newcolumntype{L}[1]{>{\\raggedright\\let\\newline\\\\\\arraybackslash\\hspace{0pt}}m{#1}}\n")
+sys.stdout.write("\\newcolumntype{C}[1]{>{\\centering\\let\\newline\\\\\\arraybackslash\\hspace{0pt}}m{#1}}\n")
+sys.stdout.write("\\newcolumntype{R}[1]{>{\\raggedleft\\let\\newline\\\\\\arraybackslash\\hspace{0pt}}m{#1}}\n")
+
+sys.stdout.write("\\begin{document}\n")
+
+sys.stdout.write("\\begin{table}\n")
+sys.stdout.write("\\begin{center}\n")
+
+sys.stdout.write("\\fontsize{4pt}{4pt}\\selectfont\n")
+# sys.stdout.write("\\tiny\n")
+
+sys.stdout.write("\\setlength{\\tabcolsep}{0pt}\n")
+sys.stdout.write("\\begin{tabular}{")
+sys.stdout.write("| C{0.3cm} ")
+for i in xrange(1,maxm+1):
+  sys.stdout.write("| C{0.3cm} ")
+sys.stdout.write("|}\n")
+
+sys.stdout.write("\\hline\n")
+
+sys.stdout.write("& ")
+for m in xrange(1,maxm):
+  sys.stdout.write("%d & " % m)
+sys.stdout.write("%d \\\\\n" % maxm)
+
+for n in xrange(1,maxn+1):
+  sys.stdout.write("\\hline\n")
+  sys.stdout.write("%d & " % n)
+  
+  for m in xrange(1,maxm):
+    if (m,n) in list_pairs:
+      sys.stdout.write("%s & " % list_io.set_to_str(list_pairs[(m,n)]))
+    else:
+      sys.stdout.write("- & ")
+
+  if (maxm,n) in list_pairs:
+    sys.stdout.write("%s \\\\\n" % list_io.set_to_str(list_pairs[(maxm,n)]))
+  else:
+    sys.stdout.write("- \\\\\n")
+
+sys.stdout.write("\\hline\n")
+
+sys.stdout.write("\\end{tabular}\n")
+
+sys.stdout.write("\\end{center}\n")
+sys.stdout.write("\\end{table}\n")
+
+sys.stdout.write("\\end{document}\n")
