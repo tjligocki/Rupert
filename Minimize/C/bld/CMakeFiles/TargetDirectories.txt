@@ -1,0 +1,6 @@
+/Users/ligocki/Rupert/Soft/C/bld/CMakeFiles/Matrix.dir
+/Users/ligocki/Rupert/Soft/C/bld/CMakeFiles/Rupert.dir
+/Users/ligocki/Rupert/Soft/C/bld/CMakeFiles/test01.dir
+/Users/ligocki/Rupert/Soft/C/bld/CMakeFiles/line.dir
+/Users/ligocki/Rupert/Soft/C/bld/CMakeFiles/edit_cache.dir
+/Users/ligocki/Rupert/Soft/C/bld/CMakeFiles/rebuild_cache.dir

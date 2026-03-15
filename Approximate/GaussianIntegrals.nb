@@ -1,0 +1,25 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Integrate","[",RowBox[{RowBox[
+{"A"," ",RowBox[{"Exp","[",RowBox[{"-",RowBox[{RowBox[{"(",RowBox[{RowBox[{"(",RowBox[
+{"x","-","m"}],")"}],"/","s"}],")"}],"^","2"}]}],"]"}]}],",","x"}],"]"}]],"Input",
+CellLabel -> "In[1]:= ",ExpressionUUID -> "bae1a58c-c184-471a-b2af-7addf660ffd9"],Cell[
+BoxData[
+RowBox[{RowBox[{"-",FractionBox["1","2"]}]," ","A"," ",SqrtBox["\[Pi]"]," ","s"," ",RowBox[
+{"Erf","[",FractionBox[RowBox[{"m","-","x"}],"s"],"]"}]}],StandardForm],"Output",
+CellLabel -> "Out[1]= ",ExpressionUUID -> "da26a405-98c2-4ca6-8c96-7f9f7e1f6cae"]},
+Open],ExpressionUUID -> "20c66c7f-d8f0-4431-bccc-60078a318749"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Integrate","[",RowBox[{RowBox[{RowBox[{"-",FractionBox["1",
+"2"]}]," ","A"," ",SqrtBox["\[Pi]"]," ","s"," ",RowBox[{"Erf","[",FractionBox[RowBox[
+{"m","-","x"}],"s"],"]"}]}],",","x"}],"]"}]],"Input",CellLabel -> "In[2]:= ",ExpressionUUID -> "b99dc249-54fd-4fc1-9007-719e829b31a2"],Cell[
+BoxData[
+RowBox[{RowBox[{"-",FractionBox["1","2"]}]," ","A"," ",SqrtBox["\[Pi]"]," ","s"," ",RowBox[
+{"(",RowBox[{RowBox[{"-",FractionBox[RowBox[{SuperscriptBox["\[ExponentialE]",RowBox[
+{"-",FractionBox[SuperscriptBox[RowBox[{"(",RowBox[{"m","-","x"}],")"}],"2"],SuperscriptBox[
+"s","2"]]}]]," ","s"}],SqrtBox["\[Pi]"]]}],"-",RowBox[{RowBox[{"(",RowBox[{"m","-","x"}],")"}]," ",RowBox[
+{"Erf","[",FractionBox[RowBox[{"m","-","x"}],"s"],"]"}]}]}],")"}]}],StandardForm],
+"Output",CellLabel -> "Out[2]= ",ExpressionUUID -> "82e3481e-4b35-4a23-af56-66b3cc6a1c3c"]},
+Open],ExpressionUUID -> "89849b84-35cf-437c-93e3-b0bb4fa458fb"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "13.1 for Wolfram Cloud 1.63.0.1 (July 14, 2022)"]

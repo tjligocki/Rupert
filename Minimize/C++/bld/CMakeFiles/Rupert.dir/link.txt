@@ -1,0 +1,2 @@
+/usr/bin/ar qc libRupert.a CMakeFiles/Rupert.dir/matrix.cpp.o CMakeFiles/Rupert.dir/rotate.cpp.o CMakeFiles/Rupert.dir/rupert.cpp.o
+/usr/bin/ranlib libRupert.a
